@@ -14,8 +14,9 @@ CREATE TABLE Vizitatori
 	NrLegitimatie INT CONSTRAINT pk_Vizitatori_NrLegitimatie PRIMARY KEY IDENTITY,
 	Nume VARCHAR(50) CONSTRAINT nn_Vizitatori_Nume NOT NULL,
 	Prenume VARCHAR(50) CONSTRAINT nn_Vizitatori_Prenume NOT NULL,
-	Varsta INT,
-	CONSTRAINT uq_Vizitatori_Nume_Prenume UNIQUE (Nume, Prenume)
+	Varsta INT CONSTRAINT ck_Vizitatori_Varsta CHECK (Varsta BETWEEN 3 AND 150),
+	CONSTRAINT uq_Vizitatori_Nume_Prenume UNIQUE (Nume, Prenume),
+	CONSTRAINT ck_Vizitatori_Nume_Prenume CHECK (LEN(Nume) >= 2 AND LEN(Prenume >= 2))
 )
 
 CREATE TABLE Vitrine
@@ -35,7 +36,7 @@ CREATE TABLE Vase
 	VasID INT CONSTRAINT pk_Vase_VasID PRIMARY KEY,
 	Culoare VARCHAR(50) CONSTRAINT df_Vase_Culoare DEFAULT 'Maro',
 	Material VARCHAR(50) CONSTRAINT ck_Vase_Material CHECK (Material IN ('Ceramica', 'Argila', 'Lut')),
-	Vechime INT,
+	Vechime INT CONSTRAINT ck_Vase_Vechime CHECK (Vechine >= 500),
 	VitrinaID INT CONSTRAINT fk_Vase_VitrinaID FOREIGN KEY(VitrinaID) REFERENCES Vitrine(VitrinaID)
 	ON UPDATE SET NULL
 	ON DELETE SET NULL
@@ -43,11 +44,12 @@ CREATE TABLE Vase
 
 CREATE TABLE Ghizi
 (
-	CNPGhid VARCHAR(50) CONSTRAINT pk_Ghizi_CNPGhid PRIMARY KEY CONSTRAINT ck_Ghizi_CNPGhid CHECK (LEN(CNPGhid) = 13),
+	CNPGhid CHAR(13) CONSTRAINT pk_Ghizi_CNPGhid PRIMARY KEY,
 	Nume VARCHAR(50) CONSTRAINT nn_Ghizi_Nume NOT NULL,
 	Prenume VARCHAR(50) CONSTRAINT nn_Ghizi_Prenume NOT NULL,
-	Inaltime FLOAT,
-	DataNasterii DATE CONSTRAINT nn_Ghizi_DataNasterii NOT NULL
+	Inaltime FLOAT CONSTRAINT ck_Ghizi_Inaltime CHECK (Inaltime >= 0.0 AND Inaltime <= 2.5),
+	DataNasterii DATE CONSTRAINT nn_Ghizi_DataNasterii NOT NULL,
+	CONSTRAINT ck_Ghizi_Nume_Prenume CHECK (LEN(Nume) > 1 AND LEN(Prenume) > 1)
 )
 
 -- Un vizitator interactioneaza cu mai multi ghizi => 1:n
@@ -58,7 +60,7 @@ CREATE TABLE VizitatoriGhizi
 	NrLegitimatie INT CONSTRAINT fk_VizitatoriGhizi_NrLegitimatie FOREIGN KEY REFERENCES Vizitatori(NrLegitimatie)
 	ON UPDATE CASCADE
 	ON DELETE CASCADE,
-	CNPGhid VARCHAR(50) CONSTRAINT fk_VizitatoriGhizi_CNPGhid FOREIGN KEY REFERENCES Ghizi(CNPGhid)
+	CNPGhid CHAR(13) CONSTRAINT fk_VizitatoriGhizi_CNPGhid FOREIGN KEY REFERENCES Ghizi(CNPGhid)
 	ON UPDATE CASCADE
 	ON DELETE CASCADE,
 	CONSTRAINT pk_VizitatoriGhizi_NrLegitimatie_CNPGhid PRIMARY KEY (NrLegitimatie, CNPGhid)
@@ -88,7 +90,7 @@ CREATE TABLE FosileDinozauri
 	FamilieDinozaur VARCHAR(50) CONSTRAINT df_FosileDinozauri_FamilieDinozaur DEFAULT 'Tyrannosauridae',
 	Epoca VARCHAR(50) CONSTRAINT df_FosileDinozauri_Epoca DEFAULT 'Cretacicului superior',
 	NrOase INT CHECK (NrOase >= 120),
-	CNPGhid VARCHAR(50) CONSTRAINT fk_FosileDinozauri_CNPGhid FOREIGN KEY REFERENCES Ghizi(CNPGhid)
+	CNPGhid CHAR(13) CONSTRAINT fk_FosileDinozauri_CNPGhid FOREIGN KEY REFERENCES Ghizi(CNPGhid)
 	ON UPDATE CASCADE
 	ON DELETE SET NULL
 )
@@ -112,14 +114,15 @@ CREATE TABLE StanduriDinozauri
 
 CREATE TABLE Paznici
 (
-	CNPPaznic VARCHAR(50) CONSTRAINT pk_Paznici_CNPPaznic PRIMARY KEY CONSTRAINT ck_Paznici_CNPPaznic CHECK (LEN(CNPPaznic) = 13),
+	CNPPaznic CHAR(13) CONSTRAINT pk_Paznici_CNPPaznic PRIMARY KEY,
 	Nume VARCHAR(50) CONSTRAINT nn_Paznici_Nume NOT NULL,
 	Prenume VARCHAR(50) CONSTRAINT nn_Paznici_Prenume NOT NULL,
 	Inaltime FLOAT CONSTRAINT ck_Paznici_Inaltime CHECK (Inaltime > 0),
-	Greutate INT,
+	Greutate INT CONSTRAINT ck_Paznici_Greutate CHECK (Greutate > 0),
 	DataNasterii DATE CONSTRAINT nn_Paznici_DataNasterii NOT NULL,
 	Tura VARCHAR(50) CONSTRAINT ck_Paznici_Tura CHECK (Tura = 'Zi' OR Tura = 'Noapte'),
-	Salariu INT
+	Salariu INT CONSTRAINT ck_Paznici_Salariu CHECK (Salariu BETWEEN 1000 AND 3000),
+	CONSTRAINT ck_Paznici_Nume_Prenume CHECK (LEN(Nume) >= 2 AND LEN(Prenume) >= 2)
 )
 
 -- O bijuterie este pazita de un singur paznic => 1:1
@@ -129,8 +132,8 @@ CREATE TABLE Bijuterii
 (
 	BijuterieID INT CONSTRAINT pk_Bijuterii_BijuterieID PRIMARY KEY IDENTITY(1, 1),
 	Material VARCHAR(50),
-	Valoare INT,
-	CNPPaznic VARCHAR(50) CONSTRAINT fk_Bijuterii_CNPPaznic FOREIGN KEY(CNPPaznic) REFERENCES Paznici(CNPPaznic)
+	Valoare FLOAT CONSTRAINT ck_Bijuterii_Valoare CHECK (Valoare >= 0.0),
+	CNPPaznic CHAR(13) CONSTRAINT fk_Bijuterii_CNPPaznic FOREIGN KEY(CNPPaznic) REFERENCES Paznici(CNPPaznic)
 	ON UPDATE CASCADE
 	ON DELETE SET NULL,
 	CONSTRAINT ck_Bijuterii_Material CHECK (Material IN ('Aur', 'Argint', 'Bronz', 'Alt material'))
