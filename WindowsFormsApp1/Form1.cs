@@ -28,8 +28,49 @@ namespace WindowsFormsApp1
             dataGridViewParent.MultiSelect = false;
             dataGridViewChild.MultiSelect = false;
 
+            numericUpDown3.ReadOnly = true;
+            numericUpDown3.Increment = 0;
+
+            numericUpDown4.ReadOnly = true;
+            numericUpDown4.Increment = 0;
+
             this.Text = "Lumea Dinozaurilor";
             this.Icon = new Icon("../../Fasticon-Dino-Dino-orange.ico");
+        }
+
+        private void loadNumberOfGhizi(SqlConnection conn)
+        {
+            SqlCommand selectCommandGhizi = new SqlCommand("SELECT COUNT(*) FROM Ghizi", conn);
+            SqlDataReader readerGhizi = selectCommandGhizi.ExecuteReader();
+            if (readerGhizi.HasRows)
+            {
+                while (readerGhizi.Read())
+                {
+
+                    numericUpDown3.Value = readerGhizi.GetInt32(0);
+                }
+            }
+            readerGhizi.Close();
+        }
+
+        private void loadNumberOfFosileDinozauri(SqlConnection conn)
+        {
+            SqlCommand selectCommandFosileDinozauri = new SqlCommand("SELECT COUNT(*) FROM FosileDinozauri", conn);
+            SqlDataReader readerFosileDinozauri = selectCommandFosileDinozauri.ExecuteReader();
+            if (readerFosileDinozauri.HasRows)
+            {
+                while (readerFosileDinozauri.Read())
+                {
+                    numericUpDown4.Value = readerFosileDinozauri.GetInt32(0);
+                }
+            }
+            readerFosileDinozauri.Close();
+        }
+
+        private void loadNumberOfGhiziAndFosileDinozauri(SqlConnection conn)
+        {
+            loadNumberOfGhizi(conn);
+            loadNumberOfFosileDinozauri(conn);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,6 +111,8 @@ namespace WindowsFormsApp1
                         }
                     }
                     reader.Close();
+
+                    loadNumberOfGhiziAndFosileDinozauri(conn);
 
                     comboBox1.SelectedIndex = 0;
                 }
@@ -261,6 +304,8 @@ namespace WindowsFormsApp1
                 childBS.DataSource = parentBS;
                 childBS.DataMember = "fk_FosileDinozauri_CNPGhid";
                 dataGridViewChild.DataSource = childBS;
+
+                loadNumberOfGhiziAndFosileDinozauri(conn);
             }
         }
 
