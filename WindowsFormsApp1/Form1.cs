@@ -1,0 +1,291 @@
+﻿using System;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+
+using Microsoft.Data.SqlClient;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
+                                    Database=MuzeuDB;
+                                    Integrated Security=true;
+                                    TrustServerCertificate=true;";
+        DataSet ds = new DataSet();
+        
+        SqlDataAdapter parentAdapter = new SqlDataAdapter();
+        SqlDataAdapter childAdapter = new SqlDataAdapter();
+        
+        BindingSource parentBS = new BindingSource();
+        BindingSource childBS = new BindingSource();
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            dataGridViewParent.MultiSelect = false;
+            dataGridViewChild.MultiSelect = false;
+
+            this.Text = "Lumea Dinozaurilor";
+            this.Icon = new Icon("../../Fasticon-Dino-Dino-orange.ico");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    
+                    parentAdapter.SelectCommand = new SqlCommand("SELECT * FROM Ghizi;", conn);
+                    childAdapter.SelectCommand = new SqlCommand("SELECT * FROM FosileDinozauri;", conn);
+                    
+                    parentAdapter.Fill(ds, "Ghizi");
+                    childAdapter.Fill(ds, "FosileDinozauri");
+                    
+                    DataColumn parentColumn = ds.Tables["Ghizi"].Columns["CNPGhid"];
+                    DataColumn childColumn = ds.Tables["FosileDinozauri"].Columns["CNPGhid"];
+                    
+                    DataRelation relation = new DataRelation("fk_FosileDinozauri_CNPGhid", parentColumn, childColumn);
+                    ds.Relations.Add(relation);
+                    
+                    parentBS.DataSource = ds.Tables["Ghizi"];
+                    dataGridViewParent.DataSource = parentBS;
+                    childBS.DataSource = parentBS;
+                    childBS.DataMember = "fk_FosileDinozauri_CNPGhid";
+                    dataGridViewChild.DataSource = childBS;
+
+                    comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
+                    SqlCommand selectCNPGhiziCommand = new SqlCommand("SELECT CNPGhid FROM Ghizi;", conn);
+                    SqlDataReader reader = selectCNPGhiziCommand.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            comboBox1.Items.Add(reader.GetString(0));
+                        }
+                    }
+                    reader.Close();
+
+                    comboBox1.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("[X]Eroare!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            // Define a new pen with a black color and a width of 2 pixels
+            Pen pen = new Pen(Color.Black, 2);
+
+            // Draw a rectangle around the panel with the specified pen
+            e.Graphics.DrawRectangle(pen, new Rectangle(0, 0, panel1.Width - 1, panel1.Height - 1));
+        }
+
+        // Define the GotFocus event handler
+        private void TextBox_GotFocus(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Clear the placeholder text and change the text color
+            if (textBox.Text == "Introduceti tipul dinozaurului...")
+            {
+                textBox.Text = "";
+                textBox.ForeColor = Color.Black;
+            }
+        }
+
+        // Define the LostFocus event handler
+        private void TextBox_LostFocus(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Restore the placeholder text and color if the textbox is empty
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = "Introduceti tipul dinozaurului...";
+                textBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
+                                            Database=MuzeuDB;
+                                            Integrated Security=true;
+                                            TrustServerCertificate=true;";
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand insertCommand = new SqlCommand("INSERT INTO FosileDinozauri " + 
+                        "(FosilaDinozaurID, TipDinozaur, FamilieDinozaur, Epoca, NrOase, CNPGhid) " +
+                        "VALUES (@fosila_dinozaur_id, @tip_dinozaur, @familie_dinozaur, @epoca, @nr_oase, @cnp_ghid);", conn);
+                    insertCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
+                    insertCommand.Parameters.AddWithValue("@tip_dinozaur"      , textBox1.Text);
+                    insertCommand.Parameters.AddWithValue("@familie_dinozaur"  , textBox2.Text);
+                    insertCommand.Parameters.AddWithValue("@epoca"             , textBox3.Text);
+                    insertCommand.Parameters.AddWithValue("@nr_oase"           , numericUpDown2.Value);
+                    insertCommand.Parameters.AddWithValue("@cnp_ghid"          , comboBox1.Text);
+                    
+                    int insertRowCount = insertCommand.ExecuteNonQuery();
+                    Console.WriteLine("Insert Row Count: {0}", insertRowCount);
+                    
+                    if (insertRowCount != 0)
+                    {
+                        MessageBox.Show("[+]Adaugare realizata cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("[!]Adaugarea nu s-a putut realiza!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("[X]Eroare!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
+                                            Database=MuzeuDB;
+                                            Integrated Security=true;
+                                            TrustServerCertificate=true;";
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand updateCommand = new SqlCommand("UPDATE FosileDinozauri SET TipDinozaur=@tip_dinozaur, FamilieDinozaur=@familie_dinozaur, Epoca=@epoca, NrOase=@nr_oase, CNPGhid=@cnp_ghid WHERE " +
+                        "FosilaDinozaurID=@fosila_dinozaur_id;", conn);
+                    updateCommand.Parameters.AddWithValue("@tip_dinozaur"      , textBox1.Text);
+                    updateCommand.Parameters.AddWithValue("@familie_dinozaur"  , textBox2.Text);
+                    updateCommand.Parameters.AddWithValue("@epoca"             , textBox3.Text);
+                    updateCommand.Parameters.AddWithValue("@nr_oase"           , numericUpDown2.Value);
+                    updateCommand.Parameters.AddWithValue("@cnp_ghid"          , comboBox1.Text);
+                    updateCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
+                    
+                    int updateRowCount = updateCommand.ExecuteNonQuery();
+                    Console.WriteLine("Update Row Count: {0}", updateRowCount);
+                    
+                    if (updateRowCount != 0)
+                    {
+                        MessageBox.Show("[&]Modificare realizata cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("[!]Modificarea nu s-a putut realiza (nu exista o fosila de dinozaur cu id-ul introdus)!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("[X]Eroare!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
+                                            Database=MuzeuDB;
+                                            Integrated Security=true;
+                                            TrustServerCertificate=true;";
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    
+                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM FosileDinozauri WHERE FosilaDinozaurID=@fosila_dinozaur_id;", conn);
+                    deleteCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
+                    
+                    int deleteRowCount = deleteCommand.ExecuteNonQuery();
+                    Console.WriteLine("Delete Row Count: {0}", deleteRowCount);
+                    
+                    if (deleteRowCount != 0)
+                    {
+                        MessageBox.Show("[-]Stergere realizata cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("[!]Stergerea nu s-a putut realiza (nu exista o fosila de dinozaur cu id-ul introdus)!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("[X]Eroare!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                ds = new DataSet();
+
+                parentAdapter = new SqlDataAdapter();
+                childAdapter = new SqlDataAdapter();
+
+                parentBS = new BindingSource();
+                childBS = new BindingSource();
+
+                parentAdapter.SelectCommand = new SqlCommand("SELECT * FROM Ghizi;", conn);
+                childAdapter.SelectCommand = new SqlCommand("SELECT * FROM FosileDinozauri;", conn);
+
+                parentAdapter.Fill(ds, "Ghizi");
+                childAdapter.Fill(ds, "FosileDinozauri");
+
+                DataColumn parentColumn = ds.Tables["Ghizi"].Columns["CNPGhid"];
+                DataColumn childColumn = ds.Tables["FosileDinozauri"].Columns["CNPGhid"];
+
+                DataRelation relation = new DataRelation("fk_FosileDinozauri_CNPGhid", parentColumn, childColumn);
+                ds.Relations.Add(relation);
+
+                parentBS.DataSource = ds.Tables["Ghizi"];
+                dataGridViewParent.DataSource = parentBS;
+                childBS.DataSource = parentBS;
+                childBS.DataMember = "fk_FosileDinozauri_CNPGhid";
+                dataGridViewChild.DataSource = childBS;
+            }
+        }
+
+        private void dataGridViewParent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int index = comboBox1.FindString(dataGridViewParent.SelectedRows[0].Cells[0].Value.ToString());
+                comboBox1.SelectedIndex = index;
+            }
+        }
+
+        private void dataGridViewChild_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int val;
+                int.TryParse(dataGridViewChild.SelectedRows[0].Cells[0].Value.ToString(), out val);
+                numericUpDown1.Value = val;
+                textBox1.Text = dataGridViewChild.SelectedRows[0].Cells[1].Value.ToString();
+                textBox2.Text = dataGridViewChild.SelectedRows[0].Cells[2].Value.ToString();
+                textBox3.Text = dataGridViewChild.SelectedRows[0].Cells[3].Value.ToString();
+                int.TryParse(dataGridViewChild.SelectedRows[0].Cells[4].Value.ToString(), out val);
+                numericUpDown2.Value = val < 120 ? 120 : val;
+            }
+        }
+    }
+}
