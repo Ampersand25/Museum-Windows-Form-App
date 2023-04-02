@@ -34,6 +34,12 @@ namespace WindowsFormsApp1
             dataGridViewChild.EnableHeadersVisualStyles = false;
             dataGridViewChild.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridViewChild.Font, FontStyle.Bold);
 
+            dataGridViewParent.RowsDefaultCellStyle.BackColor = Color.LightGray;
+            dataGridViewParent.AlternatingRowsDefaultCellStyle.BackColor = dataGridViewParent.DefaultCellStyle.BackColor;
+
+            dataGridViewChild.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            dataGridViewChild.RowsDefaultCellStyle.BackColor = dataGridViewChild.DefaultCellStyle.BackColor;
+
             numericUpDown3.ReadOnly = true;
             numericUpDown3.Increment = 0;
 
