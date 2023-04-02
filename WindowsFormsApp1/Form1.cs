@@ -28,6 +28,12 @@ namespace WindowsFormsApp1
             dataGridViewParent.MultiSelect = false;
             dataGridViewChild.MultiSelect = false;
 
+            dataGridViewParent.EnableHeadersVisualStyles = false;
+            dataGridViewParent.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridViewParent.Font, FontStyle.Bold);
+
+            dataGridViewChild.EnableHeadersVisualStyles = false;
+            dataGridViewChild.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridViewChild.Font, FontStyle.Bold);
+
             numericUpDown3.ReadOnly = true;
             numericUpDown3.Increment = 0;
 
@@ -40,7 +46,7 @@ namespace WindowsFormsApp1
 
         private void loadNumberOfGhizi(SqlConnection conn)
         {
-            SqlCommand selectCommandGhizi = new SqlCommand("SELECT COUNT(*) FROM Ghizi", conn);
+            SqlCommand selectCommandGhizi = new SqlCommand("SELECT COUNT(*) FROM [MuzeuDB].[dbo].[Ghizi]", conn);
             SqlDataReader readerGhizi = selectCommandGhizi.ExecuteReader();
             if (readerGhizi.HasRows)
             {
@@ -55,7 +61,7 @@ namespace WindowsFormsApp1
 
         private void loadNumberOfFosileDinozauri(SqlConnection conn)
         {
-            SqlCommand selectCommandFosileDinozauri = new SqlCommand("SELECT COUNT(*) FROM FosileDinozauri", conn);
+            SqlCommand selectCommandFosileDinozauri = new SqlCommand("SELECT COUNT(*) FROM [MuzeuDB].[dbo].[FosileDinozauri]", conn);
             SqlDataReader readerFosileDinozauri = selectCommandFosileDinozauri.ExecuteReader();
             if (readerFosileDinozauri.HasRows)
             {
@@ -81,8 +87,8 @@ namespace WindowsFormsApp1
                 {
                     conn.Open();
                     
-                    parentAdapter.SelectCommand = new SqlCommand("SELECT * FROM Ghizi;", conn);
-                    childAdapter.SelectCommand = new SqlCommand("SELECT * FROM FosileDinozauri;", conn);
+                    parentAdapter.SelectCommand = new SqlCommand("SELECT * FROM [MuzeuDB].[dbo].[Ghizi];", conn);
+                    childAdapter.SelectCommand = new SqlCommand("SELECT * FROM [MuzeuDB].[dbo].[FosileDinozauri];", conn);
                     
                     parentAdapter.Fill(ds, "Ghizi");
                     childAdapter.Fill(ds, "FosileDinozauri");
@@ -101,7 +107,7 @@ namespace WindowsFormsApp1
 
                     comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
-                    SqlCommand selectCNPGhiziCommand = new SqlCommand("SELECT CNPGhid FROM Ghizi;", conn);
+                    SqlCommand selectCNPGhiziCommand = new SqlCommand("SELECT [CNPGhid] FROM [MuzeuDB].[dbo].[Ghizi];", conn);
                     SqlDataReader reader = selectCNPGhiziCommand.ExecuteReader();
                     if (reader.HasRows)
                     {
@@ -170,8 +176,8 @@ namespace WindowsFormsApp1
                 {
                     conn.Open();
 
-                    SqlCommand insertCommand = new SqlCommand("INSERT INTO FosileDinozauri " + 
-                        "(FosilaDinozaurID, TipDinozaur, FamilieDinozaur, Epoca, NrOase, CNPGhid) " +
+                    SqlCommand insertCommand = new SqlCommand("INSERT INTO [MuzeuDB].[dbo].[FosileDinozauri] " + 
+                        "([FosilaDinozaurID], [TipDinozaur], [FamilieDinozaur], [Epoca], [NrOase], [CNPGhid]) " +
                         "VALUES (@fosila_dinozaur_id, @tip_dinozaur, @familie_dinozaur, @epoca, @nr_oase, @cnp_ghid);", conn);
                     insertCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
                     insertCommand.Parameters.AddWithValue("@tip_dinozaur"      , textBox1.Text);
@@ -211,8 +217,8 @@ namespace WindowsFormsApp1
                 {
                     conn.Open();
 
-                    SqlCommand updateCommand = new SqlCommand("UPDATE FosileDinozauri SET TipDinozaur=@tip_dinozaur, FamilieDinozaur=@familie_dinozaur, Epoca=@epoca, NrOase=@nr_oase, CNPGhid=@cnp_ghid WHERE " +
-                        "FosilaDinozaurID=@fosila_dinozaur_id;", conn);
+                    SqlCommand updateCommand = new SqlCommand("UPDATE [MuzeuDB].[dbo].[FosileDinozauri] SET [TipDinozaur]=@tip_dinozaur, [FamilieDinozaur]=@familie_dinozaur, [Epoca]=@epoca, [NrOase]=@nr_oase, [CNPGhid]=@cnp_ghid WHERE " +
+                        "[FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
                     updateCommand.Parameters.AddWithValue("@tip_dinozaur"      , textBox1.Text);
                     updateCommand.Parameters.AddWithValue("@familie_dinozaur"  , textBox2.Text);
                     updateCommand.Parameters.AddWithValue("@epoca"             , textBox3.Text);
@@ -251,7 +257,7 @@ namespace WindowsFormsApp1
                 {
                     conn.Open();
                     
-                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM FosileDinozauri WHERE FosilaDinozaurID=@fosila_dinozaur_id;", conn);
+                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM [MuzeuDB].[dbo].[FosileDinozauri] WHERE [FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
                     deleteCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
                     
                     int deleteRowCount = deleteCommand.ExecuteNonQuery();
@@ -287,8 +293,8 @@ namespace WindowsFormsApp1
                 parentBS = new BindingSource();
                 childBS = new BindingSource();
 
-                parentAdapter.SelectCommand = new SqlCommand("SELECT * FROM Ghizi;", conn);
-                childAdapter.SelectCommand = new SqlCommand("SELECT * FROM FosileDinozauri;", conn);
+                parentAdapter.SelectCommand = new SqlCommand("SELECT * FROM [MuzeuDB].[dbo].[Ghizi];", conn);
+                childAdapter.SelectCommand = new SqlCommand("SELECT * FROM [MuzeuDB].[dbo].[FosileDinozauri];", conn);
 
                 parentAdapter.Fill(ds, "Ghizi");
                 childAdapter.Fill(ds, "FosileDinozauri");
