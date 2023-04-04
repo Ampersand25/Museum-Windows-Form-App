@@ -86,7 +86,7 @@ CREATE TABLE VizitatoriVase
 CREATE TABLE FosileDinozauri
 (
 	FosilaDinozaurID INT CONSTRAINT pk_FosileDinozauri_FosilaDinozaurID PRIMARY KEY,
-	TipDinozaur VARCHAR(50) CONSTRAINT df_FosileDinozauri_TipDinozaur DEFAULT 'Tyrannosaurus',
+	TipDinozaur VARCHAR(50) CONSTRAINT nn_FosileDinozauri_TipDinozaur NOT NULL CONSTRAINT df_FosileDinozauri_TipDinozaur DEFAULT 'Tyrannosaurus',
 	FamilieDinozaur VARCHAR(50) CONSTRAINT df_FosileDinozauri_FamilieDinozaur DEFAULT 'Tyrannosauridae',
 	Epoca VARCHAR(50) CONSTRAINT df_FosileDinozauri_Epoca DEFAULT 'Cretacicului superior',
 	NrOase INT CHECK (NrOase >= 120),
