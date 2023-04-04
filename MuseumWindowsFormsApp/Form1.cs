@@ -227,35 +227,39 @@ namespace WindowsFormsApp1
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa stergeti fosila de dinozaur cu id-ul #" + numericUpDown1.Value + "?", "Delete Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
             {
-                string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
+                try
+                {
+                    string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
                                             Database=MuzeuDB;
                                             Integrated Security=true;
                                             TrustServerCertificate=true;";
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    
-                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM [MuzeuDB].[dbo].[FosileDinozauri] WHERE [FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
-                    deleteCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
-                    
-                    int deleteRowCount = deleteCommand.ExecuteNonQuery();
-                    Console.WriteLine("Delete Row Count: {0}", deleteRowCount);
-                    
-                    if (deleteRowCount != 0)
+                    using (SqlConnection conn = new SqlConnection(connectionString))
                     {
-                        MessageBox.Show("[-]Stergere realizata cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("[!]Stergerea nu s-a putut realiza (nu exista o fosila de dinozaur cu id-ul introdus)!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        conn.Open();
+
+                        SqlCommand deleteCommand = new SqlCommand("DELETE FROM [MuzeuDB].[dbo].[FosileDinozauri] WHERE [FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
+                        deleteCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
+
+                        int deleteRowCount = deleteCommand.ExecuteNonQuery();
+                        Console.WriteLine("Delete Row Count: {0}", deleteRowCount);
+
+                        if (deleteRowCount != 0)
+                        {
+                            MessageBox.Show("[-]Stergere realizata cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("[!]Stergerea nu s-a putut realiza (nu exista o fosila de dinozaur cu id-ul introdus)!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("[X]Eroare!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("[X]Eroare!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
