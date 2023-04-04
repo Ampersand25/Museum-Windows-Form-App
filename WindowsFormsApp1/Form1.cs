@@ -144,32 +144,6 @@ namespace WindowsFormsApp1
             e.Graphics.DrawRectangle(pen, new Rectangle(0, 0, panel1.Width - 1, panel1.Height - 1));
         }
 
-        // Define the GotFocus event handler
-        private void TextBox_GotFocus(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-
-            // Clear the placeholder text and change the text color
-            if (textBox.Text == "Introduceti tipul dinozaurului...")
-            {
-                textBox.Text = "";
-                textBox.ForeColor = Color.Black;
-            }
-        }
-
-        // Define the LostFocus event handler
-        private void TextBox_LostFocus(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-
-            // Restore the placeholder text and color if the textbox is empty
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                textBox.Text = "Introduceti tipul dinozaurului...";
-                textBox.ForeColor = Color.Gray;
-            }
-        }
-
         private void addBtn_Click(object sender, EventArgs e)
         {
             try
