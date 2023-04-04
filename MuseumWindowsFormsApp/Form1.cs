@@ -148,10 +148,6 @@ namespace WindowsFormsApp1
         {
             try
             {
-                string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
-                                            Database=MuzeuDB;
-                                            Integrated Security=true;
-                                            TrustServerCertificate=true;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
@@ -189,10 +185,6 @@ namespace WindowsFormsApp1
         {
             try
             {
-                string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
-                                            Database=MuzeuDB;
-                                            Integrated Security=true;
-                                            TrustServerCertificate=true;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
@@ -232,10 +224,6 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-                    string connectionString = @"Server=LEGIONOFCRISTI\SQLEXPRESS;
-                                            Database=MuzeuDB;
-                                            Integrated Security=true;
-                                            TrustServerCertificate=true;";
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
