@@ -21,11 +21,17 @@ namespace WindowsFormsApp1
         BindingSource parentBS = new BindingSource();
         BindingSource childBS = new BindingSource();
 
-        int FosilaDinozaurIDDefaultValue = 0;
-        string TipDinozaurDefaultValue = "Tyrannosaurus";
-        string FamilieDinozaurDefaultValue = "Tyrannosauridae";
-        string EpocaDefaultValue = "Cretacicului superior";
-        int NrOaseDefaultValue = 120;
+        readonly int FosilaDinozaurIDDefaultValue = 0;
+        readonly string TipDinozaurDefaultValue = "Tyrannosaurus";
+        readonly string FamilieDinozaurDefaultValue = "Tyrannosauridae";
+        readonly string EpocaDefaultValue = "Cretacicului superior";
+        readonly int NrOaseDefaultValue = 120;
+
+        readonly string appTitle = "Dino Land";
+        readonly string imageFolderPath = "../../Images/";
+        readonly string iconName = "DinoWorldLogo.ico";
+        readonly string[] backgrounds = { "FormBackgroundImage.png", "FormBackgroundImageAlt1.png", "FormBackgroundImageAlt2.png", "FormBackgroundImageAlt3.png", "FormBackgroundImageAlt4.png" };
+        int currentBackgroundIndex = 0;
 
         private void setDefaultValuesForControls(bool resetComboBox)
         {
@@ -67,8 +73,9 @@ namespace WindowsFormsApp1
 
             setDefaultValuesForControls(false);
 
-            this.Text = "Dino World";
-            this.Icon = new Icon("../../Images/DinoWorldLogo.ico");
+            this.Text = appTitle;
+            this.Icon = new Icon(imageFolderPath + iconName);
+            this.BackgroundImage = Image.FromFile(imageFolderPath + backgrounds[currentBackgroundIndex]);
         }
 
         private void loadNumberOfGhizi(SqlConnection conn)
@@ -338,6 +345,30 @@ namespace WindowsFormsApp1
         private void label12_Click(object sender, EventArgs e)
         {
             setDefaultValuesForControls(true);
+        }
+
+        private void setBackgroundImage()
+        {
+            this.BackgroundImage = Image.FromFile(imageFolderPath + backgrounds[currentBackgroundIndex]);
+        }
+
+        private void prevBackgroundBtn_Click(object sender, EventArgs e)
+        {
+            if (currentBackgroundIndex == 0)
+            {
+                currentBackgroundIndex = backgrounds.Length - 1;
+            }
+            else
+            {
+                currentBackgroundIndex--;
+            }
+            setBackgroundImage();
+        }
+
+        private void nextBackgroundBtn_Click(object sender, EventArgs e)
+        {
+            currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.Length;
+            setBackgroundImage();
         }
     }
 }

@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
@@ -55,7 +56,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
+            this.prevBackgroundBtn = new System.Windows.Forms.Button();
+            this.nextBackgroundBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParent)).BeginInit();
             this.panel1.SuspendLayout();
@@ -77,7 +79,7 @@
             this.dataGridViewChild.RowTemplate.Height = 28;
             this.dataGridViewChild.RowTemplate.ReadOnly = true;
             this.dataGridViewChild.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewChild.Size = new System.Drawing.Size(1004, 362);
+            this.dataGridViewChild.Size = new System.Drawing.Size(1013, 362);
             this.dataGridViewChild.TabIndex = 0;
             this.dataGridViewChild.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChild_CellClick);
             // 
@@ -103,7 +105,7 @@
             this.label1.BackColor = System.Drawing.Color.LightCyan;
             this.label1.Font = new System.Drawing.Font("MV Boli", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(38, 5);
+            this.label1.Location = new System.Drawing.Point(805, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 40);
             this.label1.TabIndex = 2;
@@ -115,7 +117,7 @@
             this.label2.BackColor = System.Drawing.Color.LightCyan;
             this.label2.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(38, 475);
+            this.label2.Location = new System.Drawing.Point(641, 475);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(375, 40);
             this.label2.TabIndex = 3;
@@ -162,6 +164,18 @@
             this.panel1.Size = new System.Drawing.Size(394, 829);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(267, 696);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 20);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Reset Fields";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // pictureBox1
             // 
@@ -416,17 +430,29 @@
             this.numericUpDown1.Size = new System.Drawing.Size(125, 26);
             this.numericUpDown1.TabIndex = 0;
             // 
-            // label12
+            // prevBackgroundBtn
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(267, 696);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 20);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Reset Fields";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.prevBackgroundBtn.BackColor = System.Drawing.Color.LightCyan;
+            this.prevBackgroundBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevBackgroundBtn.Location = new System.Drawing.Point(12, 5);
+            this.prevBackgroundBtn.Name = "prevBackgroundBtn";
+            this.prevBackgroundBtn.Size = new System.Drawing.Size(210, 40);
+            this.prevBackgroundBtn.TabIndex = 13;
+            this.prevBackgroundBtn.Text = "&Prev Background";
+            this.prevBackgroundBtn.UseVisualStyleBackColor = false;
+            this.prevBackgroundBtn.Click += new System.EventHandler(this.prevBackgroundBtn_Click);
+            // 
+            // nextBackgroundBtn
+            // 
+            this.nextBackgroundBtn.BackColor = System.Drawing.Color.LightCyan;
+            this.nextBackgroundBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextBackgroundBtn.Location = new System.Drawing.Point(228, 5);
+            this.nextBackgroundBtn.Name = "nextBackgroundBtn";
+            this.nextBackgroundBtn.Size = new System.Drawing.Size(210, 40);
+            this.nextBackgroundBtn.TabIndex = 14;
+            this.nextBackgroundBtn.Text = "&Next Background";
+            this.nextBackgroundBtn.UseVisualStyleBackColor = false;
+            this.nextBackgroundBtn.Click += new System.EventHandler(this.nextBackgroundBtn_Click);
             // 
             // MasterDetailWindow
             // 
@@ -435,6 +461,8 @@
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.FormBackgroundImage;
             this.ClientSize = new System.Drawing.Size(1458, 894);
+            this.Controls.Add(this.nextBackgroundBtn);
+            this.Controls.Add(this.prevBackgroundBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -490,6 +518,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button prevBackgroundBtn;
+        private System.Windows.Forms.Button nextBackgroundBtn;
     }
 }
 
