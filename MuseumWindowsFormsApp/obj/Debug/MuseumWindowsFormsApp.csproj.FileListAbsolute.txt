@@ -149,10 +149,10 @@ C:\Users\crist\source\repos\MuseumWindowsFormsApp\bin\Debug\zh-Hans\Microsoft.Da
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\MuseumWindowsFormsApp.csproj.AssemblyReference.cache
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\MuseumWindowsFormsApp.csproj.SuggestedBindingRedirects.cache
-C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\MuseumWindowsFormsApp.csproj.GenerateResource.cache
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\MuseumWindowsFormsApp.csproj.CoreCompileInputs.cache
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\MuseumWindowsFormsApp.csproj.CopyComplete
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\WindowsFormsApp1.exe
 C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\crist\source\repos\MuseumWindowsFormsApp\obj\Debug\WindowsFormsApp1.MasterDetailWindow.resources
