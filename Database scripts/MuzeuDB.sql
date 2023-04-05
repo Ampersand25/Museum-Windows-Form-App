@@ -86,7 +86,7 @@ CREATE TABLE VizitatoriVase
 CREATE TABLE FosileDinozauri
 (
 	FosilaDinozaurID INT CONSTRAINT pk_FosileDinozauri_FosilaDinozaurID PRIMARY KEY,
-	TipDinozaur VARCHAR(50) CONSTRAINT nn_FosileDinozauri_TipDinozaur NOT NULL CONSTRAINT df_FosileDinozauri_TipDinozaur DEFAULT 'Tyrannosaurus',
+	TipDinozaur VARCHAR(50) CONSTRAINT nn_FosileDinozauri_TipDinozaur NOT NULL CONSTRAINT uq_FosileDinozauri_TipDinozaur UNIQUE CONSTRAINT df_FosileDinozauri_TipDinozaur DEFAULT 'Tyrannosaurus',
 	FamilieDinozaur VARCHAR(50) CONSTRAINT df_FosileDinozauri_FamilieDinozaur DEFAULT 'Tyrannosauridae',
 	Epoca VARCHAR(50) CONSTRAINT df_FosileDinozauri_Epoca DEFAULT 'Cretacicului superior',
 	NrOase INT CHECK (NrOase >= 120),
@@ -132,7 +132,7 @@ CREATE TABLE Bijuterii
 (
 	BijuterieID INT CONSTRAINT pk_Bijuterii_BijuterieID PRIMARY KEY IDENTITY(1, 1),
 	Material VARCHAR(50),
-	Valoare FLOAT CONSTRAINT ck_Bijuterii_Valoare CHECK (Valoare >= 0.0),
+	Valoare INT CONSTRAINT ck_Bijuterii_Valoare CHECK (Valoare > 0),
 	CNPPaznic CHAR(13) CONSTRAINT fk_Bijuterii_CNPPaznic FOREIGN KEY(CNPPaznic) REFERENCES Paznici(CNPPaznic)
 	ON UPDATE CASCADE
 	ON DELETE SET NULL,
