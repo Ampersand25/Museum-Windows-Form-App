@@ -55,6 +55,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParent)).BeginInit();
             this.panel1.SuspendLayout();
@@ -134,6 +135,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.numericUpDown4);
             this.panel1.Controls.Add(this.label11);
@@ -414,6 +416,18 @@
             this.numericUpDown1.Size = new System.Drawing.Size(125, 26);
             this.numericUpDown1.TabIndex = 0;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(267, 696);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 20);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Reset Fields";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // MasterDetailWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -475,6 +489,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label12;
     }
 }
 

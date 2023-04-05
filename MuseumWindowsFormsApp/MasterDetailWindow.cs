@@ -21,6 +21,25 @@ namespace WindowsFormsApp1
         BindingSource parentBS = new BindingSource();
         BindingSource childBS = new BindingSource();
 
+        int FosilaDinozaurIDDefaultValue = 0;
+        string TipDinozaurDefaultValue = "Tyrannosaurus";
+        string FamilieDinozaurDefaultValue = "Tyrannosauridae";
+        string EpocaDefaultValue = "Cretacicului superior";
+        int NrOaseDefaultValue = 120;
+
+        private void setDefaultValuesForControls(bool resetComboBox)
+        {
+            numericUpDown1.Value = FosilaDinozaurIDDefaultValue;
+            textBox1.Text = TipDinozaurDefaultValue;
+            textBox2.Text = FamilieDinozaurDefaultValue;
+            textBox3.Text = EpocaDefaultValue;
+            numericUpDown2.Value = NrOaseDefaultValue;
+            if (resetComboBox)
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+        }
+
         public MasterDetailWindow()
         {
             InitializeComponent();
@@ -45,6 +64,8 @@ namespace WindowsFormsApp1
 
             numericUpDown4.ReadOnly = true;
             numericUpDown4.Increment = 0;
+
+            setDefaultValuesForControls(false);
 
             this.Text = "Dino World";
             this.Icon = new Icon("../../Images/DinoWorldLogo.ico");
@@ -312,6 +333,11 @@ namespace WindowsFormsApp1
                 int.TryParse(dataGridViewChild.SelectedRows[0].Cells[4].Value.ToString(), out val);
                 numericUpDown2.Value = val < 120 ? 120 : val;
             }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            setDefaultValuesForControls(true);
         }
     }
 }
