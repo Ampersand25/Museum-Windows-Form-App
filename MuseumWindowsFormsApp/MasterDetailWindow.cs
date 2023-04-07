@@ -370,5 +370,15 @@ namespace WindowsFormsApp1
             currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.Length;
             setBackgroundImage();
         }
+
+        private void MasterDetailWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Display a confirmation prompt to the user
+            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa inchideti aplicatia?", "Exit Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.No || result == DialogResult.Cancel)
+            {
+                e.Cancel = true; // Cancel the form closing event
+            }
+        }
     }
 }

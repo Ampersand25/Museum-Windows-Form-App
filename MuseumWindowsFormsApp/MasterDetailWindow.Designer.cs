@@ -473,6 +473,7 @@
             this.Name = "MasterDetailWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasterDetailWindow";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MasterDetailWindow_FormClosing);
             this.Load += new System.EventHandler(this.MasterDetailWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChild)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParent)).EndInit();
