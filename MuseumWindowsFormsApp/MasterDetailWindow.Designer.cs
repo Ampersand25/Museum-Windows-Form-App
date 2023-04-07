@@ -33,39 +33,39 @@
             this.parentTableLbl = new System.Windows.Forms.Label();
             this.childTableLbl = new System.Windows.Forms.Label();
             this.meniuPrincipalLbl = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.resetFieldsLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.fosilaDinozaurPictureBox = new System.Windows.Forms.PictureBox();
+            this.nrTotalFosileNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.nrTotalFosileLbl = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.nrTotalGhiziNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.nrTotalGhiziLbl = new System.Windows.Forms.Label();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CNPGhidComboBox = new System.Windows.Forms.ComboBox();
             this.CNPGhidLbl = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nrOaseNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.nrOaseLbl = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.epocaTextBox = new System.Windows.Forms.TextBox();
             this.epocaLbl = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.familieDinozaurTextBox = new System.Windows.Forms.TextBox();
             this.familieDinozaurLbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tipDinozaurTextBox = new System.Windows.Forms.TextBox();
             this.tipDinozaurLbl = new System.Windows.Forms.Label();
             this.fosilaDinozaurIDLbl = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.fosilaDinozaurIDNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.prevBackgroundBtn = new System.Windows.Forms.Button();
             this.nextBackgroundBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParent)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fosilaDinozaurPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrTotalFosileNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrTotalGhiziNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrOaseNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fosilaDinozaurIDNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewChild
@@ -134,36 +134,36 @@
             this.meniuPrincipalLbl.TabIndex = 4;
             this.meniuPrincipalLbl.Text = "Meniu Principal";
             // 
-            // panel1
+            // mainPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.resetFieldsLbl);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.numericUpDown4);
-            this.panel1.Controls.Add(this.nrTotalFosileLbl);
-            this.panel1.Controls.Add(this.numericUpDown3);
-            this.panel1.Controls.Add(this.nrTotalGhiziLbl);
-            this.panel1.Controls.Add(this.refreshBtn);
-            this.panel1.Controls.Add(this.deleteBtn);
-            this.panel1.Controls.Add(this.updateBtn);
-            this.panel1.Controls.Add(this.addBtn);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.CNPGhidLbl);
-            this.panel1.Controls.Add(this.numericUpDown2);
-            this.panel1.Controls.Add(this.nrOaseLbl);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.epocaLbl);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.familieDinozaurLbl);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.tipDinozaurLbl);
-            this.panel1.Controls.Add(this.fosilaDinozaurIDLbl);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Location = new System.Drawing.Point(1059, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 829);
-            this.panel1.TabIndex = 5;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.mainPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.mainPanel.Controls.Add(this.resetFieldsLbl);
+            this.mainPanel.Controls.Add(this.fosilaDinozaurPictureBox);
+            this.mainPanel.Controls.Add(this.nrTotalFosileNumericUpDown);
+            this.mainPanel.Controls.Add(this.nrTotalFosileLbl);
+            this.mainPanel.Controls.Add(this.nrTotalGhiziNumericUpDown);
+            this.mainPanel.Controls.Add(this.nrTotalGhiziLbl);
+            this.mainPanel.Controls.Add(this.refreshBtn);
+            this.mainPanel.Controls.Add(this.deleteBtn);
+            this.mainPanel.Controls.Add(this.updateBtn);
+            this.mainPanel.Controls.Add(this.addBtn);
+            this.mainPanel.Controls.Add(this.CNPGhidComboBox);
+            this.mainPanel.Controls.Add(this.CNPGhidLbl);
+            this.mainPanel.Controls.Add(this.nrOaseNumericUpDown);
+            this.mainPanel.Controls.Add(this.nrOaseLbl);
+            this.mainPanel.Controls.Add(this.epocaTextBox);
+            this.mainPanel.Controls.Add(this.epocaLbl);
+            this.mainPanel.Controls.Add(this.familieDinozaurTextBox);
+            this.mainPanel.Controls.Add(this.familieDinozaurLbl);
+            this.mainPanel.Controls.Add(this.tipDinozaurTextBox);
+            this.mainPanel.Controls.Add(this.tipDinozaurLbl);
+            this.mainPanel.Controls.Add(this.fosilaDinozaurIDLbl);
+            this.mainPanel.Controls.Add(this.fosilaDinozaurIDNumericUpDown);
+            this.mainPanel.Location = new System.Drawing.Point(1059, 48);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(394, 832);
+            this.mainPanel.TabIndex = 5;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // resetFieldsLbl
             // 
@@ -177,27 +177,27 @@
             this.resetFieldsLbl.Text = "Reset Fields";
             this.resetFieldsLbl.Click += new System.EventHandler(this.resetFieldsLbl_Click);
             // 
-            // pictureBox1
+            // fosilaDinozaurPictureBox
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.DinoFossilImage;
-            this.pictureBox1.Location = new System.Drawing.Point(205, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.fosilaDinozaurPictureBox.Image = global::WindowsFormsApp1.Properties.Resources.DinoFossilImage;
+            this.fosilaDinozaurPictureBox.Location = new System.Drawing.Point(205, 17);
+            this.fosilaDinozaurPictureBox.Name = "fosilaDinozaurPictureBox";
+            this.fosilaDinozaurPictureBox.Size = new System.Drawing.Size(172, 138);
+            this.fosilaDinozaurPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fosilaDinozaurPictureBox.TabIndex = 20;
+            this.fosilaDinozaurPictureBox.TabStop = false;
             // 
-            // numericUpDown4
+            // nrTotalFosileNumericUpDown
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(226, 649);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.nrTotalFosileNumericUpDown.Location = new System.Drawing.Point(226, 649);
+            this.nrTotalFosileNumericUpDown.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(125, 26);
-            this.numericUpDown4.TabIndex = 19;
+            this.nrTotalFosileNumericUpDown.Name = "nrTotalFosileNumericUpDown";
+            this.nrTotalFosileNumericUpDown.Size = new System.Drawing.Size(125, 26);
+            this.nrTotalFosileNumericUpDown.TabIndex = 19;
             // 
             // nrTotalFosileLbl
             // 
@@ -211,17 +211,17 @@
             this.nrTotalFosileLbl.TabIndex = 18;
             this.nrTotalFosileLbl.Text = "NrTotalFosile";
             // 
-            // numericUpDown3
+            // nrTotalGhiziNumericUpDown
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(18, 649);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.nrTotalGhiziNumericUpDown.Location = new System.Drawing.Point(18, 649);
+            this.nrTotalGhiziNumericUpDown.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(125, 26);
-            this.numericUpDown3.TabIndex = 17;
+            this.nrTotalGhiziNumericUpDown.Name = "nrTotalGhiziNumericUpDown";
+            this.nrTotalGhiziNumericUpDown.Size = new System.Drawing.Size(125, 26);
+            this.nrTotalGhiziNumericUpDown.TabIndex = 17;
             // 
             // nrTotalGhiziLbl
             // 
@@ -283,13 +283,13 @@
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // comboBox1
+            // CNPGhidComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(226, 525);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 11;
+            this.CNPGhidComboBox.FormattingEnabled = true;
+            this.CNPGhidComboBox.Location = new System.Drawing.Point(226, 527);
+            this.CNPGhidComboBox.Name = "CNPGhidComboBox";
+            this.CNPGhidComboBox.Size = new System.Drawing.Size(151, 28);
+            this.CNPGhidComboBox.TabIndex = 11;
             // 
             // CNPGhidLbl
             // 
@@ -303,23 +303,23 @@
             this.CNPGhidLbl.TabIndex = 10;
             this.CNPGhidLbl.Text = "CNPGhid";
             // 
-            // numericUpDown2
+            // nrOaseNumericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(18, 527);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nrOaseNumericUpDown.Location = new System.Drawing.Point(18, 527);
+            this.nrOaseNumericUpDown.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.nrOaseNumericUpDown.Minimum = new decimal(new int[] {
             120,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(125, 26);
-            this.numericUpDown2.TabIndex = 9;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.nrOaseNumericUpDown.Name = "nrOaseNumericUpDown";
+            this.nrOaseNumericUpDown.Size = new System.Drawing.Size(125, 26);
+            this.nrOaseNumericUpDown.TabIndex = 9;
+            this.nrOaseNumericUpDown.Value = new decimal(new int[] {
             120,
             0,
             0,
@@ -337,14 +337,14 @@
             this.nrOaseLbl.TabIndex = 8;
             this.nrOaseLbl.Text = "NrOase";
             // 
-            // textBox3
+            // epocaTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(18, 406);
-            this.textBox3.MaxLength = 50;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(359, 26);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "Cretacicului superior";
+            this.epocaTextBox.Location = new System.Drawing.Point(18, 406);
+            this.epocaTextBox.MaxLength = 50;
+            this.epocaTextBox.Name = "epocaTextBox";
+            this.epocaTextBox.Size = new System.Drawing.Size(359, 26);
+            this.epocaTextBox.TabIndex = 7;
+            this.epocaTextBox.Text = "Cretacicului superior";
             // 
             // epocaLbl
             // 
@@ -358,14 +358,14 @@
             this.epocaLbl.TabIndex = 6;
             this.epocaLbl.Text = "Epocă";
             // 
-            // textBox2
+            // familieDinozaurTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(18, 287);
-            this.textBox2.MaxLength = 50;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(359, 26);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Tyrannosauridae";
+            this.familieDinozaurTextBox.Location = new System.Drawing.Point(18, 287);
+            this.familieDinozaurTextBox.MaxLength = 50;
+            this.familieDinozaurTextBox.Name = "familieDinozaurTextBox";
+            this.familieDinozaurTextBox.Size = new System.Drawing.Size(359, 26);
+            this.familieDinozaurTextBox.TabIndex = 5;
+            this.familieDinozaurTextBox.Text = "Tyrannosauridae";
             // 
             // familieDinozaurLbl
             // 
@@ -380,14 +380,14 @@
             this.familieDinozaurLbl.TabIndex = 4;
             this.familieDinozaurLbl.Text = "FamilieDinozaur";
             // 
-            // textBox1
+            // tipDinozaurTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 169);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 26);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Tyrannosaurus";
+            this.tipDinozaurTextBox.Location = new System.Drawing.Point(18, 169);
+            this.tipDinozaurTextBox.MaxLength = 50;
+            this.tipDinozaurTextBox.Name = "tipDinozaurTextBox";
+            this.tipDinozaurTextBox.Size = new System.Drawing.Size(359, 26);
+            this.tipDinozaurTextBox.TabIndex = 3;
+            this.tipDinozaurTextBox.Text = "Tyrannosaurus";
             // 
             // tipDinozaurLbl
             // 
@@ -413,22 +413,22 @@
             this.fosilaDinozaurIDLbl.TabIndex = 1;
             this.fosilaDinozaurIDLbl.Text = "FosilăDinozaurID";
             // 
-            // numericUpDown1
+            // fosilaDinozaurIDNumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(18, 57);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.fosilaDinozaurIDNumericUpDown.Location = new System.Drawing.Point(18, 57);
+            this.fosilaDinozaurIDNumericUpDown.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.fosilaDinozaurIDNumericUpDown.Minimum = new decimal(new int[] {
             -2147483648,
             0,
             0,
             -2147483648});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(125, 26);
-            this.numericUpDown1.TabIndex = 0;
+            this.fosilaDinozaurIDNumericUpDown.Name = "fosilaDinozaurIDNumericUpDown";
+            this.fosilaDinozaurIDNumericUpDown.Size = new System.Drawing.Size(125, 26);
+            this.fosilaDinozaurIDNumericUpDown.TabIndex = 0;
             // 
             // prevBackgroundBtn
             // 
@@ -463,7 +463,7 @@
             this.ClientSize = new System.Drawing.Size(1458, 894);
             this.Controls.Add(this.nextBackgroundBtn);
             this.Controls.Add(this.prevBackgroundBtn);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.meniuPrincipalLbl);
             this.Controls.Add(this.childTableLbl);
             this.Controls.Add(this.parentTableLbl);
@@ -472,17 +472,17 @@
             this.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.Name = "MasterDetailWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "MasterDetailWindow";
+            this.Load += new System.EventHandler(this.MasterDetailWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChild)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParent)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fosilaDinozaurPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrTotalFosileNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrTotalGhiziNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrOaseNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fosilaDinozaurIDNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,28 +495,28 @@
         private System.Windows.Forms.Label parentTableLbl;
         private System.Windows.Forms.Label childTableLbl;
         private System.Windows.Forms.Label meniuPrincipalLbl;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Label fosilaDinozaurIDLbl;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown fosilaDinozaurIDNumericUpDown;
+        private System.Windows.Forms.TextBox tipDinozaurTextBox;
         private System.Windows.Forms.Label tipDinozaurLbl;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox epocaTextBox;
         private System.Windows.Forms.Label epocaLbl;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox familieDinozaurTextBox;
         private System.Windows.Forms.Label familieDinozaurLbl;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CNPGhidComboBox;
         private System.Windows.Forms.Label CNPGhidLbl;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nrOaseNumericUpDown;
         private System.Windows.Forms.Label nrOaseLbl;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.Label nrTotalGhiziLbl;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown nrTotalFosileNumericUpDown;
         private System.Windows.Forms.Label nrTotalFosileLbl;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown nrTotalGhiziNumericUpDown;
+        private System.Windows.Forms.PictureBox fosilaDinozaurPictureBox;
         private System.Windows.Forms.Label resetFieldsLbl;
         private System.Windows.Forms.Button prevBackgroundBtn;
         private System.Windows.Forms.Button nextBackgroundBtn;

@@ -35,14 +35,14 @@ namespace WindowsFormsApp1
 
         private void setDefaultValuesForControls(bool resetComboBox)
         {
-            numericUpDown1.Value = FosilaDinozaurIDDefaultValue;
-            textBox1.Text = TipDinozaurDefaultValue;
-            textBox2.Text = FamilieDinozaurDefaultValue;
-            textBox3.Text = EpocaDefaultValue;
-            numericUpDown2.Value = NrOaseDefaultValue;
+            fosilaDinozaurIDNumericUpDown.Value = FosilaDinozaurIDDefaultValue;
+            tipDinozaurTextBox.Text = TipDinozaurDefaultValue;
+            familieDinozaurTextBox.Text = FamilieDinozaurDefaultValue;
+            epocaTextBox.Text = EpocaDefaultValue;
+            nrOaseNumericUpDown.Value = NrOaseDefaultValue;
             if (resetComboBox)
             {
-                comboBox1.SelectedIndex = 0;
+                CNPGhidComboBox.SelectedIndex = 0;
             }
         }
 
@@ -65,11 +65,11 @@ namespace WindowsFormsApp1
             dataGridViewChild.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dataGridViewChild.RowsDefaultCellStyle.BackColor = dataGridViewChild.DefaultCellStyle.BackColor;
 
-            numericUpDown3.ReadOnly = true;
-            numericUpDown3.Increment = 0;
+            nrTotalGhiziNumericUpDown.ReadOnly = true;
+            nrTotalGhiziNumericUpDown.Increment = 0;
 
-            numericUpDown4.ReadOnly = true;
-            numericUpDown4.Increment = 0;
+            nrTotalFosileNumericUpDown.ReadOnly = true;
+            nrTotalFosileNumericUpDown.Increment = 0;
 
             setDefaultValuesForControls(false);
 
@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
                 while (readerGhizi.Read())
                 {
 
-                    numericUpDown3.Value = readerGhizi.GetInt32(0);
+                    nrTotalGhiziNumericUpDown.Value = readerGhizi.GetInt32(0);
                 }
             }
             readerGhizi.Close();
@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
             {
                 while (readerFosileDinozauri.Read())
                 {
-                    numericUpDown4.Value = readerFosileDinozauri.GetInt32(0);
+                    nrTotalFosileNumericUpDown.Value = readerFosileDinozauri.GetInt32(0);
                 }
             }
             readerFosileDinozauri.Close();
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
             loadNumberOfFosileDinozauri(conn);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MasterDetailWindow_Load(object sender, EventArgs e)
         {
             try
             {
@@ -139,7 +139,7 @@ namespace WindowsFormsApp1
                     childBS.DataMember = "fk_FosileDinozauri_CNPGhid";
                     dataGridViewChild.DataSource = childBS;
 
-                    comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+                    CNPGhidComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
                     SqlCommand selectCNPGhiziCommand = new SqlCommand("SELECT [CNPGhid] FROM [MuzeuDB].[dbo].[Ghizi];", conn);
                     SqlDataReader reader = selectCNPGhiziCommand.ExecuteReader();
@@ -147,14 +147,14 @@ namespace WindowsFormsApp1
                     {
                         while (reader.Read())
                         {
-                            comboBox1.Items.Add(reader.GetString(0));
+                            CNPGhidComboBox.Items.Add(reader.GetString(0));
                         }
                     }
                     reader.Close();
 
                     loadNumberOfGhiziAndFosileDinozauri(conn);
 
-                    comboBox1.SelectedIndex = 0;
+                    CNPGhidComboBox.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
@@ -163,13 +163,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
             // Define a new pen with a black color and a width of 2 pixels
             Pen pen = new Pen(Color.Black, 2);
 
             // Draw a rectangle around the panel with the specified pen
-            e.Graphics.DrawRectangle(pen, new Rectangle(0, 0, panel1.Width - 1, panel1.Height - 1));
+            e.Graphics.DrawRectangle(pen, new Rectangle(0, 0, mainPanel.Width - 1, mainPanel.Height - 1));
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -183,12 +183,12 @@ namespace WindowsFormsApp1
                     SqlCommand insertCommand = new SqlCommand("INSERT INTO [MuzeuDB].[dbo].[FosileDinozauri] " + 
                         "([FosilaDinozaurID], [TipDinozaur], [FamilieDinozaur], [Epoca], [NrOase], [CNPGhid]) " +
                         "VALUES (@fosila_dinozaur_id, @tip_dinozaur, @familie_dinozaur, @epoca, @nr_oase, @cnp_ghid);", conn);
-                    insertCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
-                    insertCommand.Parameters.AddWithValue("@tip_dinozaur"      , textBox1.Text);
-                    insertCommand.Parameters.AddWithValue("@familie_dinozaur"  , textBox2.Text);
-                    insertCommand.Parameters.AddWithValue("@epoca"             , textBox3.Text);
-                    insertCommand.Parameters.AddWithValue("@nr_oase"           , numericUpDown2.Value);
-                    insertCommand.Parameters.AddWithValue("@cnp_ghid"          , comboBox1.Text);
+                    insertCommand.Parameters.AddWithValue("@fosila_dinozaur_id", fosilaDinozaurIDNumericUpDown.Value);
+                    insertCommand.Parameters.AddWithValue("@tip_dinozaur"      , tipDinozaurTextBox.Text);
+                    insertCommand.Parameters.AddWithValue("@familie_dinozaur"  , familieDinozaurTextBox.Text);
+                    insertCommand.Parameters.AddWithValue("@epoca"             , epocaTextBox.Text);
+                    insertCommand.Parameters.AddWithValue("@nr_oase"           , nrOaseNumericUpDown.Value);
+                    insertCommand.Parameters.AddWithValue("@cnp_ghid"          , CNPGhidComboBox.Text);
                     
                     int insertRowCount = insertCommand.ExecuteNonQuery();
                     Console.WriteLine("Insert Row Count: {0}", insertRowCount);
@@ -220,12 +220,12 @@ namespace WindowsFormsApp1
 
                     SqlCommand updateCommand = new SqlCommand("UPDATE [MuzeuDB].[dbo].[FosileDinozauri] SET [TipDinozaur]=@tip_dinozaur, [FamilieDinozaur]=@familie_dinozaur, [Epoca]=@epoca, [NrOase]=@nr_oase, [CNPGhid]=@cnp_ghid WHERE " +
                         "[FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
-                    updateCommand.Parameters.AddWithValue("@tip_dinozaur"      , textBox1.Text);
-                    updateCommand.Parameters.AddWithValue("@familie_dinozaur"  , textBox2.Text);
-                    updateCommand.Parameters.AddWithValue("@epoca"             , textBox3.Text);
-                    updateCommand.Parameters.AddWithValue("@nr_oase"           , numericUpDown2.Value);
-                    updateCommand.Parameters.AddWithValue("@cnp_ghid"          , comboBox1.Text);
-                    updateCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
+                    updateCommand.Parameters.AddWithValue("@tip_dinozaur"      , tipDinozaurTextBox.Text);
+                    updateCommand.Parameters.AddWithValue("@familie_dinozaur"  , familieDinozaurTextBox.Text);
+                    updateCommand.Parameters.AddWithValue("@epoca"             , epocaTextBox.Text);
+                    updateCommand.Parameters.AddWithValue("@nr_oase"           , nrOaseNumericUpDown.Value);
+                    updateCommand.Parameters.AddWithValue("@cnp_ghid"          , CNPGhidComboBox.Text);
+                    updateCommand.Parameters.AddWithValue("@fosila_dinozaur_id", fosilaDinozaurIDNumericUpDown.Value);
                     
                     int updateRowCount = updateCommand.ExecuteNonQuery();
                     Console.WriteLine("Update Row Count: {0}", updateRowCount);
@@ -249,7 +249,7 @@ namespace WindowsFormsApp1
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa stergeti fosila de dinozaur cu id-ul #" + numericUpDown1.Value + "?", "Delete Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa stergeti fosila de dinozaur cu id-ul #" + fosilaDinozaurIDNumericUpDown.Value + "?", "Delete Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
                 try
@@ -259,7 +259,7 @@ namespace WindowsFormsApp1
                         conn.Open();
 
                         SqlCommand deleteCommand = new SqlCommand("DELETE FROM [MuzeuDB].[dbo].[FosileDinozauri] WHERE [FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
-                        deleteCommand.Parameters.AddWithValue("@fosila_dinozaur_id", numericUpDown1.Value);
+                        deleteCommand.Parameters.AddWithValue("@fosila_dinozaur_id", fosilaDinozaurIDNumericUpDown.Value);
 
                         int deleteRowCount = deleteCommand.ExecuteNonQuery();
                         Console.WriteLine("Delete Row Count: {0}", deleteRowCount);
@@ -322,8 +322,8 @@ namespace WindowsFormsApp1
         {
             if (e.RowIndex >= 0)
             {
-                int index = comboBox1.FindString(dataGridViewParent.SelectedRows[0].Cells[0].Value.ToString());
-                comboBox1.SelectedIndex = index;
+                int index = CNPGhidComboBox.FindString(dataGridViewParent.SelectedRows[0].Cells[0].Value.ToString());
+                CNPGhidComboBox.SelectedIndex = index;
             }
         }
 
@@ -333,12 +333,12 @@ namespace WindowsFormsApp1
             {
                 int val;
                 int.TryParse(dataGridViewChild.SelectedRows[0].Cells[0].Value.ToString(), out val);
-                numericUpDown1.Value = val;
-                textBox1.Text = dataGridViewChild.SelectedRows[0].Cells[1].Value.ToString();
-                textBox2.Text = dataGridViewChild.SelectedRows[0].Cells[2].Value.ToString();
-                textBox3.Text = dataGridViewChild.SelectedRows[0].Cells[3].Value.ToString();
+                fosilaDinozaurIDNumericUpDown.Value = val;
+                tipDinozaurTextBox.Text = dataGridViewChild.SelectedRows[0].Cells[1].Value.ToString();
+                familieDinozaurTextBox.Text = dataGridViewChild.SelectedRows[0].Cells[2].Value.ToString();
+                epocaTextBox.Text = dataGridViewChild.SelectedRows[0].Cells[3].Value.ToString();
                 int.TryParse(dataGridViewChild.SelectedRows[0].Cells[4].Value.ToString(), out val);
-                numericUpDown2.Value = val < 120 ? 120 : val;
+                nrOaseNumericUpDown.Value = val < 120 ? 120 : val;
             }
         }
 
