@@ -342,7 +342,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void resetFieldsLbl_Click(object sender, EventArgs e)
         {
             setDefaultValuesForControls(true);
         }

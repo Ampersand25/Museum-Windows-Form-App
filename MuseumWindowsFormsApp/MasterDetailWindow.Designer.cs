@@ -30,31 +30,31 @@
         {
             this.dataGridViewChild = new System.Windows.Forms.DataGridView();
             this.dataGridViewParent = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.parentTableLbl = new System.Windows.Forms.Label();
+            this.childTableLbl = new System.Windows.Forms.Label();
+            this.meniuPrincipalLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.resetFieldsLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
+            this.nrTotalFosileLbl = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
+            this.nrTotalGhiziLbl = new System.Windows.Forms.Label();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.CNPGhidLbl = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
+            this.nrOaseLbl = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.epocaLbl = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.familieDinozaurLbl = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tipDinozaurLbl = new System.Windows.Forms.Label();
+            this.fosilaDinozaurIDLbl = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.prevBackgroundBtn = new System.Windows.Forms.Button();
             this.nextBackgroundBtn = new System.Windows.Forms.Button();
@@ -99,65 +99,65 @@
             this.dataGridViewParent.TabIndex = 1;
             this.dataGridViewParent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewParent_CellClick);
             // 
-            // label1
+            // parentTableLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightCyan;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(805, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 40);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tabelul Ghizi";
+            this.parentTableLbl.AutoSize = true;
+            this.parentTableLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.parentTableLbl.Font = new System.Drawing.Font("MV Boli", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parentTableLbl.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.parentTableLbl.Location = new System.Drawing.Point(805, 5);
+            this.parentTableLbl.Name = "parentTableLbl";
+            this.parentTableLbl.Size = new System.Drawing.Size(211, 40);
+            this.parentTableLbl.TabIndex = 2;
+            this.parentTableLbl.Text = "Tabelul Ghizi";
             // 
-            // label2
+            // childTableLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightCyan;
-            this.label2.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(641, 475);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 40);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tabelul Fosile Dinozauri";
+            this.childTableLbl.AutoSize = true;
+            this.childTableLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.childTableLbl.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.childTableLbl.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.childTableLbl.Location = new System.Drawing.Point(641, 475);
+            this.childTableLbl.Name = "childTableLbl";
+            this.childTableLbl.Size = new System.Drawing.Size(375, 40);
+            this.childTableLbl.TabIndex = 3;
+            this.childTableLbl.Text = "Tabelul Fosile Dinozauri";
             // 
-            // label3
+            // meniuPrincipalLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightCyan;
-            this.label3.Font = new System.Drawing.Font("MV Boli", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1132, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 40);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Meniu Principal";
+            this.meniuPrincipalLbl.AutoSize = true;
+            this.meniuPrincipalLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.meniuPrincipalLbl.Font = new System.Drawing.Font("MV Boli", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meniuPrincipalLbl.Location = new System.Drawing.Point(1132, 5);
+            this.meniuPrincipalLbl.Name = "meniuPrincipalLbl";
+            this.meniuPrincipalLbl.Size = new System.Drawing.Size(251, 40);
+            this.meniuPrincipalLbl.TabIndex = 4;
+            this.meniuPrincipalLbl.Text = "Meniu Principal";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.resetFieldsLbl);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.numericUpDown4);
-            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.nrTotalFosileLbl);
             this.panel1.Controls.Add(this.numericUpDown3);
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.nrTotalGhiziLbl);
             this.panel1.Controls.Add(this.refreshBtn);
             this.panel1.Controls.Add(this.deleteBtn);
             this.panel1.Controls.Add(this.updateBtn);
             this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.CNPGhidLbl);
             this.panel1.Controls.Add(this.numericUpDown2);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.nrOaseLbl);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.epocaLbl);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.familieDinozaurLbl);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.tipDinozaurLbl);
+            this.panel1.Controls.Add(this.fosilaDinozaurIDLbl);
             this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Location = new System.Drawing.Point(1059, 48);
             this.panel1.Name = "panel1";
@@ -165,17 +165,17 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label12
+            // resetFieldsLbl
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(267, 696);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 20);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Reset Fields";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.resetFieldsLbl.AutoSize = true;
+            this.resetFieldsLbl.BackColor = System.Drawing.Color.White;
+            this.resetFieldsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetFieldsLbl.Location = new System.Drawing.Point(267, 696);
+            this.resetFieldsLbl.Name = "resetFieldsLbl";
+            this.resetFieldsLbl.Size = new System.Drawing.Size(110, 20);
+            this.resetFieldsLbl.TabIndex = 21;
+            this.resetFieldsLbl.Text = "Reset Fields";
+            this.resetFieldsLbl.Click += new System.EventHandler(this.resetFieldsLbl_Click);
             // 
             // pictureBox1
             // 
@@ -199,17 +199,17 @@
             this.numericUpDown4.Size = new System.Drawing.Size(125, 26);
             this.numericUpDown4.TabIndex = 19;
             // 
-            // label11
+            // nrTotalFosileLbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.LightCyan;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.nrTotalFosileLbl.AutoSize = true;
+            this.nrTotalFosileLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.nrTotalFosileLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(221, 605);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(141, 25);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "NrTotalFosile";
+            this.nrTotalFosileLbl.Location = new System.Drawing.Point(221, 605);
+            this.nrTotalFosileLbl.Name = "nrTotalFosileLbl";
+            this.nrTotalFosileLbl.Size = new System.Drawing.Size(141, 25);
+            this.nrTotalFosileLbl.TabIndex = 18;
+            this.nrTotalFosileLbl.Text = "NrTotalFosile";
             // 
             // numericUpDown3
             // 
@@ -223,17 +223,17 @@
             this.numericUpDown3.Size = new System.Drawing.Size(125, 26);
             this.numericUpDown3.TabIndex = 17;
             // 
-            // label10
+            // nrTotalGhiziLbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.LightCyan;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.nrTotalGhiziLbl.AutoSize = true;
+            this.nrTotalGhiziLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.nrTotalGhiziLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 605);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 25);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "NrTotalGhizi";
+            this.nrTotalGhiziLbl.Location = new System.Drawing.Point(13, 605);
+            this.nrTotalGhiziLbl.Name = "nrTotalGhiziLbl";
+            this.nrTotalGhiziLbl.Size = new System.Drawing.Size(132, 25);
+            this.nrTotalGhiziLbl.TabIndex = 15;
+            this.nrTotalGhiziLbl.Text = "NrTotalGhizi";
             // 
             // refreshBtn
             // 
@@ -291,17 +291,17 @@
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 11;
             // 
-            // label9
+            // CNPGhidLbl
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.LightCyan;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.CNPGhidLbl.AutoSize = true;
+            this.CNPGhidLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.CNPGhidLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(221, 484);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 25);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "CNPGhid";
+            this.CNPGhidLbl.Location = new System.Drawing.Point(221, 484);
+            this.CNPGhidLbl.Name = "CNPGhidLbl";
+            this.CNPGhidLbl.Size = new System.Drawing.Size(102, 25);
+            this.CNPGhidLbl.TabIndex = 10;
+            this.CNPGhidLbl.Text = "CNPGhid";
             // 
             // numericUpDown2
             // 
@@ -325,17 +325,17 @@
             0,
             0});
             // 
-            // label8
+            // nrOaseLbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.LightCyan;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.nrOaseLbl.AutoSize = true;
+            this.nrOaseLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.nrOaseLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 484);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 25);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "NrOase";
+            this.nrOaseLbl.Location = new System.Drawing.Point(13, 484);
+            this.nrOaseLbl.Name = "nrOaseLbl";
+            this.nrOaseLbl.Size = new System.Drawing.Size(86, 25);
+            this.nrOaseLbl.TabIndex = 8;
+            this.nrOaseLbl.Text = "NrOase";
             // 
             // textBox3
             // 
@@ -346,17 +346,17 @@
             this.textBox3.TabIndex = 7;
             this.textBox3.Text = "Cretacicului superior";
             // 
-            // label7
+            // epocaLbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.LightCyan;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.epocaLbl.AutoSize = true;
+            this.epocaLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.epocaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 364);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 25);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Epocă";
+            this.epocaLbl.Location = new System.Drawing.Point(13, 364);
+            this.epocaLbl.Name = "epocaLbl";
+            this.epocaLbl.Size = new System.Drawing.Size(73, 25);
+            this.epocaLbl.TabIndex = 6;
+            this.epocaLbl.Text = "Epocă";
             // 
             // textBox2
             // 
@@ -367,18 +367,18 @@
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Tyrannosauridae";
             // 
-            // label6
+            // familieDinozaurLbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.LightCyan;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.familieDinozaurLbl.AutoSize = true;
+            this.familieDinozaurLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.familieDinozaurLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label6.Location = new System.Drawing.Point(13, 244);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "FamilieDinozaur";
+            this.familieDinozaurLbl.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.familieDinozaurLbl.Location = new System.Drawing.Point(13, 244);
+            this.familieDinozaurLbl.Name = "familieDinozaurLbl";
+            this.familieDinozaurLbl.Size = new System.Drawing.Size(167, 25);
+            this.familieDinozaurLbl.TabIndex = 4;
+            this.familieDinozaurLbl.Text = "FamilieDinozaur";
             // 
             // textBox1
             // 
@@ -389,29 +389,29 @@
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "Tyrannosaurus";
             // 
-            // label5
+            // tipDinozaurLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.LightCyan;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.tipDinozaurLbl.AutoSize = true;
+            this.tipDinozaurLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.tipDinozaurLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 25);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "TipDinozaur";
+            this.tipDinozaurLbl.Location = new System.Drawing.Point(13, 130);
+            this.tipDinozaurLbl.Name = "tipDinozaurLbl";
+            this.tipDinozaurLbl.Size = new System.Drawing.Size(129, 25);
+            this.tipDinozaurLbl.TabIndex = 2;
+            this.tipDinozaurLbl.Text = "TipDinozaur";
             // 
-            // label4
+            // fosilaDinozaurIDLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightCyan;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.fosilaDinozaurIDLbl.AutoSize = true;
+            this.fosilaDinozaurIDLbl.BackColor = System.Drawing.Color.LightCyan;
+            this.fosilaDinozaurIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "FosilăDinozaurID";
+            this.fosilaDinozaurIDLbl.Location = new System.Drawing.Point(13, 17);
+            this.fosilaDinozaurIDLbl.Name = "fosilaDinozaurIDLbl";
+            this.fosilaDinozaurIDLbl.Size = new System.Drawing.Size(177, 25);
+            this.fosilaDinozaurIDLbl.TabIndex = 1;
+            this.fosilaDinozaurIDLbl.Text = "FosilăDinozaurID";
             // 
             // numericUpDown1
             // 
@@ -464,9 +464,9 @@
             this.Controls.Add(this.nextBackgroundBtn);
             this.Controls.Add(this.prevBackgroundBtn);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.meniuPrincipalLbl);
+            this.Controls.Add(this.childTableLbl);
+            this.Controls.Add(this.parentTableLbl);
             this.Controls.Add(this.dataGridViewParent);
             this.Controls.Add(this.dataGridViewChild);
             this.ForeColor = System.Drawing.Color.DeepSkyBlue;
@@ -492,32 +492,32 @@
 
         private System.Windows.Forms.DataGridView dataGridViewChild;
         private System.Windows.Forms.DataGridView dataGridViewParent;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label parentTableLbl;
+        private System.Windows.Forms.Label childTableLbl;
+        private System.Windows.Forms.Label meniuPrincipalLbl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label fosilaDinozaurIDLbl;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label tipDinozaurLbl;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label epocaLbl;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label familieDinozaurLbl;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label CNPGhidLbl;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label nrOaseLbl;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button refreshBtn;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label nrTotalGhiziLbl;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label nrTotalFosileLbl;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label resetFieldsLbl;
         private System.Windows.Forms.Button prevBackgroundBtn;
         private System.Windows.Forms.Button nextBackgroundBtn;
     }
