@@ -328,7 +328,6 @@ namespace WindowsFormsApp1
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            // TODO
             DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa stergeti fosila de dinozaur cu id-ul #" + 0 + "?", "Delete Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
@@ -338,8 +337,18 @@ namespace WindowsFormsApp1
                     {
                         conn.Open();
 
-                        SqlCommand deleteCommand = new SqlCommand("DELETE FROM [MuzeuDB].[dbo].[FosileDinozauri] WHERE [FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
-                        deleteCommand.Parameters.AddWithValue("@fosila_dinozaur_id", 0);
+                        SqlCommand deleteCommand = new SqlCommand("DELETE FROM " + System.Configuration.ConfigurationManager.AppSettings["childTable"] + " WHERE " + System.Configuration.ConfigurationManager.AppSettings["deleteCondition"] + ";", conn);
+
+                        foreach (DataGridViewColumn column in dataGridViewChild.Columns)
+                        {
+                            string columnName = column.Name;
+                            string inputName = columnName + "Input";
+                            Control inputControl = mainPanel.Controls[inputName];
+
+                            deleteCommand.Parameters.AddWithValue("@value1", inputControl.Text);
+
+                            break;
+                        }
 
                         int deleteRowCount = deleteCommand.ExecuteNonQuery();
                         Console.WriteLine("Delete Row Count: {0}", deleteRowCount);
