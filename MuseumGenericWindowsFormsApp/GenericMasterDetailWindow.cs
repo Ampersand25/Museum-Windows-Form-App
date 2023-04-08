@@ -279,22 +279,33 @@ namespace WindowsFormsApp1
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            // TODO
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    SqlCommand updateCommand = new SqlCommand("UPDATE [MuzeuDB].[dbo].[FosileDinozauri] SET [TipDinozaur]=@tip_dinozaur, [FamilieDinozaur]=@familie_dinozaur, [Epoca]=@epoca, [NrOase]=@nr_oase, [CNPGhid]=@cnp_ghid WHERE " +
-                        "[FosilaDinozaurID]=@fosila_dinozaur_id;", conn);
-                    updateCommand.Parameters.AddWithValue("@tip_dinozaur"      , 0);
-                    updateCommand.Parameters.AddWithValue("@familie_dinozaur"  , "");
-                    updateCommand.Parameters.AddWithValue("@epoca"             , "");
-                    updateCommand.Parameters.AddWithValue("@nr_oase"           , "");
-                    updateCommand.Parameters.AddWithValue("@cnp_ghid"          , "");
-                    updateCommand.Parameters.AddWithValue("@fosila_dinozaur_id", 0);
-                    
+                    SqlCommand updateCommand = new SqlCommand("UPDATE " + System.Configuration.ConfigurationManager.AppSettings["childTable"] + " SET " + System.Configuration.ConfigurationManager.AppSettings["updateValues"] + " WHERE " + System.Configuration.ConfigurationManager.AppSettings["updateCondition"] + ";", conn);
+
+                    string valueName = "";
+                    int count = 1;
+                    foreach (DataGridViewColumn column in dataGridViewChild.Columns)
+                    {
+                        valueName = "@value" + count;
+                        string columnName = column.Name;
+                        if (columnName != System.Configuration.ConfigurationManager.AppSettings["foreignKeyName"])
+                        {
+                            string inputName = columnName + "Input";
+                            Control inputControl = mainPanel.Controls[inputName];
+
+                            updateCommand.Parameters.AddWithValue(valueName, inputControl.Text);
+
+                            count++;
+                        }
+                    }
+                    string selectedElementComboBox1 = comboBox1.SelectedItem.ToString();
+                    updateCommand.Parameters.AddWithValue(valueName, selectedElementComboBox1);
+
                     int updateRowCount = updateCommand.ExecuteNonQuery();
                     Console.WriteLine("Update Row Count: {0}", updateRowCount);
                     
