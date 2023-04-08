@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -229,23 +230,33 @@ namespace WindowsFormsApp1
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            // TODO
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    SqlCommand insertCommand = new SqlCommand("INSERT INTO [MuzeuDB].[dbo].[FosileDinozauri] " + 
-                        "([FosilaDinozaurID], [TipDinozaur], [FamilieDinozaur], [Epoca], [NrOase], [CNPGhid]) " +
-                        "VALUES (@fosila_dinozaur_id, @tip_dinozaur, @familie_dinozaur, @epoca, @nr_oase, @cnp_ghid);", conn);
-                    insertCommand.Parameters.AddWithValue("@fosila_dinozaur_id", 0);
-                    insertCommand.Parameters.AddWithValue("@tip_dinozaur"      , "");
-                    insertCommand.Parameters.AddWithValue("@familie_dinozaur"  , "");
-                    insertCommand.Parameters.AddWithValue("@epoca"             , "");
-                    insertCommand.Parameters.AddWithValue("@nr_oase"           , "");
-                    insertCommand.Parameters.AddWithValue("@cnp_ghid"          , 0);
-                    
+                    SqlCommand insertCommand = new SqlCommand("INSERT INTO " + System.Configuration.ConfigurationManager.AppSettings["childTable"] + "(" + System.Configuration.ConfigurationManager.AppSettings["insertColumns"] + ") VALUES (" + System.Configuration.ConfigurationManager.AppSettings["insertValues"] + ");", conn);
+
+                    string valueName = "";
+                    int count = 1;
+                    foreach (DataGridViewColumn column in dataGridViewChild.Columns)
+                    {
+                        valueName = "@value" + count;
+                        string columnName = column.Name;
+                        if (columnName != System.Configuration.ConfigurationManager.AppSettings["foreignKeyName"])
+                        {
+                            string inputName = columnName + "Input";
+                            Control inputControl = mainPanel.Controls[inputName];
+
+                            insertCommand.Parameters.AddWithValue(valueName, inputControl.Text);
+
+                            count++;
+                        }
+                    }
+                    string selectedElementComboBox1 = comboBox1.SelectedItem.ToString();
+                    insertCommand.Parameters.AddWithValue(valueName, selectedElementComboBox1);
+
                     int insertRowCount = insertCommand.ExecuteNonQuery();
                     Console.WriteLine("Insert Row Count: {0}", insertRowCount);
                     
