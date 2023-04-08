@@ -15,15 +15,6 @@ namespace WindowsFormsApp1
                                     Integrated Security=true;
                                     TrustServerCertificate=true;";
 
-        static bool isValidEmail(string email)
-        {
-            // Regular expression pattern to validate email addresses
-            string pattern = @"/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
-
-            // Use Regex.IsMatch method to check if the email address matches the pattern
-            return Regex.IsMatch(email, pattern);
-        }
-
         public Register()
         {
             InitializeComponent();
@@ -48,55 +39,77 @@ namespace WindowsFormsApp1
             }
         }
 
+        static bool isValidEmail(string email)
+        {
+            // Regular expression pattern to validate email addresses
+            string pattern = @"/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+
+            // Use Regex.IsMatch method to check if the email address matches the pattern
+            return Regex.IsMatch(email, pattern);
+        }
+
+        private string validateEmail(string emailStr)
+        {
+            if (emailStr.Length == 0)
+            {
+                return "Invalid email: email must be non empty!\n";
+            }
+            else if (isValidEmail(emailStr))
+            {
+                return "Invalid email: the given email address is not correct!\n";
+            }
+            return "";
+        }
+
+        private string validateUsername(string usernameStr)
+        {
+            if (usernameStr.Length == 0)
+            {
+                return "Invalid username: username must be non empty!\n";
+            }
+            else if (usernameStr.Length < 5)
+            {
+                return "Invalid username: username is too short (username must be at least 5 characters long)!\n";
+            }
+            return "";
+        }
+
+        private string validatePassword(string passwordStr)
+        {
+            if (passwordStr.Length == 0)
+            {
+                return "Invalid password: password must be non empty!\n";
+            }
+            else if (passwordStr.Length < 5)
+            {
+                return "Invalid password: password is too short (passwords must be at least 5 characters long)!\n";
+            }
+            else if (!passwordStr.Any(char.IsLower))
+            {
+                return "Invalid password: password must contains at least one lower letter!\n";
+            }
+            else if (!passwordStr.Any(char.IsUpper))
+            {
+                return "Invalid password: password must contains at least one upper letter!\n";
+            }
+            else if (!passwordStr.Any(char.IsDigit))
+            {
+                return "Invalid password: password must contains at least one digit!\n";
+            }
+            else if (!passwordStr.Equals(confirmPasswordTxt.Text))
+            {
+                return "Invalid password: confiramtion failed (the two password are different)!\n";
+            }
+            return "";
+        }
+
         private void validateUserData()
         {
             string errors = "";
 
-            string emailStr = emailTxt.Text;
-            if (emailStr.Length == 0)
-            {
-                errors += "Invalid email: email must be non empty!\n";
-            }
-            else if (isValidEmail(emailStr))
-            {
-                errors += "Invalid email: the given email address is not correct!\n";
-            }
-
-            string usernameStr = usernameTxt.Text;
-            if (usernameStr.Length == 0)
-            {
-                errors += "Invalid username: username must be non empty!\n";
-            }
-            else if (usernameStr.Length < 5)
-            {
-                errors += "Invalid username: username is too short (username must be at least 5 characters long)!\n";
-            }
-
-            string passwordStr = passwordTxt.Text;
-            if (passwordStr.Length == 0)
-            {
-                errors += "Invalid password: password must be non empty!\n";
-            }
-            else if (passwordStr.Length < 5)
-            {
-                errors += "Invalid password: password is too short (passwords must be at least 5 characters long)!\n";
-            }
-            else if (!passwordStr.Any(char.IsLower))
-            {
-                errors += "Invalid password: password must contains at least one lower letter!\n";
-            }
-            else if (!passwordStr.Any(char.IsUpper))
-            {
-                errors += "Invalid password: password must contains at least one upper letter!\n";
-            }
-            else if (!passwordStr.Any(char.IsDigit))
-            {
-                errors += "Invalid password: password must contains at least one digit!\n";
-            }
-            else if (!passwordStr.Equals(confirmPasswordTxt.Text))
-            {
-                errors += "Invalid password: confiramtion failed (the two password are different)!\n";
-            }
+            errors += validateEmail(emailTxt.Text);
+            errors += validateUsername(usernameTxt.Text);
+            errors += validatePassword(passwordTxt.Text);
 
             if (errors.Length != 0)
             {
