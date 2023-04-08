@@ -1,0 +1,23 @@
+<!-- FIRST RUNNING SCENARIO/CONFIGURATION -->
+<add key="parentTable" value="[MuzeuDB].[dbo].[Ghizi]" />
+<add key="childTable" value="[MuzeuDB].[dbo].[FosileDinozauri]" />
+<add key="parentTableName" value="Ghizi" />
+<add key="childTableName" value="FosileDinozauri" />
+<add key="foreignKeyName" value="CNPGhid" />
+<add key="foreignKeyRelation" value="fk_FosileDinozauri_CNPGhid" />
+
+<!-- SECOND RUNNING SCENARIO/CONFIGURATION -->
+<add key="parentTable" value="[MuzeuDB].[dbo].[Vitrine]" />
+<add key="childTable" value="[MuzeuDB].[dbo].[Vase]" />
+<add key="parentTableName" value="Vitrine" />
+<add key="childTableName" value="Vase" />
+<add key="foreignKeyName" value="VitrinaID" />
+<add key="foreignKeyRelation" value="fk_Vase_VitrinaID" />
+
+<!-- THIRD RUNNING SCENARIO/CONFIGURATION -->
+<add key="parentTable" value="[MuzeuDB].[dbo].[Paznici]" />
+<add key="childTable" value="[MuzeuDB].[dbo].[Bijuterii]" />
+<add key="parentTableName" value="Paznici" />
+<add key="childTableName" value="Bijuterii" />
+<add key="foreignKeyName" value="CNPPaznic" />
+<add key="foreignKeyRelation" value="fk_Bijuterii_CNPPaznic" />
