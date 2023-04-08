@@ -77,3 +77,5 @@ C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\ru\Microsoft.
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\MuseumGenericWindowsFormsApp.csproj.CopyComplete
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\WindowsFormsApp1.Register.resources
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\WindowsFormsApp1.Login.resources
