@@ -36,7 +36,7 @@
             this.clearFieldsBtn = new System.Windows.Forms.Button();
             this.logInBtn = new System.Windows.Forms.Button();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.logInLbl = new System.Windows.Forms.Label();
+            this.signInLbl = new System.Windows.Forms.Label();
             this.usernamePanel = new System.Windows.Forms.Panel();
             this.passwordPanel = new System.Windows.Forms.Panel();
             this.passwordPic = new System.Windows.Forms.PictureBox();
@@ -140,16 +140,16 @@
             this.showPasswordCheckBox.UseVisualStyleBackColor = true;
             this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
             // 
-            // logInLbl
+            // signInLbl
             // 
-            this.logInLbl.AutoSize = true;
-            this.logInLbl.Font = new System.Drawing.Font("Bauhaus 93", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logInLbl.ForeColor = System.Drawing.Color.Plum;
-            this.logInLbl.Location = new System.Drawing.Point(185, 167);
-            this.logInLbl.Name = "logInLbl";
-            this.logInLbl.Size = new System.Drawing.Size(178, 63);
-            this.logInLbl.TabIndex = 36;
-            this.logInLbl.Text = "Log In";
+            this.signInLbl.AutoSize = true;
+            this.signInLbl.Font = new System.Drawing.Font("Bauhaus 93", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signInLbl.ForeColor = System.Drawing.Color.Plum;
+            this.signInLbl.Location = new System.Drawing.Point(185, 167);
+            this.signInLbl.Name = "signInLbl";
+            this.signInLbl.Size = new System.Drawing.Size(198, 63);
+            this.signInLbl.TabIndex = 36;
+            this.signInLbl.Text = "Sign In";
             // 
             // usernamePanel
             // 
@@ -215,7 +215,7 @@
             this.Controls.Add(this.clearFieldsBtn);
             this.Controls.Add(this.logInBtn);
             this.Controls.Add(this.showPasswordCheckBox);
-            this.Controls.Add(this.logInLbl);
+            this.Controls.Add(this.signInLbl);
             this.ForeColor = System.Drawing.Color.Plum;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -239,7 +239,7 @@
         private System.Windows.Forms.Button clearFieldsBtn;
         private System.Windows.Forms.Button logInBtn;
         private System.Windows.Forms.CheckBox showPasswordCheckBox;
-        private System.Windows.Forms.Label logInLbl;
+        private System.Windows.Forms.Label signInLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox usernamePic;
         private System.Windows.Forms.Panel usernamePanel;

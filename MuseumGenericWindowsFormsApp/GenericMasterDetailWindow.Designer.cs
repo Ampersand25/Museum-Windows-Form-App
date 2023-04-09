@@ -132,6 +132,7 @@
             // changeBackgroundBtn
             // 
             this.changeBackgroundBtn.BackColor = System.Drawing.Color.LightPink;
+            this.changeBackgroundBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeBackgroundBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeBackgroundBtn.ForeColor = System.Drawing.Color.Fuchsia;
             this.changeBackgroundBtn.Location = new System.Drawing.Point(18, 771);
@@ -146,6 +147,7 @@
             // 
             this.resetFieldsLbl.AutoSize = true;
             this.resetFieldsLbl.BackColor = System.Drawing.Color.White;
+            this.resetFieldsLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetFieldsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetFieldsLbl.ForeColor = System.Drawing.Color.Fuchsia;
             this.resetFieldsLbl.Location = new System.Drawing.Point(14, 646);
@@ -158,6 +160,7 @@
             // refreshBtn
             // 
             this.refreshBtn.BackColor = System.Drawing.Color.LightPink;
+            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.ForeColor = System.Drawing.Color.Fuchsia;
             this.refreshBtn.Location = new System.Drawing.Point(205, 720);
@@ -171,6 +174,7 @@
             // deleteBtn
             // 
             this.deleteBtn.BackColor = System.Drawing.Color.LightPink;
+            this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.Fuchsia;
             this.deleteBtn.Location = new System.Drawing.Point(18, 720);
@@ -184,6 +188,7 @@
             // updateBtn
             // 
             this.updateBtn.BackColor = System.Drawing.Color.LightPink;
+            this.updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.Fuchsia;
             this.updateBtn.Location = new System.Drawing.Point(205, 669);
@@ -197,6 +202,7 @@
             // addBtn
             // 
             this.addBtn.BackColor = System.Drawing.Color.LightPink;
+            this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.Fuchsia;
             this.addBtn.Location = new System.Drawing.Point(18, 669);
