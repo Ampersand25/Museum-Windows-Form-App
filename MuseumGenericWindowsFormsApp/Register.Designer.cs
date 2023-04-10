@@ -50,7 +50,7 @@
             // 
             // emailTxt
             // 
-            this.emailTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.emailTxt.BackColor = System.Drawing.Color.White;
             this.emailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.emailTxt.Location = new System.Drawing.Point(71, 178);
             this.emailTxt.Name = "emailTxt";
@@ -151,7 +151,7 @@
             // 
             // usernameTxt
             // 
-            this.usernameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.usernameTxt.BackColor = System.Drawing.Color.White;
             this.usernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.usernameTxt.Location = new System.Drawing.Point(71, 281);
             this.usernameTxt.Name = "usernameTxt";
@@ -170,7 +170,7 @@
             // 
             // passwordTxt
             // 
-            this.passwordTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.passwordTxt.BackColor = System.Drawing.Color.White;
             this.passwordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.passwordTxt.Location = new System.Drawing.Point(71, 388);
             this.passwordTxt.Name = "passwordTxt";
@@ -189,7 +189,7 @@
             // 
             // confirmPasswordTxt
             // 
-            this.confirmPasswordTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.confirmPasswordTxt.BackColor = System.Drawing.Color.White;
             this.confirmPasswordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.confirmPasswordTxt.Location = new System.Drawing.Point(71, 497);
             this.confirmPasswordTxt.Name = "confirmPasswordTxt";
