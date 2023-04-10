@@ -7,17 +7,17 @@ GO
 
 
 /*
-DELETE FROM [dbo].[VizitatoriGhizi]
-DELETE FROM [dbo].[StanduriDinozauri]
-DELETE FROM [dbo].[FosileDinozauri]
-DELETE FROM [dbo].[Ghizi]
-DELETE FROM [dbo].[VizitatoriVase]
-DELETE FROM [dbo].[Vase]
-DELETE FROM [dbo].[Vitrine]
-DELETE FROM [dbo].[VizitatoriBijuterii]
-DELETE FROM [dbo].[Vizitatori]
-DELETE FROM [dbo].[Bijuterii]
-DELETE FROM [dbo].[Paznici]
+DELETE FROM [MuzeuDB].[dbo].[VizitatoriGhizi]
+DELETE FROM [MuzeuDB].[dbo].[StanduriDinozauri]
+DELETE FROM [MuzeuDB].[dbo].[FosileDinozauri]
+DELETE FROM [MuzeuDB].[dbo].[Ghizi]
+DELETE FROM [MuzeuDB].[dbo].[VizitatoriVase]
+DELETE FROM [MuzeuDB].[dbo].[Vase]
+DELETE FROM [MuzeuDB].[dbo].[Vitrine]
+DELETE FROM [MuzeuDB].[dbo].[VizitatoriBijuterii]
+DELETE FROM [MuzeuDB].[dbo].[Vizitatori]
+DELETE FROM [MuzeuDB].[dbo].[Bijuterii]
+DELETE FROM [MuzeuDB].[dbo].[Paznici]
 */
 
 
