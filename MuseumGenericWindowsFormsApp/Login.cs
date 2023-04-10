@@ -13,6 +13,9 @@ namespace WindowsFormsApp1
                                     Integrated Security=true;
                                     TrustServerCertificate=true;";
 
+        readonly private string usernamePlaceholder = "Enter username...";
+        readonly private string passwordPlaceholder = "Enter password...";
+
         public Login()
         {
             InitializeComponent();
@@ -23,7 +26,13 @@ namespace WindowsFormsApp1
             this.Text = "Authentication Page";
             this.Icon = new Icon("../../Images/MuseumLogo.ico");
 
-            passwordTxt.PasswordChar = '*';
+            // Set the placeholder text
+            usernameTxt.Text = usernamePlaceholder;
+            usernameTxt.ForeColor = System.Drawing.Color.Gray;
+
+            // Set the placeholder text
+            passwordTxt.Text = passwordPlaceholder;
+            passwordTxt.ForeColor = System.Drawing.Color.Gray;
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
@@ -36,6 +45,73 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void usernameTxt_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text when the TextBox is clicked
+            if (usernameTxt.Text.Equals(usernamePlaceholder))
+            {
+                usernameTxt.Text = "";
+                usernameTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
+        private void usernameTxt_Leave(object sender, EventArgs e)
+        {
+            // Restore the placeholder text if the TextBox is empty when it loses focus
+            if (string.IsNullOrWhiteSpace(usernameTxt.Text))
+            {
+                usernameTxt.Text = usernamePlaceholder;
+                usernameTxt.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
+        private void usernameTxt_TextChanged(object sender, EventArgs e)
+        {
+            // Hide the placeholder text when the user starts typing
+            if (usernameTxt.Text != usernamePlaceholder)
+            {
+                usernameTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
+        private void passwordTxt_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text when the TextBox is clicked
+            if (passwordTxt.Text.Equals(passwordPlaceholder))
+            {
+                passwordTxt.Text = "";
+                passwordTxt.ForeColor = System.Drawing.Color.Plum;
+                if (showPasswordCheckBox.Checked)
+                {
+                    passwordTxt.PasswordChar = '\0';
+                }
+                else
+                {
+                    passwordTxt.PasswordChar = '*';
+                }
+            }
+        }
+
+        private void passwordTxt_Leave(object sender, EventArgs e)
+        {
+            // Restore the placeholder text if the TextBox is empty when it loses focus
+            if (string.IsNullOrWhiteSpace(passwordTxt.Text))
+            {
+                passwordTxt.Text = passwordPlaceholder;
+                passwordTxt.ForeColor = System.Drawing.Color.Gray;
+                passwordTxt.PasswordChar = '\0';
+            }
+        }
+
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
+            // Hide the placeholder text when the user starts typing
+            if (passwordTxt.Text != passwordPlaceholder)
+            {
+                passwordTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (showPasswordCheckBox.Checked)
@@ -44,12 +120,27 @@ namespace WindowsFormsApp1
             }
             else
             {
-                passwordTxt.PasswordChar = '*';
+                if (passwordTxt.Text != passwordPlaceholder)
+                {
+                    passwordTxt.PasswordChar = '*';
+                }
             }
         }
 
         private void logInBtn_Click(object sender, EventArgs e)
         {
+            if (usernameTxt.Text.Length == 0 || usernameTxt.Text.Equals(usernamePlaceholder))
+            {
+                MessageBox.Show("[X]Nume de utilizator invalid!\n", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (passwordTxt.Text.Length == 0 || passwordTxt.Text.Equals(passwordPlaceholder))
+            {
+                MessageBox.Show("[X]Parola invalida!\n", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -90,8 +181,18 @@ namespace WindowsFormsApp1
 
         private void clearFieldsBtn_Click(object sender, EventArgs e)
         {
-            usernameTxt.Clear();
-            passwordTxt.Clear();
+            if (!usernameTxt.Equals(usernamePlaceholder))
+            {
+                usernameTxt.Text = usernamePlaceholder;
+                usernameTxt.ForeColor = System.Drawing.Color.Gray;
+            }
+
+            if (!passwordTxt.Equals(passwordPlaceholder))
+            {
+                passwordTxt.Text = passwordPlaceholder;
+                passwordTxt.ForeColor = System.Drawing.Color.Gray;
+                passwordTxt.PasswordChar = '\0';
+            }
         }
 
         private void createAccountLbl_Click(object sender, EventArgs e)

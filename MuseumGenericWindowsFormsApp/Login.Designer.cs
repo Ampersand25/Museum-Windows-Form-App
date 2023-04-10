@@ -57,6 +57,9 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(339, 50);
             this.passwordTxt.TabIndex = 47;
+            this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
+            this.passwordTxt.Enter += new System.EventHandler(this.passwordTxt_Enter);
+            this.passwordTxt.Leave += new System.EventHandler(this.passwordTxt_Leave);
             // 
             // usernameTxt
             // 
@@ -68,6 +71,9 @@
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(339, 50);
             this.usernameTxt.TabIndex = 45;
+            this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);
+            this.usernameTxt.Enter += new System.EventHandler(this.usernameTxt_Enter);
+            this.usernameTxt.Leave += new System.EventHandler(this.usernameTxt_Leave);
             // 
             // createAccountLbl
             // 
