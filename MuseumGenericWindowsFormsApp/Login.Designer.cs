@@ -151,7 +151,7 @@
             this.signInLbl.AutoSize = true;
             this.signInLbl.Font = new System.Drawing.Font("Bauhaus 93", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInLbl.ForeColor = System.Drawing.Color.Plum;
-            this.signInLbl.Location = new System.Drawing.Point(185, 167);
+            this.signInLbl.Location = new System.Drawing.Point(178, 167);
             this.signInLbl.Name = "signInLbl";
             this.signInLbl.Size = new System.Drawing.Size(198, 63);
             this.signInLbl.TabIndex = 36;

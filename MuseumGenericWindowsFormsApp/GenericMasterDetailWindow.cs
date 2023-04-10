@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         readonly string appTitle = System.Configuration.ConfigurationManager.AppSettings["applicationTitle"];
         readonly string imageFolderPath = System.Configuration.ConfigurationManager.AppSettings["imageFolderPath"];
         readonly string iconName = System.Configuration.ConfigurationManager.AppSettings["iconName"];
-        readonly string[] backgrounds = { System.Configuration.ConfigurationManager.AppSettings["firstBackground"], System.Configuration.ConfigurationManager.AppSettings["secondBackground"], System.Configuration.ConfigurationManager.AppSettings["thirdBackground"] };
+        readonly string[] backgrounds = { System.Configuration.ConfigurationManager.AppSettings["firstBackground"], System.Configuration.ConfigurationManager.AppSettings["secondBackground"], System.Configuration.ConfigurationManager.AppSettings["thirdBackground"], System.Configuration.ConfigurationManager.AppSettings["fourthBackground"], System.Configuration.ConfigurationManager.AppSettings["fifthBackground"] };
         int currentBackgroundIndex = 0;
 
         readonly int xInitialPosition = 15;
