@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
             // Clear the placeholder text when the TextBox is clicked
             if (usernameTxt.Text.Equals(usernamePlaceholder))
             {
-                usernameTxt.Text = "";
+                usernameTxt.Clear();
                 usernameTxt.ForeColor = System.Drawing.Color.Plum;
             }
         }
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
         private void usernameTxt_TextChanged(object sender, EventArgs e)
         {
             // Hide the placeholder text when the user starts typing
-            if (usernameTxt.Text != usernamePlaceholder)
+            if (!usernameTxt.Text.Equals(usernamePlaceholder))
             {
                 usernameTxt.ForeColor = System.Drawing.Color.Plum;
             }
@@ -79,16 +79,9 @@ namespace WindowsFormsApp1
             // Clear the placeholder text when the TextBox is clicked
             if (passwordTxt.Text.Equals(passwordPlaceholder))
             {
-                passwordTxt.Text = "";
+                passwordTxt.Clear();
                 passwordTxt.ForeColor = System.Drawing.Color.Plum;
-                if (showPasswordCheckBox.Checked)
-                {
-                    passwordTxt.PasswordChar = '\0';
-                }
-                else
-                {
-                    passwordTxt.PasswordChar = '*';
-                }
+                passwordTxt.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
             }
         }
 
@@ -106,7 +99,7 @@ namespace WindowsFormsApp1
         private void passwordTxt_TextChanged(object sender, EventArgs e)
         {
             // Hide the placeholder text when the user starts typing
-            if (passwordTxt.Text != passwordPlaceholder)
+            if (!passwordTxt.Text.Equals(passwordPlaceholder))
             {
                 passwordTxt.ForeColor = System.Drawing.Color.Plum;
             }
