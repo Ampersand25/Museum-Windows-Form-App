@@ -82,11 +82,11 @@
             // 
             this.parentTableLbl.AutoSize = true;
             this.parentTableLbl.BackColor = System.Drawing.Color.Chartreuse;
-            this.parentTableLbl.Font = new System.Drawing.Font("Bauhaus 93", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parentTableLbl.Font = new System.Drawing.Font("Harlow Solid Italic", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parentTableLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.parentTableLbl.Location = new System.Drawing.Point(13, 10);
+            this.parentTableLbl.Location = new System.Drawing.Point(12, 7);
             this.parentTableLbl.Name = "parentTableLbl";
-            this.parentTableLbl.Size = new System.Drawing.Size(232, 34);
+            this.parentTableLbl.Size = new System.Drawing.Size(226, 38);
             this.parentTableLbl.TabIndex = 2;
             this.parentTableLbl.Text = "Tabelul Părinte";
             // 
@@ -94,11 +94,11 @@
             // 
             this.childTableLbl.AutoSize = true;
             this.childTableLbl.BackColor = System.Drawing.Color.Chartreuse;
-            this.childTableLbl.Font = new System.Drawing.Font("Bauhaus 93", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.childTableLbl.Font = new System.Drawing.Font("Harlow Solid Italic", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.childTableLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.childTableLbl.Location = new System.Drawing.Point(13, 481);
+            this.childTableLbl.Location = new System.Drawing.Point(12, 477);
             this.childTableLbl.Name = "childTableLbl";
-            this.childTableLbl.Size = new System.Drawing.Size(212, 34);
+            this.childTableLbl.Size = new System.Drawing.Size(187, 38);
             this.childTableLbl.TabIndex = 3;
             this.childTableLbl.Text = "Tabelul Copil";
             // 
@@ -106,11 +106,11 @@
             // 
             this.meniulPrincipalLbl.AutoSize = true;
             this.meniulPrincipalLbl.BackColor = System.Drawing.Color.Chartreuse;
-            this.meniulPrincipalLbl.Font = new System.Drawing.Font("Bauhaus 93", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meniulPrincipalLbl.Font = new System.Drawing.Font("Harlow Solid Italic", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meniulPrincipalLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.meniulPrincipalLbl.Location = new System.Drawing.Point(1130, 11);
+            this.meniulPrincipalLbl.Location = new System.Drawing.Point(1136, 7);
             this.meniulPrincipalLbl.Name = "meniulPrincipalLbl";
-            this.meniulPrincipalLbl.Size = new System.Drawing.Size(252, 34);
+            this.meniulPrincipalLbl.Size = new System.Drawing.Size(243, 38);
             this.meniulPrincipalLbl.TabIndex = 4;
             this.meniulPrincipalLbl.Text = "Meniul Principal";
             // 
@@ -132,7 +132,7 @@
             // changeBackgroundBtn
             // 
             this.changeBackgroundBtn.BackColor = System.Drawing.Color.Chartreuse;
-            this.changeBackgroundBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeBackgroundBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeBackgroundBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.changeBackgroundBtn.Location = new System.Drawing.Point(18, 771);
             this.changeBackgroundBtn.Name = "changeBackgroundBtn";
@@ -146,11 +146,11 @@
             // 
             this.resetFieldsLbl.AutoSize = true;
             this.resetFieldsLbl.BackColor = System.Drawing.Color.White;
-            this.resetFieldsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetFieldsLbl.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetFieldsLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.resetFieldsLbl.Location = new System.Drawing.Point(14, 646);
+            this.resetFieldsLbl.Location = new System.Drawing.Point(14, 643);
             this.resetFieldsLbl.Name = "resetFieldsLbl";
-            this.resetFieldsLbl.Size = new System.Drawing.Size(104, 20);
+            this.resetFieldsLbl.Size = new System.Drawing.Size(111, 23);
             this.resetFieldsLbl.TabIndex = 21;
             this.resetFieldsLbl.Text = "Clear Fields";
             this.resetFieldsLbl.Click += new System.EventHandler(this.resetFieldsLbl_Click);
@@ -158,7 +158,7 @@
             // refreshBtn
             // 
             this.refreshBtn.BackColor = System.Drawing.Color.Chartreuse;
-            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.refreshBtn.Location = new System.Drawing.Point(205, 720);
             this.refreshBtn.Name = "refreshBtn";
@@ -171,7 +171,7 @@
             // deleteBtn
             // 
             this.deleteBtn.BackColor = System.Drawing.Color.Chartreuse;
-            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.deleteBtn.Location = new System.Drawing.Point(18, 720);
             this.deleteBtn.Name = "deleteBtn";
@@ -184,7 +184,7 @@
             // updateBtn
             // 
             this.updateBtn.BackColor = System.Drawing.Color.Chartreuse;
-            this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.updateBtn.Location = new System.Drawing.Point(205, 669);
             this.updateBtn.Name = "updateBtn";
@@ -197,7 +197,7 @@
             // addBtn
             // 
             this.addBtn.BackColor = System.Drawing.Color.Chartreuse;
-            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.addBtn.Location = new System.Drawing.Point(18, 669);
             this.addBtn.Name = "addBtn";

@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
                 label.ForeColor = Color.DarkOliveGreen;
                 label.BackColor = Color.Chartreuse;
                 label.Width = 230;
-                label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                label.Font = new Font("Times New Roman", 12, FontStyle.Bold);
                 yPosition += yStep;
 
                 mainPanel.Controls.Add(label);
