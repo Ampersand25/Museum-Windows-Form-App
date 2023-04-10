@@ -127,8 +127,8 @@ namespace WindowsFormsApp1
                 label.Name = columnName + "Lbl";
                 label.Location = new Point(xInitialPosition, yPosition);
                 label.Text = columnName;
-                label.ForeColor = Color.Fuchsia;
-                label.BackColor = Color.LightPink;
+                label.ForeColor = Color.DarkOliveGreen;
+                label.BackColor = Color.Chartreuse;
                 label.Width = 230;
                 label.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
                 yPosition += yStep;
@@ -195,12 +195,12 @@ namespace WindowsFormsApp1
             if (e.RowIndex % 2 == 0)
             {
                 // Set the background color of the even cells to Thistle
-                dataGridViewParent.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Thistle;
+                dataGridViewParent.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.SpringGreen;
             }
             else
             {
                 // Set the background color of the odd cells to LightPink
-                dataGridViewParent.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.LightPink;
+                dataGridViewParent.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.PaleGreen;
             }
         }
 
@@ -210,12 +210,12 @@ namespace WindowsFormsApp1
             if (e.RowIndex % 2 == 0)
             {
                 // Set the background color of the even cells to Thistle
-                dataGridViewChild.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.LightPink;
+                dataGridViewChild.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.PaleGreen;
             }
             else
             {
                 // Set the background color of the odd cells to LightPink
-                dataGridViewChild.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Thistle;
+                dataGridViewChild.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.SpringGreen;
             }
         }
 

@@ -81,9 +81,9 @@
             // parentTableLbl
             // 
             this.parentTableLbl.AutoSize = true;
-            this.parentTableLbl.BackColor = System.Drawing.Color.LightPink;
+            this.parentTableLbl.BackColor = System.Drawing.Color.Chartreuse;
             this.parentTableLbl.Font = new System.Drawing.Font("Bauhaus 93", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parentTableLbl.ForeColor = System.Drawing.Color.Fuchsia;
+            this.parentTableLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.parentTableLbl.Location = new System.Drawing.Point(13, 10);
             this.parentTableLbl.Name = "parentTableLbl";
             this.parentTableLbl.Size = new System.Drawing.Size(232, 34);
@@ -93,9 +93,9 @@
             // childTableLbl
             // 
             this.childTableLbl.AutoSize = true;
-            this.childTableLbl.BackColor = System.Drawing.Color.LightPink;
+            this.childTableLbl.BackColor = System.Drawing.Color.Chartreuse;
             this.childTableLbl.Font = new System.Drawing.Font("Bauhaus 93", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.childTableLbl.ForeColor = System.Drawing.Color.Fuchsia;
+            this.childTableLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.childTableLbl.Location = new System.Drawing.Point(13, 481);
             this.childTableLbl.Name = "childTableLbl";
             this.childTableLbl.Size = new System.Drawing.Size(212, 34);
@@ -105,9 +105,9 @@
             // meniulPrincipalLbl
             // 
             this.meniulPrincipalLbl.AutoSize = true;
-            this.meniulPrincipalLbl.BackColor = System.Drawing.Color.LightPink;
+            this.meniulPrincipalLbl.BackColor = System.Drawing.Color.Chartreuse;
             this.meniulPrincipalLbl.Font = new System.Drawing.Font("Bauhaus 93", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meniulPrincipalLbl.ForeColor = System.Drawing.Color.Fuchsia;
+            this.meniulPrincipalLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.meniulPrincipalLbl.Location = new System.Drawing.Point(1130, 11);
             this.meniulPrincipalLbl.Name = "meniulPrincipalLbl";
             this.meniulPrincipalLbl.Size = new System.Drawing.Size(252, 34);
@@ -131,9 +131,9 @@
             // 
             // changeBackgroundBtn
             // 
-            this.changeBackgroundBtn.BackColor = System.Drawing.Color.LightPink;
+            this.changeBackgroundBtn.BackColor = System.Drawing.Color.Chartreuse;
             this.changeBackgroundBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeBackgroundBtn.ForeColor = System.Drawing.Color.Fuchsia;
+            this.changeBackgroundBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.changeBackgroundBtn.Location = new System.Drawing.Point(18, 771);
             this.changeBackgroundBtn.Name = "changeBackgroundBtn";
             this.changeBackgroundBtn.Size = new System.Drawing.Size(359, 45);
@@ -147,7 +147,7 @@
             this.resetFieldsLbl.AutoSize = true;
             this.resetFieldsLbl.BackColor = System.Drawing.Color.White;
             this.resetFieldsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetFieldsLbl.ForeColor = System.Drawing.Color.Fuchsia;
+            this.resetFieldsLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.resetFieldsLbl.Location = new System.Drawing.Point(14, 646);
             this.resetFieldsLbl.Name = "resetFieldsLbl";
             this.resetFieldsLbl.Size = new System.Drawing.Size(104, 20);
@@ -157,9 +157,9 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.BackColor = System.Drawing.Color.LightPink;
+            this.refreshBtn.BackColor = System.Drawing.Color.Chartreuse;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.ForeColor = System.Drawing.Color.Fuchsia;
+            this.refreshBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.refreshBtn.Location = new System.Drawing.Point(205, 720);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(172, 45);
@@ -170,9 +170,9 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.BackColor = System.Drawing.Color.LightPink;
+            this.deleteBtn.BackColor = System.Drawing.Color.Chartreuse;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.ForeColor = System.Drawing.Color.Fuchsia;
+            this.deleteBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.deleteBtn.Location = new System.Drawing.Point(18, 720);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(172, 45);
@@ -183,9 +183,9 @@
             // 
             // updateBtn
             // 
-            this.updateBtn.BackColor = System.Drawing.Color.LightPink;
+            this.updateBtn.BackColor = System.Drawing.Color.Chartreuse;
             this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.ForeColor = System.Drawing.Color.Fuchsia;
+            this.updateBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.updateBtn.Location = new System.Drawing.Point(205, 669);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(172, 45);
@@ -196,9 +196,9 @@
             // 
             // addBtn
             // 
-            this.addBtn.BackColor = System.Drawing.Color.LightPink;
+            this.addBtn.BackColor = System.Drawing.Color.Chartreuse;
             this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.ForeColor = System.Drawing.Color.Fuchsia;
+            this.addBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.addBtn.Location = new System.Drawing.Point(18, 669);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(172, 45);
@@ -211,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
+            this.BackColor = System.Drawing.Color.YellowGreen;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.FormBackgroundImage1;
             this.ClientSize = new System.Drawing.Size(1458, 894);
             this.Controls.Add(this.mainPanel);
@@ -220,7 +220,7 @@
             this.Controls.Add(this.parentTableLbl);
             this.Controls.Add(this.dataGridViewParent);
             this.Controls.Add(this.dataGridViewChild);
-            this.ForeColor = System.Drawing.Color.Fuchsia;
+            this.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.Name = "GenericMasterDetailWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasterDetailWindow";
