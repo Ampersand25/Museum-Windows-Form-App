@@ -56,6 +56,9 @@
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(395, 35);
             this.emailTxt.TabIndex = 27;
+            this.emailTxt.TextChanged += new System.EventHandler(this.emailTxt_TextChanged);
+            this.emailTxt.Enter += new System.EventHandler(this.emailTxt_Enter);
+            this.emailTxt.Leave += new System.EventHandler(this.emailTxt_Leave);
             // 
             // emailLbl
             // 
@@ -157,6 +160,9 @@
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(395, 35);
             this.usernameTxt.TabIndex = 29;
+            this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);
+            this.usernameTxt.Enter += new System.EventHandler(this.usernameTxt_Enter);
+            this.usernameTxt.Leave += new System.EventHandler(this.usernameTxt_Leave);
             // 
             // usernameLbl
             // 
@@ -176,6 +182,9 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(395, 35);
             this.passwordTxt.TabIndex = 31;
+            this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
+            this.passwordTxt.Enter += new System.EventHandler(this.passwordTxt_Enter);
+            this.passwordTxt.Leave += new System.EventHandler(this.passwordTxt_Leave);
             // 
             // passwordLbl
             // 
@@ -195,6 +204,9 @@
             this.confirmPasswordTxt.Name = "confirmPasswordTxt";
             this.confirmPasswordTxt.Size = new System.Drawing.Size(395, 35);
             this.confirmPasswordTxt.TabIndex = 33;
+            this.confirmPasswordTxt.TextChanged += new System.EventHandler(this.confirmPasswordTxt_TextChanged);
+            this.confirmPasswordTxt.Enter += new System.EventHandler(this.confirmPasswordTxt_Enter);
+            this.confirmPasswordTxt.Leave += new System.EventHandler(this.confirmPasswordTxt_Leave);
             // 
             // confirmPasswordLbl
             // 

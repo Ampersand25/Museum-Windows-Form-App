@@ -15,6 +15,11 @@ namespace WindowsFormsApp1
                                     Integrated Security=true;
                                     TrustServerCertificate=true;";
 
+        readonly private string emailPlaceholder = "Enter email...";
+        readonly private string usernamePlaceholder = "Enter username...";
+        readonly private string passwordPlaceholder = "Enter password...";
+        readonly private string confirmPasswordPlaceholder = "Reenter password...";
+
         public Register()
         {
             InitializeComponent();
@@ -25,8 +30,21 @@ namespace WindowsFormsApp1
             this.Text = "Registration Page";
             this.Icon = new Icon("../../Images/MuseumLogo.ico");
 
-            passwordTxt.PasswordChar = '*';
-            confirmPasswordTxt.PasswordChar = '*';
+            // Set the placeholder text
+            emailTxt.Text = emailPlaceholder;
+            emailTxt.ForeColor = System.Drawing.Color.Gray;
+
+            // Set the placeholder text
+            usernameTxt.Text = usernamePlaceholder;
+            usernameTxt.ForeColor = System.Drawing.Color.Gray;
+
+            // Set the placeholder text
+            passwordTxt.Text = passwordPlaceholder;
+            passwordTxt.ForeColor = System.Drawing.Color.Gray;
+
+            // Set the placeholder text
+            confirmPasswordTxt.Text = confirmPasswordPlaceholder;
+            confirmPasswordTxt.ForeColor = System.Drawing.Color.Gray;
         }
 
         private void Register_FormClosing(object sender, FormClosingEventArgs e)
@@ -117,6 +135,126 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void emailTxt_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text when the TextBox is clicked
+            if (emailTxt.Text.Equals(emailPlaceholder))
+            {
+                emailTxt.Clear();
+                emailTxt.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void emailTxt_Leave(object sender, EventArgs e)
+        {
+            // Restore the placeholder text if the TextBox is empty when it loses focus
+            if (string.IsNullOrWhiteSpace(emailTxt.Text))
+            {
+                emailTxt.Text = emailPlaceholder;
+                emailTxt.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
+        private void emailTxt_TextChanged(object sender, EventArgs e)
+        {
+            // Hide the placeholder text when the user starts typing
+            if (!emailTxt.Text.Equals(emailPlaceholder))
+            {
+                emailTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
+        private void usernameTxt_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text when the TextBox is clicked
+            if (usernameTxt.Text.Equals(usernamePlaceholder))
+            {
+                usernameTxt.Clear();
+                usernameTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
+        private void usernameTxt_Leave(object sender, EventArgs e)
+        {
+            // Restore the placeholder text if the TextBox is empty when it loses focus
+            if (string.IsNullOrWhiteSpace(usernameTxt.Text))
+            {
+                usernameTxt.Text = usernamePlaceholder;
+                usernameTxt.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
+        private void usernameTxt_TextChanged(object sender, EventArgs e)
+        {
+            // Hide the placeholder text when the user starts typing
+            if (!usernameTxt.Text.Equals(usernamePlaceholder))
+            {
+                usernameTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
+        private void passwordTxt_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text when the TextBox is clicked
+            if (passwordTxt.Text.Equals(passwordPlaceholder))
+            {
+                passwordTxt.Clear();
+                passwordTxt.ForeColor = System.Drawing.Color.Plum;
+                passwordTxt.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+            }
+        }
+
+        private void passwordTxt_Leave(object sender, EventArgs e)
+        {
+            // Restore the placeholder text if the TextBox is empty when it loses focus
+            if (string.IsNullOrWhiteSpace(passwordTxt.Text))
+            {
+                passwordTxt.Text = passwordPlaceholder;
+                passwordTxt.ForeColor = System.Drawing.Color.Gray;
+                passwordTxt.PasswordChar = '\0';
+            }
+        }
+
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
+            // Hide the placeholder text when the user starts typing
+            if (!passwordTxt.Text.Equals(passwordPlaceholder))
+            {
+                passwordTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
+        private void confirmPasswordTxt_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text when the TextBox is clicked
+            if (confirmPasswordTxt.Text.Equals(confirmPasswordPlaceholder))
+            {
+                confirmPasswordTxt.Clear();
+                confirmPasswordTxt.ForeColor = System.Drawing.Color.Plum;
+                confirmPasswordTxt.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+            }
+        }
+
+        private void confirmPasswordTxt_Leave(object sender, EventArgs e)
+        {
+            // Restore the placeholder text if the TextBox is empty when it loses focus
+            if (string.IsNullOrWhiteSpace(confirmPasswordTxt.Text))
+            {
+                confirmPasswordTxt.Text = confirmPasswordPlaceholder;
+                confirmPasswordTxt.ForeColor = System.Drawing.Color.Gray;
+                confirmPasswordTxt.PasswordChar = '\0';
+            }
+        }
+
+        private void confirmPasswordTxt_TextChanged(object sender, EventArgs e)
+        {
+            // Hide the placeholder text when the user starts typing
+            if (!confirmPasswordTxt.Text.Equals(confirmPasswordPlaceholder))
+            {
+                confirmPasswordTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+        }
+
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (showPasswordCheckBox.Checked)
@@ -126,8 +264,15 @@ namespace WindowsFormsApp1
             }
             else
             {
-                passwordTxt.PasswordChar = '*';
-                confirmPasswordTxt.PasswordChar = '*';
+                if (!passwordTxt.Text.Equals(passwordPlaceholder))
+                {
+                    passwordTxt.PasswordChar = '*';
+                }
+
+                if (!confirmPasswordTxt.Text.Equals(confirmPasswordPlaceholder))
+                {
+                    confirmPasswordTxt.PasswordChar = '*';
+                }
             }
         }
 
@@ -179,10 +324,31 @@ namespace WindowsFormsApp1
 
         private void clearFieldsBtn_Click(object sender, EventArgs e)
         {
-            emailTxt.Clear();
-            usernameTxt.Clear();
-            passwordTxt.Clear();
-            confirmPasswordTxt.Clear();
+            if (!emailTxt.Equals(emailPlaceholder))
+            {
+                emailTxt.Text = emailPlaceholder;
+                emailTxt.ForeColor = System.Drawing.Color.Gray;
+            }
+
+            if (!usernameTxt.Equals(usernamePlaceholder))
+            {
+                usernameTxt.Text = usernamePlaceholder;
+                usernameTxt.ForeColor = System.Drawing.Color.Gray;
+            }
+
+            if (!passwordTxt.Equals(passwordPlaceholder))
+            {
+                passwordTxt.Text = passwordPlaceholder;
+                passwordTxt.ForeColor = System.Drawing.Color.Gray;
+                passwordTxt.PasswordChar = '\0';
+            }
+
+            if (!confirmPasswordTxt.Equals(confirmPasswordPlaceholder))
+            {
+                confirmPasswordTxt.Text = confirmPasswordPlaceholder;
+                confirmPasswordTxt.ForeColor = System.Drawing.Color.Gray;
+                confirmPasswordTxt.PasswordChar = '\0';
+            }
         }
 
         private void backToLoginLbl_Click(object sender, EventArgs e)
