@@ -169,6 +169,7 @@
             // 
             this.resetFieldsLbl.AutoSize = true;
             this.resetFieldsLbl.BackColor = System.Drawing.Color.White;
+            this.resetFieldsLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetFieldsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetFieldsLbl.Location = new System.Drawing.Point(267, 696);
             this.resetFieldsLbl.Name = "resetFieldsLbl";
@@ -189,6 +190,8 @@
             // 
             // nrTotalFosileNumericUpDown
             // 
+            this.nrTotalFosileNumericUpDown.Cursor = System.Windows.Forms.Cursors.No;
+            this.nrTotalFosileNumericUpDown.Enabled = false;
             this.nrTotalFosileNumericUpDown.Location = new System.Drawing.Point(226, 649);
             this.nrTotalFosileNumericUpDown.Maximum = new decimal(new int[] {
             2147483647,
@@ -196,6 +199,7 @@
             0,
             0});
             this.nrTotalFosileNumericUpDown.Name = "nrTotalFosileNumericUpDown";
+            this.nrTotalFosileNumericUpDown.ReadOnly = true;
             this.nrTotalFosileNumericUpDown.Size = new System.Drawing.Size(125, 26);
             this.nrTotalFosileNumericUpDown.TabIndex = 19;
             // 
@@ -213,6 +217,8 @@
             // 
             // nrTotalGhiziNumericUpDown
             // 
+            this.nrTotalGhiziNumericUpDown.Cursor = System.Windows.Forms.Cursors.No;
+            this.nrTotalGhiziNumericUpDown.Enabled = false;
             this.nrTotalGhiziNumericUpDown.Location = new System.Drawing.Point(18, 649);
             this.nrTotalGhiziNumericUpDown.Maximum = new decimal(new int[] {
             2147483647,
@@ -220,6 +226,7 @@
             0,
             0});
             this.nrTotalGhiziNumericUpDown.Name = "nrTotalGhiziNumericUpDown";
+            this.nrTotalGhiziNumericUpDown.ReadOnly = true;
             this.nrTotalGhiziNumericUpDown.Size = new System.Drawing.Size(125, 26);
             this.nrTotalGhiziNumericUpDown.TabIndex = 17;
             // 
@@ -238,6 +245,7 @@
             // refreshBtn
             // 
             this.refreshBtn.BackColor = System.Drawing.Color.LightCyan;
+            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.Location = new System.Drawing.Point(205, 770);
             this.refreshBtn.Name = "refreshBtn";
@@ -250,6 +258,7 @@
             // deleteBtn
             // 
             this.deleteBtn.BackColor = System.Drawing.Color.LightCyan;
+            this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.Location = new System.Drawing.Point(18, 770);
             this.deleteBtn.Name = "deleteBtn";
@@ -262,6 +271,7 @@
             // updateBtn
             // 
             this.updateBtn.BackColor = System.Drawing.Color.LightCyan;
+            this.updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.Location = new System.Drawing.Point(205, 719);
             this.updateBtn.Name = "updateBtn";
@@ -274,6 +284,7 @@
             // addBtn
             // 
             this.addBtn.BackColor = System.Drawing.Color.LightCyan;
+            this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.Location = new System.Drawing.Point(18, 719);
             this.addBtn.Name = "addBtn";
