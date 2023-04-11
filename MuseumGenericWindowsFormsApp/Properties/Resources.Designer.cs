@@ -113,9 +113,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MuseumEmoji {
+        internal static System.Drawing.Bitmap MuseumLogInPicture {
             get {
-                object obj = ResourceManager.GetObject("MuseumEmoji", resourceCulture);
+                object obj = ResourceManager.GetObject("MuseumLogInPicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MuseumLogInPicture {
+        internal static System.Drawing.Bitmap MuseumPicture {
             get {
-                object obj = ResourceManager.GetObject("MuseumLogInPicture", resourceCulture);
+                object obj = ResourceManager.GetObject("MuseumPicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap UserIcon {
+        internal static System.Drawing.Bitmap RegisterPicture {
             get {
-                object obj = ResourceManager.GetObject("UserIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("RegisterPicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WaveEmoji {
+        internal static System.Drawing.Bitmap UserIcon {
             get {
-                object obj = ResourceManager.GetObject("WaveEmoji", resourceCulture);
+                object obj = ResourceManager.GetObject("UserIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

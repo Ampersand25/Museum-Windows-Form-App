@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.createAccountLbl = new System.Windows.Forms.Label();
@@ -138,6 +137,7 @@
             this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordCheckBox.Font = new System.Drawing.Font("Bauhaus 93", 14F);
+            this.showPasswordCheckBox.ForeColor = System.Drawing.Color.Plum;
             this.showPasswordCheckBox.Location = new System.Drawing.Point(250, 494);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
             this.showPasswordCheckBox.Size = new System.Drawing.Size(222, 36);
@@ -151,7 +151,7 @@
             this.signInLbl.AutoSize = true;
             this.signInLbl.Font = new System.Drawing.Font("Bauhaus 93", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInLbl.ForeColor = System.Drawing.Color.Plum;
-            this.signInLbl.Location = new System.Drawing.Point(178, 167);
+            this.signInLbl.Location = new System.Drawing.Point(175, 167);
             this.signInLbl.Name = "signInLbl";
             this.signInLbl.Size = new System.Drawing.Size(198, 63);
             this.signInLbl.TabIndex = 36;
@@ -195,7 +195,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.MuseumLogInPicture;
             this.pictureBox1.Location = new System.Drawing.Point(77, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(395, 152);
