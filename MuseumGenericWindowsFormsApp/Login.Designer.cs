@@ -37,14 +37,15 @@
             this.signInLbl = new System.Windows.Forms.Label();
             this.usernamePanel = new System.Windows.Forms.Panel();
             this.passwordPanel = new System.Windows.Forms.Panel();
+            this.showPasswordLbl = new System.Windows.Forms.Label();
+            this.showPasswordBtn = new System.Windows.Forms.Button();
             this.passwordPic = new System.Windows.Forms.PictureBox();
             this.usernamePic = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.showPasswordBtn = new System.Windows.Forms.Button();
-            this.showPasswordLbl = new System.Windows.Forms.Label();
+            this.museumPic = new System.Windows.Forms.PictureBox();
+            this.infoBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.museumPic)).BeginInit();
             this.SuspendLayout();
             // 
             // passwordTxt
@@ -159,6 +160,33 @@
             this.passwordPanel.Size = new System.Drawing.Size(395, 5);
             this.passwordPanel.TabIndex = 52;
             // 
+            // showPasswordLbl
+            // 
+            this.showPasswordLbl.AutoSize = true;
+            this.showPasswordLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPasswordLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPasswordLbl.ForeColor = System.Drawing.Color.Plum;
+            this.showPasswordLbl.Location = new System.Drawing.Point(244, 503);
+            this.showPasswordLbl.Name = "showPasswordLbl";
+            this.showPasswordLbl.Size = new System.Drawing.Size(172, 28);
+            this.showPasswordLbl.TabIndex = 54;
+            this.showPasswordLbl.Text = "Show Password";
+            // 
+            // showPasswordBtn
+            // 
+            this.showPasswordBtn.BackColor = System.Drawing.Color.Transparent;
+            this.showPasswordBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ShowPasswordIcon;
+            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
+            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordBtn.Location = new System.Drawing.Point(422, 494);
+            this.showPasswordBtn.Name = "showPasswordBtn";
+            this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
+            this.showPasswordBtn.TabIndex = 53;
+            this.showPasswordBtn.UseVisualStyleBackColor = false;
+            this.showPasswordBtn.Click += new System.EventHandler(this.showPasswordBtn_Click);
+            // 
             // passwordPic
             // 
             this.passwordPic.Image = global::WindowsFormsApp1.Properties.Resources.PasswordIcon;
@@ -179,42 +207,30 @@
             this.usernamePic.TabIndex = 49;
             this.usernamePic.TabStop = false;
             // 
-            // pictureBox1
+            // museumPic
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.MuseumLogInPicture;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(395, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
+            this.museumPic.Image = global::WindowsFormsApp1.Properties.Resources.MuseumLogInPicture;
+            this.museumPic.Location = new System.Drawing.Point(77, 12);
+            this.museumPic.Name = "museumPic";
+            this.museumPic.Size = new System.Drawing.Size(395, 152);
+            this.museumPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.museumPic.TabIndex = 48;
+            this.museumPic.TabStop = false;
             // 
-            // showPasswordBtn
+            // infoBtn
             // 
-            this.showPasswordBtn.BackColor = System.Drawing.Color.Transparent;
-            this.showPasswordBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ShowPasswordIcon;
-            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.showPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
-            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordBtn.Location = new System.Drawing.Point(422, 494);
-            this.showPasswordBtn.Name = "showPasswordBtn";
-            this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
-            this.showPasswordBtn.TabIndex = 53;
-            this.showPasswordBtn.UseVisualStyleBackColor = false;
-            this.showPasswordBtn.Click += new System.EventHandler(this.showPasswordBtn_Click);
-            // 
-            // showPasswordLbl
-            // 
-            this.showPasswordLbl.AutoSize = true;
-            this.showPasswordLbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPasswordLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showPasswordLbl.ForeColor = System.Drawing.Color.Plum;
-            this.showPasswordLbl.Location = new System.Drawing.Point(244, 503);
-            this.showPasswordLbl.Name = "showPasswordLbl";
-            this.showPasswordLbl.Size = new System.Drawing.Size(172, 28);
-            this.showPasswordLbl.TabIndex = 54;
-            this.showPasswordLbl.Text = "Show Password";
+            this.infoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.infoBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.InfoIcon;
+            this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.infoBtn.FlatAppearance.BorderSize = 0;
+            this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.infoBtn.Location = new System.Drawing.Point(12, 12);
+            this.infoBtn.Name = "infoBtn";
+            this.infoBtn.Size = new System.Drawing.Size(50, 50);
+            this.infoBtn.TabIndex = 55;
+            this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // Login
             // 
@@ -223,13 +239,14 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(538, 914);
+            this.Controls.Add(this.infoBtn);
             this.Controls.Add(this.showPasswordLbl);
             this.Controls.Add(this.showPasswordBtn);
             this.Controls.Add(this.passwordPanel);
             this.Controls.Add(this.passwordPic);
             this.Controls.Add(this.usernamePanel);
             this.Controls.Add(this.usernamePic);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.museumPic);
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.createAccountLbl);
@@ -245,7 +262,7 @@
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.museumPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,12 +277,13 @@
         private System.Windows.Forms.Button clearFieldsBtn;
         private System.Windows.Forms.Button logInBtn;
         private System.Windows.Forms.Label signInLbl;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox museumPic;
         private System.Windows.Forms.PictureBox usernamePic;
         private System.Windows.Forms.Panel usernamePanel;
         private System.Windows.Forms.PictureBox passwordPic;
         private System.Windows.Forms.Panel passwordPanel;
         private System.Windows.Forms.Button showPasswordBtn;
         private System.Windows.Forms.Label showPasswordLbl;
+        private System.Windows.Forms.Button infoBtn;
     }
 }

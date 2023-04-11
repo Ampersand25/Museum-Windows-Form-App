@@ -205,5 +205,20 @@ namespace WindowsFormsApp1
             new Register().Show();
             this.Hide();
         }
+
+        private void infoBtn_Click(object sender, EventArgs e)
+        {
+            string creditsStr = "• Museum icons created by Freepik - Flaticon: https://www.flaticon.com/free-icons/museum\n" +
+                                "• Info icons created by Freepik - Flaticon: https://www.flaticon.com/free-icons/info\n" +
+                                "• User icons created by Phoenix Group - Flaticon: https://www.flaticon.com/free-icons/user\n" +
+                                "• Password icons created by Prosymbols Premium - Flaticon: https://www.flaticon.com/free-icons/password\n" +
+                                "• Eye icons created by Kiranshastry - Flaticon: https://www.flaticon.com/free-icons/eye\n" +
+                                "• Password icons created by th studio - Flaticon: https://www.flaticon.com/free-icons/password\n" +
+                                "• Museum icons created by Freepik - Flaticon: https://www.flaticon.com/free-icons/museum\n" +
+                                "• Register icons created by Freepik - Flaticon: https://www.flaticon.com/free-icons/register\n" +
+                                "• Eye icons created by Freepik - Flaticon: https://www.flaticon.com/free-icons/eye\n" +
+                                "• Show password icons created by Stasy - Flaticon: https://www.flaticon.com/free-icons/show-password";
+            MessageBox.Show("Special thanks to:\n" + creditsStr, "©Credits", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

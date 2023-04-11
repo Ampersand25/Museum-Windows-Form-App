@@ -136,6 +136,9 @@
   <data name="FormBackgroundImage5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\FormBackgroundImage5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ShowPasswordRegisterIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\ShowPasswordRegisterIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PasswordIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\PasswordIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,7 +157,7 @@
   <data name="FormBackgroundImage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\FormBackgroundImage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShowPasswordRegisterIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\ShowPasswordRegisterIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="InfoIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\InfoIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

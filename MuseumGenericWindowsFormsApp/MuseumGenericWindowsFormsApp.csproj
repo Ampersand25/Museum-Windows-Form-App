@@ -244,12 +244,6 @@
     <None Include="Images\FormBackgroundImage3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\WaveEmoji.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\MuseumEmoji.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\MuseumLogInPicture.png" />
   </ItemGroup>
   <ItemGroup>
@@ -266,9 +260,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\RegisterPicture.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\MuseumPicture.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\HidePasswordIcon.png" />
