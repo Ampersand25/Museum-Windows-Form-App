@@ -35,7 +35,6 @@
             this.haveAccountLbl = new System.Windows.Forms.Label();
             this.clearFieldsBtn = new System.Windows.Forms.Button();
             this.registerBtn = new System.Windows.Forms.Button();
-            this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.signUpLbl = new System.Windows.Forms.Label();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.usernameLbl = new System.Windows.Forms.Label();
@@ -43,9 +42,9 @@
             this.passwordLbl = new System.Windows.Forms.Label();
             this.confirmPasswordTxt = new System.Windows.Forms.TextBox();
             this.confirmPasswordLbl = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.showPasswordLbl = new System.Windows.Forms.Label();
+            this.showPasswordBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,26 +127,12 @@
             this.registerBtn.UseVisualStyleBackColor = false;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
-            // showPasswordCheckBox
-            // 
-            this.showPasswordCheckBox.AutoSize = true;
-            this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordCheckBox.Font = new System.Drawing.Font("Bauhaus 93", 12F);
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(273, 538);
-            this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(193, 32);
-            this.showPasswordCheckBox.TabIndex = 21;
-            this.showPasswordCheckBox.Text = "Show Password";
-            this.showPasswordCheckBox.UseVisualStyleBackColor = true;
-            this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
-            // 
             // signUpLbl
             // 
             this.signUpLbl.AutoSize = true;
             this.signUpLbl.Font = new System.Drawing.Font("Bauhaus 93", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpLbl.ForeColor = System.Drawing.Color.Plum;
-            this.signUpLbl.Location = new System.Drawing.Point(60, 34);
+            this.signUpLbl.Location = new System.Drawing.Point(140, 34);
             this.signUpLbl.Name = "signUpLbl";
             this.signUpLbl.Size = new System.Drawing.Size(214, 63);
             this.signUpLbl.TabIndex = 14;
@@ -219,22 +204,36 @@
             this.confirmPasswordLbl.TabIndex = 32;
             this.confirmPasswordLbl.Text = "Confirm Password";
             // 
-            // pictureBox2
+            // showPasswordLbl
             // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.MuseumPicture;
-            this.pictureBox2.Location = new System.Drawing.Point(396, 34);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 63);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 35;
-            this.pictureBox2.TabStop = false;
+            this.showPasswordLbl.AutoSize = true;
+            this.showPasswordLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F);
+            this.showPasswordLbl.Location = new System.Drawing.Point(238, 547);
+            this.showPasswordLbl.Name = "showPasswordLbl";
+            this.showPasswordLbl.Size = new System.Drawing.Size(172, 28);
+            this.showPasswordLbl.TabIndex = 37;
+            this.showPasswordLbl.Text = "Show Password";
+            // 
+            // showPasswordBtn
+            // 
+            this.showPasswordBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ShowPasswordRegisterIcon;
+            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
+            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordBtn.Location = new System.Drawing.Point(416, 538);
+            this.showPasswordBtn.Name = "showPasswordBtn";
+            this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
+            this.showPasswordBtn.TabIndex = 36;
+            this.showPasswordBtn.UseVisualStyleBackColor = true;
+            this.showPasswordBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(311, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
@@ -245,7 +244,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(538, 914);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.showPasswordLbl);
+            this.Controls.Add(this.showPasswordBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.confirmPasswordTxt);
             this.Controls.Add(this.confirmPasswordLbl);
@@ -259,7 +259,6 @@
             this.Controls.Add(this.haveAccountLbl);
             this.Controls.Add(this.clearFieldsBtn);
             this.Controls.Add(this.registerBtn);
-            this.Controls.Add(this.showPasswordCheckBox);
             this.Controls.Add(this.signUpLbl);
             this.ForeColor = System.Drawing.Color.Plum;
             this.Name = "Register";
@@ -267,7 +266,6 @@
             this.Text = "Register";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
             this.Load += new System.EventHandler(this.Register_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,7 +280,6 @@
         private System.Windows.Forms.Label haveAccountLbl;
         private System.Windows.Forms.Button clearFieldsBtn;
         private System.Windows.Forms.Button registerBtn;
-        private System.Windows.Forms.CheckBox showPasswordCheckBox;
         private System.Windows.Forms.Label signUpLbl;
         private System.Windows.Forms.TextBox usernameTxt;
         private System.Windows.Forms.Label usernameLbl;
@@ -291,6 +288,7 @@
         private System.Windows.Forms.TextBox confirmPasswordTxt;
         private System.Windows.Forms.Label confirmPasswordLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button showPasswordBtn;
+        private System.Windows.Forms.Label showPasswordLbl;
     }
 }

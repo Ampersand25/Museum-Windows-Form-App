@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
         readonly private string passwordPlaceholder = "Enter password...";
         readonly private string confirmPasswordPlaceholder = "Reenter password...";
 
+        private bool isShowPasswordOn = false;
+
         public Register()
         {
             InitializeComponent();
@@ -200,7 +202,7 @@ namespace WindowsFormsApp1
             {
                 passwordTxt.Clear();
                 passwordTxt.ForeColor = System.Drawing.Color.Plum;
-                passwordTxt.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+                passwordTxt.PasswordChar = isShowPasswordOn ? '\0' : '*';
             }
         }
 
@@ -231,7 +233,7 @@ namespace WindowsFormsApp1
             {
                 confirmPasswordTxt.Clear();
                 confirmPasswordTxt.ForeColor = System.Drawing.Color.Plum;
-                confirmPasswordTxt.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+                confirmPasswordTxt.PasswordChar = isShowPasswordOn ? '\0' : '*';
             }
         }
 
@@ -255,12 +257,14 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void updateShowPasswordState()
         {
-            if (showPasswordCheckBox.Checked)
+            if (isShowPasswordOn)
             {
                 passwordTxt.PasswordChar = '\0';
                 confirmPasswordTxt.PasswordChar = '\0';
+                showPasswordBtn.BackgroundImage = Image.FromFile("../../Images/HidePasswordRegisterIcon.png");
+                showPasswordLbl.Text = "Hide Password";
             }
             else
             {
@@ -268,12 +272,19 @@ namespace WindowsFormsApp1
                 {
                     passwordTxt.PasswordChar = '*';
                 }
-
                 if (!confirmPasswordTxt.Text.Equals(confirmPasswordPlaceholder))
                 {
                     confirmPasswordTxt.PasswordChar = '*';
                 }
+                showPasswordBtn.BackgroundImage = Image.FromFile("../../Images/ShowPasswordRegisterIcon.png");
+                showPasswordLbl.Text = "Show Password";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            isShowPasswordOn = !isShowPasswordOn;
+            updateShowPasswordState();
         }
 
         private void registerBtn_Click(object sender, EventArgs e)

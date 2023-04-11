@@ -34,13 +34,14 @@
             this.dontHaveAccountLbl = new System.Windows.Forms.Label();
             this.clearFieldsBtn = new System.Windows.Forms.Button();
             this.logInBtn = new System.Windows.Forms.Button();
-            this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.signInLbl = new System.Windows.Forms.Label();
             this.usernamePanel = new System.Windows.Forms.Panel();
             this.passwordPanel = new System.Windows.Forms.Panel();
             this.passwordPic = new System.Windows.Forms.PictureBox();
             this.usernamePic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.showPasswordBtn = new System.Windows.Forms.Button();
+            this.showPasswordLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,27 +132,12 @@
             this.logInBtn.UseVisualStyleBackColor = false;
             this.logInBtn.Click += new System.EventHandler(this.logInBtn_Click);
             // 
-            // showPasswordCheckBox
-            // 
-            this.showPasswordCheckBox.AutoSize = true;
-            this.showPasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordCheckBox.Font = new System.Drawing.Font("Bauhaus 93", 14F);
-            this.showPasswordCheckBox.ForeColor = System.Drawing.Color.Plum;
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(250, 494);
-            this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(222, 36);
-            this.showPasswordCheckBox.TabIndex = 37;
-            this.showPasswordCheckBox.Text = "Show Password";
-            this.showPasswordCheckBox.UseVisualStyleBackColor = true;
-            this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
-            // 
             // signInLbl
             // 
             this.signInLbl.AutoSize = true;
             this.signInLbl.Font = new System.Drawing.Font("Bauhaus 93", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInLbl.ForeColor = System.Drawing.Color.Plum;
-            this.signInLbl.Location = new System.Drawing.Point(175, 167);
+            this.signInLbl.Location = new System.Drawing.Point(171, 167);
             this.signInLbl.Name = "signInLbl";
             this.signInLbl.Size = new System.Drawing.Size(198, 63);
             this.signInLbl.TabIndex = 36;
@@ -203,12 +189,42 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // showPasswordBtn
+            // 
+            this.showPasswordBtn.BackColor = System.Drawing.Color.Transparent;
+            this.showPasswordBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ShowPasswordIcon;
+            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
+            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordBtn.Location = new System.Drawing.Point(422, 494);
+            this.showPasswordBtn.Name = "showPasswordBtn";
+            this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
+            this.showPasswordBtn.TabIndex = 53;
+            this.showPasswordBtn.UseVisualStyleBackColor = false;
+            this.showPasswordBtn.Click += new System.EventHandler(this.showPasswordBtn_Click);
+            // 
+            // showPasswordLbl
+            // 
+            this.showPasswordLbl.AutoSize = true;
+            this.showPasswordLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPasswordLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPasswordLbl.ForeColor = System.Drawing.Color.Plum;
+            this.showPasswordLbl.Location = new System.Drawing.Point(244, 503);
+            this.showPasswordLbl.Name = "showPasswordLbl";
+            this.showPasswordLbl.Size = new System.Drawing.Size(172, 28);
+            this.showPasswordLbl.TabIndex = 54;
+            this.showPasswordLbl.Text = "Show Password";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(538, 914);
+            this.Controls.Add(this.showPasswordLbl);
+            this.Controls.Add(this.showPasswordBtn);
             this.Controls.Add(this.passwordPanel);
             this.Controls.Add(this.passwordPic);
             this.Controls.Add(this.usernamePanel);
@@ -220,7 +236,6 @@
             this.Controls.Add(this.dontHaveAccountLbl);
             this.Controls.Add(this.clearFieldsBtn);
             this.Controls.Add(this.logInBtn);
-            this.Controls.Add(this.showPasswordCheckBox);
             this.Controls.Add(this.signInLbl);
             this.ForeColor = System.Drawing.Color.Plum;
             this.Name = "Login";
@@ -244,12 +259,13 @@
         private System.Windows.Forms.Label dontHaveAccountLbl;
         private System.Windows.Forms.Button clearFieldsBtn;
         private System.Windows.Forms.Button logInBtn;
-        private System.Windows.Forms.CheckBox showPasswordCheckBox;
         private System.Windows.Forms.Label signInLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox usernamePic;
         private System.Windows.Forms.Panel usernamePanel;
         private System.Windows.Forms.PictureBox passwordPic;
         private System.Windows.Forms.Panel passwordPanel;
+        private System.Windows.Forms.Button showPasswordBtn;
+        private System.Windows.Forms.Label showPasswordLbl;
     }
 }

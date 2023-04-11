@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
         readonly private string usernamePlaceholder = "Enter username...";
         readonly private string passwordPlaceholder = "Enter password...";
 
+        private bool isShowPasswordOn = false;
+
         public Login()
         {
             InitializeComponent();
@@ -81,7 +83,7 @@ namespace WindowsFormsApp1
             {
                 passwordTxt.Clear();
                 passwordTxt.ForeColor = System.Drawing.Color.Plum;
-                passwordTxt.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+                passwordTxt.PasswordChar = isShowPasswordOn ? '\0' : '*';
             }
         }
 
@@ -105,11 +107,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void updateShowPasswordState()
         {
-            if (showPasswordCheckBox.Checked)
+            if (isShowPasswordOn)
             {
                 passwordTxt.PasswordChar = '\0';
+                showPasswordBtn.BackgroundImage = Image.FromFile("../../Images/HidePasswordIcon.png");
+                showPasswordLbl.Text = "Hide Password";
             }
             else
             {
@@ -117,7 +121,15 @@ namespace WindowsFormsApp1
                 {
                     passwordTxt.PasswordChar = '*';
                 }
+                showPasswordBtn.BackgroundImage = Image.FromFile("../../Images/ShowPasswordIcon.png");
+                showPasswordLbl.Text = "Show Password";
             }
+        }
+
+        private void showPasswordBtn_Click(object sender, EventArgs e)
+        {
+            isShowPasswordOn = !isShowPasswordOn;
+            updateShowPasswordState();
         }
 
         private void logInBtn_Click(object sender, EventArgs e)

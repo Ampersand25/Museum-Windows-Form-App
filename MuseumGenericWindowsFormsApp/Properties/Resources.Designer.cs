@@ -113,9 +113,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MuseumLogInPicture {
+        internal static System.Drawing.Bitmap HidePasswordIcon {
             get {
-                object obj = ResourceManager.GetObject("MuseumLogInPicture", resourceCulture);
+                object obj = ResourceManager.GetObject("HidePasswordIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,19 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MuseumPicture {
+        internal static System.Drawing.Bitmap HidePasswordRegisterIcon {
             get {
-                object obj = ResourceManager.GetObject("MuseumPicture", resourceCulture);
+                object obj = ResourceManager.GetObject("HidePasswordRegisterIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MuseumLogInPicture {
+            get {
+                object obj = ResourceManager.GetObject("MuseumLogInPicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +156,26 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap RegisterPicture {
             get {
                 object obj = ResourceManager.GetObject("RegisterPicture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShowPasswordIcon {
+            get {
+                object obj = ResourceManager.GetObject("ShowPasswordIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShowPasswordRegisterIcon {
+            get {
+                object obj = ResourceManager.GetObject("ShowPasswordRegisterIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
