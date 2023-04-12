@@ -38,11 +38,12 @@
             this.usernamePanel = new System.Windows.Forms.Panel();
             this.passwordPanel = new System.Windows.Forms.Panel();
             this.showPasswordLbl = new System.Windows.Forms.Label();
+            this.exitBtn = new System.Windows.Forms.Button();
+            this.infoBtn = new System.Windows.Forms.Button();
             this.showPasswordBtn = new System.Windows.Forms.Button();
             this.passwordPic = new System.Windows.Forms.PictureBox();
             this.usernamePic = new System.Windows.Forms.PictureBox();
             this.museumPic = new System.Windows.Forms.PictureBox();
-            this.infoBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.museumPic)).BeginInit();
@@ -172,6 +173,36 @@
             this.showPasswordLbl.TabIndex = 54;
             this.showPasswordLbl.Text = "Show Password";
             // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.exitBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ExitIcon;
+            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Location = new System.Drawing.Point(476, 12);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(50, 50);
+            this.exitBtn.TabIndex = 56;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
+            // infoBtn
+            // 
+            this.infoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.infoBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.InfoIcon;
+            this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.infoBtn.FlatAppearance.BorderSize = 0;
+            this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.infoBtn.Location = new System.Drawing.Point(12, 12);
+            this.infoBtn.Name = "infoBtn";
+            this.infoBtn.Size = new System.Drawing.Size(50, 50);
+            this.infoBtn.TabIndex = 55;
+            this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
+            // 
             // showPasswordBtn
             // 
             this.showPasswordBtn.BackColor = System.Drawing.Color.Transparent;
@@ -217,21 +248,6 @@
             this.museumPic.TabIndex = 48;
             this.museumPic.TabStop = false;
             // 
-            // infoBtn
-            // 
-            this.infoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.infoBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.InfoIcon;
-            this.infoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.infoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.infoBtn.FlatAppearance.BorderSize = 0;
-            this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.infoBtn.Location = new System.Drawing.Point(12, 12);
-            this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Size = new System.Drawing.Size(50, 50);
-            this.infoBtn.TabIndex = 55;
-            this.infoBtn.UseVisualStyleBackColor = false;
-            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -239,6 +255,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(538, 914);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.infoBtn);
             this.Controls.Add(this.showPasswordLbl);
             this.Controls.Add(this.showPasswordBtn);
@@ -285,5 +302,6 @@
         private System.Windows.Forms.Button showPasswordBtn;
         private System.Windows.Forms.Label showPasswordLbl;
         private System.Windows.Forms.Button infoBtn;
+        private System.Windows.Forms.Button exitBtn;
     }
 }

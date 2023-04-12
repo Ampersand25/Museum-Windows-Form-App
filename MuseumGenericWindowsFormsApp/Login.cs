@@ -218,8 +218,14 @@ namespace WindowsFormsApp1
                                 "• Register icons created by Freepik - Flaticon:\nhttps://www.flaticon.com/free-icons/register\n" +
                                 "• Eye icons created by Freepik - Flaticon:\nhttps://www.flaticon.com/free-icons/eye\n" +
                                 "• Show password icons created by Stasy - Flaticon:\nhttps://www.flaticon.com/free-icons/show-password\n" +
-                                "• Dinosaur icons created by Smashicons - Flaticon:\nhttps://www.flaticon.com/free-icons/dinosaur";
+                                "• Dinosaur icons created by Smashicons - Flaticon:\nhttps://www.flaticon.com/free-icons/dinosaur\n" +
+                                "• Logout icons created by Pixel perfect - Flaticon:\nhttps://www.flaticon.com/free-icons/logout";
             MessageBox.Show("Special thanks to:\n" + creditsStr, "©Credits", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
