@@ -162,7 +162,7 @@ namespace WindowsFormsApp1
                             string password = passwordTxt.Text;
                             if (password.Equals(reader.GetString(0)))
                             {
-                                new GenericMasterDetailWindow().Show();
+                                new SplashScreen().Show();
                                 this.Hide();
                             }
                             else

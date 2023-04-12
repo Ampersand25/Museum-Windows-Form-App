@@ -79,3 +79,8 @@ C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\zh-Hant\Micro
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\MuseumGenericWindowsFormsApp.csproj.CopyComplete
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\WindowsFormsApp1.Register.resources
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\CircularProgressBar.dll
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\WinFormAnimation.dll
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\CircularProgressBar.xml
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\WinFormAnimation.xml
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\WindowsFormsApp1.SplashScreen.resources
