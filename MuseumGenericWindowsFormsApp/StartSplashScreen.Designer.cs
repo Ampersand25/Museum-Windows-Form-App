@@ -32,7 +32,7 @@
             this.totalProgressPanel = new System.Windows.Forms.Panel();
             this.currentProgressPanel = new System.Windows.Forms.Panel();
             this.creatorLbl = new System.Windows.Forms.Label();
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.rectanglePic = new System.Windows.Forms.PictureBox();
             this.tRexPic = new System.Windows.Forms.PictureBox();
             this.loadingLbl = new System.Windows.Forms.Label();
@@ -63,17 +63,17 @@
             this.creatorLbl.BackColor = System.Drawing.Color.Transparent;
             this.creatorLbl.Font = new System.Drawing.Font("Bauhaus 93", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.creatorLbl.ForeColor = System.Drawing.Color.Plum;
-            this.creatorLbl.Location = new System.Drawing.Point(12, 549);
+            this.creatorLbl.Location = new System.Drawing.Point(20, 554);
             this.creatorLbl.Name = "creatorLbl";
             this.creatorLbl.Size = new System.Drawing.Size(415, 34);
             this.creatorLbl.TabIndex = 3;
             this.creatorLbl.Text = "Created by Cristian Stanciu";
             // 
-            // timer
+            // timer1
             // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 15;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // rectanglePic
             // 
@@ -101,7 +101,7 @@
             this.loadingLbl.BackColor = System.Drawing.Color.Transparent;
             this.loadingLbl.Font = new System.Drawing.Font("Bauhaus 93", 30F, System.Drawing.FontStyle.Bold);
             this.loadingLbl.ForeColor = System.Drawing.Color.Plum;
-            this.loadingLbl.Location = new System.Drawing.Point(332, 288);
+            this.loadingLbl.Location = new System.Drawing.Point(332, 287);
             this.loadingLbl.Name = "loadingLbl";
             this.loadingLbl.Size = new System.Drawing.Size(316, 68);
             this.loadingLbl.TabIndex = 6;
@@ -135,7 +135,7 @@
         private System.Windows.Forms.Panel totalProgressPanel;
         private System.Windows.Forms.Panel currentProgressPanel;
         private System.Windows.Forms.Label creatorLbl;
-        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox rectanglePic;
         private System.Windows.Forms.PictureBox tRexPic;
         private System.Windows.Forms.Label loadingLbl;

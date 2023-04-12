@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        MessageBox.Show("[X]User inexistent (nume de utilizator invalid)!\n", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[X]User inexistent!\n", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     reader.Close();
                 }

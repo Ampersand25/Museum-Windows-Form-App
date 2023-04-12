@@ -32,12 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.circularProgressBar = new CircularProgressBar.CircularProgressBar();
             this.appNameLbl = new System.Windows.Forms.Label();
-            this.loadingLbl = new System.Windows.Forms.Label();
             this.copyrightsLbl = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loadingLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,18 +87,6 @@
             this.appNameLbl.TabIndex = 1;
             this.appNameLbl.Text = "Grand Cluj-Napoca Museum";
             // 
-            // loadingLbl
-            // 
-            this.loadingLbl.AutoSize = true;
-            this.loadingLbl.BackColor = System.Drawing.Color.Transparent;
-            this.loadingLbl.Font = new System.Drawing.Font("Bauhaus 93", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadingLbl.ForeColor = System.Drawing.Color.Fuchsia;
-            this.loadingLbl.Location = new System.Drawing.Point(170, 570);
-            this.loadingLbl.Name = "loadingLbl";
-            this.loadingLbl.Size = new System.Drawing.Size(153, 32);
-            this.loadingLbl.TabIndex = 2;
-            this.loadingLbl.Text = "Loading...";
-            // 
             // copyrightsLbl
             // 
             this.copyrightsLbl.AutoSize = true;
@@ -146,17 +134,29 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // loadingLbl
+            // 
+            this.loadingLbl.AutoSize = true;
+            this.loadingLbl.BackColor = System.Drawing.Color.Transparent;
+            this.loadingLbl.Font = new System.Drawing.Font("Bauhaus 93", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadingLbl.ForeColor = System.Drawing.Color.Fuchsia;
+            this.loadingLbl.Location = new System.Drawing.Point(176, 556);
+            this.loadingLbl.Name = "loadingLbl";
+            this.loadingLbl.Size = new System.Drawing.Size(153, 32);
+            this.loadingLbl.TabIndex = 7;
+            this.loadingLbl.Text = "Loading...";
+            // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Plum;
             this.ClientSize = new System.Drawing.Size(500, 800);
+            this.Controls.Add(this.loadingLbl);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.copyrightsLbl);
-            this.Controls.Add(this.loadingLbl);
             this.Controls.Add(this.appNameLbl);
             this.Controls.Add(this.circularProgressBar);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
@@ -176,11 +176,11 @@
 
         private CircularProgressBar.CircularProgressBar circularProgressBar;
         private System.Windows.Forms.Label appNameLbl;
-        private System.Windows.Forms.Label loadingLbl;
         private System.Windows.Forms.Label copyrightsLbl;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label loadingLbl;
     }
 }
