@@ -45,6 +45,8 @@
             this.showPasswordLbl = new System.Windows.Forms.Label();
             this.showPasswordBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.passwordSafeLevelPanel = new System.Windows.Forms.Panel();
+            this.passwordSafeLevelLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             // 
             this.emailTxt.BackColor = System.Drawing.Color.White;
             this.emailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.emailTxt.Location = new System.Drawing.Point(71, 178);
+            this.emailTxt.Location = new System.Drawing.Point(71, 162);
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(395, 35);
             this.emailTxt.TabIndex = 27;
@@ -64,7 +66,7 @@
             // 
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLbl.Location = new System.Drawing.Point(70, 147);
+            this.emailLbl.Location = new System.Drawing.Point(70, 131);
             this.emailLbl.Name = "emailLbl";
             this.emailLbl.Size = new System.Drawing.Size(71, 28);
             this.emailLbl.TabIndex = 26;
@@ -142,7 +144,7 @@
             // 
             this.usernameTxt.BackColor = System.Drawing.Color.White;
             this.usernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.usernameTxt.Location = new System.Drawing.Point(71, 281);
+            this.usernameTxt.Location = new System.Drawing.Point(71, 265);
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(395, 35);
             this.usernameTxt.TabIndex = 29;
@@ -154,7 +156,7 @@
             // 
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F);
-            this.usernameLbl.Location = new System.Drawing.Point(70, 250);
+            this.usernameLbl.Location = new System.Drawing.Point(70, 234);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(115, 28);
             this.usernameLbl.TabIndex = 28;
@@ -164,7 +166,7 @@
             // 
             this.passwordTxt.BackColor = System.Drawing.Color.White;
             this.passwordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.passwordTxt.Location = new System.Drawing.Point(71, 388);
+            this.passwordTxt.Location = new System.Drawing.Point(71, 372);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(395, 35);
             this.passwordTxt.TabIndex = 31;
@@ -176,7 +178,7 @@
             // 
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F);
-            this.passwordLbl.Location = new System.Drawing.Point(70, 357);
+            this.passwordLbl.Location = new System.Drawing.Point(70, 341);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(111, 28);
             this.passwordLbl.TabIndex = 30;
@@ -186,7 +188,7 @@
             // 
             this.confirmPasswordTxt.BackColor = System.Drawing.Color.White;
             this.confirmPasswordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.confirmPasswordTxt.Location = new System.Drawing.Point(71, 497);
+            this.confirmPasswordTxt.Location = new System.Drawing.Point(71, 505);
             this.confirmPasswordTxt.Name = "confirmPasswordTxt";
             this.confirmPasswordTxt.Size = new System.Drawing.Size(395, 35);
             this.confirmPasswordTxt.TabIndex = 33;
@@ -198,7 +200,7 @@
             // 
             this.confirmPasswordLbl.AutoSize = true;
             this.confirmPasswordLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F);
-            this.confirmPasswordLbl.Location = new System.Drawing.Point(70, 466);
+            this.confirmPasswordLbl.Location = new System.Drawing.Point(70, 474);
             this.confirmPasswordLbl.Name = "confirmPasswordLbl";
             this.confirmPasswordLbl.Size = new System.Drawing.Size(203, 28);
             this.confirmPasswordLbl.TabIndex = 32;
@@ -208,7 +210,7 @@
             // 
             this.showPasswordLbl.AutoSize = true;
             this.showPasswordLbl.Font = new System.Drawing.Font("Bauhaus 93", 12F);
-            this.showPasswordLbl.Location = new System.Drawing.Point(238, 547);
+            this.showPasswordLbl.Location = new System.Drawing.Point(238, 555);
             this.showPasswordLbl.Name = "showPasswordLbl";
             this.showPasswordLbl.Size = new System.Drawing.Size(172, 28);
             this.showPasswordLbl.TabIndex = 37;
@@ -221,7 +223,7 @@
             this.showPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPasswordBtn.FlatAppearance.BorderSize = 0;
             this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordBtn.Location = new System.Drawing.Point(416, 538);
+            this.showPasswordBtn.Location = new System.Drawing.Point(416, 546);
             this.showPasswordBtn.Name = "showPasswordBtn";
             this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
             this.showPasswordBtn.TabIndex = 36;
@@ -238,12 +240,33 @@
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
+            // passwordSafeLevelPanel
+            // 
+            this.passwordSafeLevelPanel.BackColor = System.Drawing.Color.Red;
+            this.passwordSafeLevelPanel.Location = new System.Drawing.Point(71, 413);
+            this.passwordSafeLevelPanel.Name = "passwordSafeLevelPanel";
+            this.passwordSafeLevelPanel.Size = new System.Drawing.Size(395, 8);
+            this.passwordSafeLevelPanel.TabIndex = 38;
+            // 
+            // passwordSafeLevelLbl
+            // 
+            this.passwordSafeLevelLbl.AutoSize = true;
+            this.passwordSafeLevelLbl.Font = new System.Drawing.Font("Bauhaus 93", 8F);
+            this.passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Red;
+            this.passwordSafeLevelLbl.Location = new System.Drawing.Point(72, 424);
+            this.passwordSafeLevelLbl.Name = "passwordSafeLevelLbl";
+            this.passwordSafeLevelLbl.Size = new System.Drawing.Size(131, 18);
+            this.passwordSafeLevelLbl.TabIndex = 39;
+            this.passwordSafeLevelLbl.Text = "WEAK PASSWORD";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(538, 914);
+            this.Controls.Add(this.passwordSafeLevelLbl);
+            this.Controls.Add(this.passwordSafeLevelPanel);
             this.Controls.Add(this.showPasswordLbl);
             this.Controls.Add(this.showPasswordBtn);
             this.Controls.Add(this.pictureBox1);
@@ -290,5 +313,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button showPasswordBtn;
         private System.Windows.Forms.Label showPasswordLbl;
+        private System.Windows.Forms.Panel passwordSafeLevelPanel;
+        private System.Windows.Forms.Label passwordSafeLevelLbl;
     }
 }

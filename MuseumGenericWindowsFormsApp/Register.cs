@@ -224,6 +224,45 @@ namespace WindowsFormsApp1
             {
                 passwordTxt.ForeColor = System.Drawing.Color.Plum;
             }
+
+            if (passwordTxt.Text.Equals(passwordPlaceholder) || passwordTxt.Text.Length == 0)
+            {
+                passwordSafeLevelPanel.BackColor = System.Drawing.Color.Gray;
+
+                passwordSafeLevelLbl.Text = "NO PASSWORD ENTERED";
+                passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Gray;
+            }
+            else if (!passwordTxt.Text.Equals(passwordPlaceholder))
+            {
+                if (passwordTxt.Text.Length < 5)
+                {
+                    passwordSafeLevelPanel.BackColor = System.Drawing.Color.Red;
+
+                    passwordSafeLevelLbl.Text = "WEAK PASSWORD";
+                    passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Red;
+                }
+                else if (passwordTxt.Text.Length < 8)
+                {
+                    passwordSafeLevelPanel.BackColor = System.Drawing.Color.Orange;
+
+                    passwordSafeLevelLbl.Text = "DECENT PASSWORD";
+                    passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Orange;
+                }
+                else if (passwordTxt.Text.Length < 11)
+                {
+                    passwordSafeLevelPanel.BackColor = System.Drawing.Color.Green;
+
+                    passwordSafeLevelLbl.Text = "STRONG PASSWORD";
+                    passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    passwordSafeLevelPanel.BackColor = System.Drawing.Color.Aqua;
+
+                    passwordSafeLevelLbl.Text = "VERY STRONG PASSWORD";
+                    passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Aqua;
+                }
+            }
         }
 
         private void confirmPasswordTxt_Enter(object sender, EventArgs e)
