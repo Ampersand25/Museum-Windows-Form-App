@@ -84,3 +84,4 @@ C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\WinFormAnimat
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\CircularProgressBar.xml
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\bin\Debug\WinFormAnimation.xml
 C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\WindowsFormsApp1.SplashScreen.resources
+C:\Users\crist\source\repos\MuseumGenericWindowsFormsApp\obj\Debug\WindowsFormsApp1.StartSplashScreen.resources
