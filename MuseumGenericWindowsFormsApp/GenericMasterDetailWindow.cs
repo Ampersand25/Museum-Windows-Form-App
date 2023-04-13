@@ -48,6 +48,10 @@ namespace WindowsFormsApp1
             dataGridViewChild.EnableHeadersVisualStyles = false;
             dataGridViewChild.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridViewChild.Font, FontStyle.Bold);
 
+            // Set the cell border style to Sunken
+            dataGridViewParent.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
+            dataGridViewChild.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
+
             this.Text = appTitle;
             this.Icon = new Icon(imageFolderPath + iconName);
             this.BackgroundImage = Image.FromFile(imageFolderPath + backgrounds[currentBackgroundIndex]);
@@ -179,6 +183,7 @@ namespace WindowsFormsApp1
 
                     loadDataToTables(conn);
 
+
                     createControls(conn);
                 }
             }
@@ -215,6 +220,38 @@ namespace WindowsFormsApp1
             {
                 // Set the background color of the odd cells to LightPink
                 dataGridViewChild.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Thistle;
+            }
+        }
+
+        private void dataGridViewParent_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewParent.SelectedCells.Count > 0)
+            {
+                int rowIndex = dataGridViewParent.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridViewParent.Rows[rowIndex];
+
+                // Set the background color of the selected row and row header
+                dataGridViewParent.RowsDefaultCellStyle.SelectionBackColor = Color.MediumOrchid;
+                dataGridViewParent.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+
+                selectedRow.HeaderCell.Style.BackColor = Color.White;
+                selectedRow.HeaderCell.Style.SelectionBackColor = Color.MediumOrchid;
+            }
+        }
+
+        private void dataGridViewChild_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewChild.SelectedCells.Count > 0)
+            {
+                int rowIndex = dataGridViewChild.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridViewChild.Rows[rowIndex];
+
+                // Set the background color of the selected row and row header
+                dataGridViewChild.RowsDefaultCellStyle.SelectionBackColor = Color.MediumOrchid;
+                dataGridViewChild.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+
+                selectedRow.HeaderCell.Style.BackColor = Color.White;
+                selectedRow.HeaderCell.Style.SelectionBackColor = Color.MediumOrchid;
             }
         }
 

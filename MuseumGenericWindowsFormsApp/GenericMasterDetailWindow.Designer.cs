@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewChild = new System.Windows.Forms.DataGridView();
             this.dataGridViewParent = new System.Windows.Forms.DataGridView();
             this.parentTableLbl = new System.Windows.Forms.Label();
@@ -48,10 +52,28 @@
             // dataGridViewChild
             // 
             this.dataGridViewChild.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewChild.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Fuchsia;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewChild.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewChild.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Fuchsia;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewChild.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewChild.GridColor = System.Drawing.SystemColors.ControlText;
             this.dataGridViewChild.Location = new System.Drawing.Point(12, 518);
             this.dataGridViewChild.Name = "dataGridViewChild";
+            this.dataGridViewChild.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridViewChild.RowHeadersWidth = 62;
             this.dataGridViewChild.RowTemplate.Height = 28;
             this.dataGridViewChild.RowTemplate.ReadOnly = true;
@@ -60,14 +82,33 @@
             this.dataGridViewChild.TabIndex = 0;
             this.dataGridViewChild.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChild_CellClick);
             this.dataGridViewChild.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewChild_CellFormatting);
+            this.dataGridViewChild.SelectionChanged += new System.EventHandler(this.dataGridViewChild_SelectionChanged);
             // 
             // dataGridViewParent
             // 
             this.dataGridViewParent.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewParent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Fuchsia;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewParent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewParent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Fuchsia;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewParent.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewParent.GridColor = System.Drawing.SystemColors.ControlText;
             this.dataGridViewParent.Location = new System.Drawing.Point(12, 48);
             this.dataGridViewParent.Name = "dataGridViewParent";
+            this.dataGridViewParent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridViewParent.RowHeadersWidth = 62;
             this.dataGridViewParent.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.dataGridViewParent.RowTemplate.Height = 28;
@@ -77,6 +118,7 @@
             this.dataGridViewParent.TabIndex = 1;
             this.dataGridViewParent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewParent_CellClick);
             this.dataGridViewParent.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewParent_CellFormatting);
+            this.dataGridViewParent.SelectionChanged += new System.EventHandler(this.dataGridViewParent_SelectionChanged);
             // 
             // parentTableLbl
             // 
