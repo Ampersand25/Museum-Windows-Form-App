@@ -47,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passwordSafeLevelPanel = new System.Windows.Forms.Panel();
             this.passwordSafeLevelLbl = new System.Windows.Forms.Label();
+            this.passwordMatchLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,12 +260,24 @@
             this.passwordSafeLevelLbl.TabIndex = 39;
             this.passwordSafeLevelLbl.Text = "WEAK PASSWORD";
             // 
+            // passwordMatchLbl
+            // 
+            this.passwordMatchLbl.AutoSize = true;
+            this.passwordMatchLbl.Font = new System.Drawing.Font("Bauhaus 93", 8F);
+            this.passwordMatchLbl.ForeColor = System.Drawing.Color.Red;
+            this.passwordMatchLbl.Location = new System.Drawing.Point(72, 546);
+            this.passwordMatchLbl.Name = "passwordMatchLbl";
+            this.passwordMatchLbl.Size = new System.Drawing.Size(85, 18);
+            this.passwordMatchLbl.TabIndex = 40;
+            this.passwordMatchLbl.Text = "NO MATCH";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(538, 914);
+            this.Controls.Add(this.passwordMatchLbl);
             this.Controls.Add(this.passwordSafeLevelLbl);
             this.Controls.Add(this.passwordSafeLevelPanel);
             this.Controls.Add(this.showPasswordLbl);
@@ -315,5 +328,6 @@
         private System.Windows.Forms.Label showPasswordLbl;
         private System.Windows.Forms.Panel passwordSafeLevelPanel;
         private System.Windows.Forms.Label passwordSafeLevelLbl;
+        private System.Windows.Forms.Label passwordMatchLbl;
     }
 }

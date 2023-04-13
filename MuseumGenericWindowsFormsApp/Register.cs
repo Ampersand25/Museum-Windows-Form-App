@@ -22,6 +22,10 @@ namespace WindowsFormsApp1
 
         private bool isShowPasswordOn = false;
 
+        readonly private int weakPasswordMaxLen = 7;
+        readonly private int decentPasswordMaxLen = 12;
+        readonly private int strongPasswordMaxLen = 17;
+
         public Register()
         {
             InitializeComponent();
@@ -224,21 +228,21 @@ namespace WindowsFormsApp1
             }
             else if (!passwordTxt.Text.Equals(passwordPlaceholder))
             {
-                if (passwordTxt.Text.Length < 5)
+                if (passwordTxt.Text.Length <= weakPasswordMaxLen)
                 {
                     passwordSafeLevelPanel.BackColor = System.Drawing.Color.Red;
 
                     passwordSafeLevelLbl.Text = "WEAK PASSWORD";
                     passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Red;
                 }
-                else if (passwordTxt.Text.Length < 8)
+                else if (passwordTxt.Text.Length <= decentPasswordMaxLen)
                 {
                     passwordSafeLevelPanel.BackColor = System.Drawing.Color.Orange;
 
                     passwordSafeLevelLbl.Text = "DECENT PASSWORD";
                     passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Orange;
                 }
-                else if (passwordTxt.Text.Length < 11)
+                else if (passwordTxt.Text.Length <= strongPasswordMaxLen)
                 {
                     passwordSafeLevelPanel.BackColor = System.Drawing.Color.Green;
 
@@ -252,6 +256,17 @@ namespace WindowsFormsApp1
                     passwordSafeLevelLbl.Text = "VERY STRONG PASSWORD";
                     passwordSafeLevelLbl.ForeColor = System.Drawing.Color.Aqua;
                 }
+            }
+
+            if (passwordTxt.Text.Equals(confirmPasswordTxt.Text))
+            {
+                passwordMatchLbl.Text = "MATCH";
+                passwordMatchLbl.ForeColor = Color.Green;
+            }
+            else
+            {
+                passwordMatchLbl.Text = "NO MATCH";
+                passwordMatchLbl.ForeColor = Color.Red;
             }
         }
 
@@ -283,6 +298,17 @@ namespace WindowsFormsApp1
             if (!confirmPasswordTxt.Text.Equals(confirmPasswordPlaceholder))
             {
                 confirmPasswordTxt.ForeColor = System.Drawing.Color.Plum;
+            }
+
+            if (confirmPasswordTxt.Text.Equals(passwordTxt.Text))
+            {
+                passwordMatchLbl.Text = "MATCH";
+                passwordMatchLbl.ForeColor = Color.Green;
+            }
+            else
+            {
+                passwordMatchLbl.Text = "NO MATCH";
+                passwordMatchLbl.ForeColor = Color.Red;
             }
         }
 
