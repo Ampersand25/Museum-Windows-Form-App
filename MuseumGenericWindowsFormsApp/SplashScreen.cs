@@ -1,27 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using System.Drawing;
 
 namespace WindowsFormsApp1
 {
     public partial class SplashScreen : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-        );
 
         public SplashScreen()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             circularProgressBar.Value = 0;
         }
 
