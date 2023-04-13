@@ -43,11 +43,13 @@
             this.confirmPasswordTxt = new System.Windows.Forms.TextBox();
             this.confirmPasswordLbl = new System.Windows.Forms.Label();
             this.showPasswordLbl = new System.Windows.Forms.Label();
-            this.showPasswordBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passwordSafeLevelPanel = new System.Windows.Forms.Panel();
             this.passwordSafeLevelLbl = new System.Windows.Forms.Label();
             this.passwordMatchLbl = new System.Windows.Forms.Label();
+            this.matchPic = new System.Windows.Forms.PictureBox();
+            this.showPasswordBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.matchPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,30 +219,6 @@
             this.showPasswordLbl.TabIndex = 37;
             this.showPasswordLbl.Text = "Show Password";
             // 
-            // showPasswordBtn
-            // 
-            this.showPasswordBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ShowPasswordRegisterIcon;
-            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.showPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
-            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordBtn.Location = new System.Drawing.Point(416, 546);
-            this.showPasswordBtn.Name = "showPasswordBtn";
-            this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
-            this.showPasswordBtn.TabIndex = 36;
-            this.showPasswordBtn.UseVisualStyleBackColor = true;
-            this.showPasswordBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(71, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
-            // 
             // passwordSafeLevelPanel
             // 
             this.passwordSafeLevelPanel.BackColor = System.Drawing.Color.Red;
@@ -265,11 +243,45 @@
             this.passwordMatchLbl.AutoSize = true;
             this.passwordMatchLbl.Font = new System.Drawing.Font("Bauhaus 93", 8F);
             this.passwordMatchLbl.ForeColor = System.Drawing.Color.Red;
-            this.passwordMatchLbl.Location = new System.Drawing.Point(72, 546);
+            this.passwordMatchLbl.Location = new System.Drawing.Point(102, 550);
             this.passwordMatchLbl.Name = "passwordMatchLbl";
             this.passwordMatchLbl.Size = new System.Drawing.Size(85, 18);
             this.passwordMatchLbl.TabIndex = 40;
             this.passwordMatchLbl.Text = "NO MATCH";
+            // 
+            // matchPic
+            // 
+            this.matchPic.Image = global::WindowsFormsApp1.Properties.Resources.NoMatchIcon;
+            this.matchPic.Location = new System.Drawing.Point(71, 546);
+            this.matchPic.Name = "matchPic";
+            this.matchPic.Size = new System.Drawing.Size(25, 25);
+            this.matchPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.matchPic.TabIndex = 41;
+            this.matchPic.TabStop = false;
+            // 
+            // showPasswordBtn
+            // 
+            this.showPasswordBtn.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ShowPasswordRegisterIcon;
+            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
+            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordBtn.Location = new System.Drawing.Point(416, 546);
+            this.showPasswordBtn.Name = "showPasswordBtn";
+            this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
+            this.showPasswordBtn.TabIndex = 36;
+            this.showPasswordBtn.UseVisualStyleBackColor = true;
+            this.showPasswordBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(71, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
             // 
             // Register
             // 
@@ -277,6 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(538, 914);
+            this.Controls.Add(this.matchPic);
             this.Controls.Add(this.passwordMatchLbl);
             this.Controls.Add(this.passwordSafeLevelLbl);
             this.Controls.Add(this.passwordSafeLevelPanel);
@@ -302,6 +315,7 @@
             this.Text = "Register";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
             this.Load += new System.EventHandler(this.Register_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.matchPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,5 +343,6 @@
         private System.Windows.Forms.Panel passwordSafeLevelPanel;
         private System.Windows.Forms.Label passwordSafeLevelLbl;
         private System.Windows.Forms.Label passwordMatchLbl;
+        private System.Windows.Forms.PictureBox matchPic;
     }
 }

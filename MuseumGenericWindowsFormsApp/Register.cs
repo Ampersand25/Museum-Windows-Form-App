@@ -211,6 +211,32 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void updateMatchChecker()
+        {
+            if (confirmPasswordTxt.Text.Equals(passwordTxt.Text))
+            {
+                passwordMatchLbl.Text = "MATCH";
+                passwordMatchLbl.ForeColor = Color.Green;
+
+                // Load a new image from a file
+                Image matchImage = Image.FromFile("../../Images/MatchIcon.png");
+
+                // Assign the new image to the PictureBox control
+                matchPic.Image = matchImage;
+            }
+            else
+            {
+                passwordMatchLbl.Text = "NO MATCH";
+                passwordMatchLbl.ForeColor = Color.Red;
+
+                // Load a new image from a file
+                Image noMatchImage = Image.FromFile("../../Images/NoMatchIcon.png");
+
+                // Assign the new image to the PictureBox control
+                matchPic.Image = noMatchImage;
+            }
+        }
+
         private void passwordTxt_TextChanged(object sender, EventArgs e)
         {
             // Hide the placeholder text when the user starts typing
@@ -258,16 +284,7 @@ namespace WindowsFormsApp1
                 }
             }
 
-            if (passwordTxt.Text.Equals(confirmPasswordTxt.Text))
-            {
-                passwordMatchLbl.Text = "MATCH";
-                passwordMatchLbl.ForeColor = Color.Green;
-            }
-            else
-            {
-                passwordMatchLbl.Text = "NO MATCH";
-                passwordMatchLbl.ForeColor = Color.Red;
-            }
+            updateMatchChecker();
         }
 
         private void confirmPasswordTxt_Enter(object sender, EventArgs e)
@@ -300,16 +317,7 @@ namespace WindowsFormsApp1
                 confirmPasswordTxt.ForeColor = System.Drawing.Color.Plum;
             }
 
-            if (confirmPasswordTxt.Text.Equals(passwordTxt.Text))
-            {
-                passwordMatchLbl.Text = "MATCH";
-                passwordMatchLbl.ForeColor = Color.Green;
-            }
-            else
-            {
-                passwordMatchLbl.Text = "NO MATCH";
-                passwordMatchLbl.ForeColor = Color.Red;
-            }
+            updateMatchChecker();
         }
 
         private void updateShowPasswordState()
