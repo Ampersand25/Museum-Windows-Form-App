@@ -49,16 +49,6 @@ namespace WindowsFormsApp1
             confirmPasswordTxt.ForeColor = System.Drawing.Color.Gray;
         }
 
-        private void Register_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            // Display a confirmation prompt to the user
-            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa inchideti aplicatia?", "Exit Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (result == DialogResult.No || result == DialogResult.Cancel)
-            {
-                e.Cancel = true; // Cancel the form closing event
-            }
-        }
-
         static bool isValidEmail(string email)
         {
             // Regular expression pattern to validate email addresses
@@ -405,6 +395,11 @@ namespace WindowsFormsApp1
         {
             new Login().Show();
             this.Hide();
+        }
+
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -42,5 +42,10 @@ namespace WindowsFormsApp1
                 this.Hide();
             }
         }
+
+        private void SplashScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

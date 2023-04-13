@@ -37,16 +37,6 @@ namespace WindowsFormsApp1
             passwordTxt.ForeColor = System.Drawing.Color.Gray;
         }
 
-        private void Login_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            // Display a confirmation prompt to the user
-            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa inchideti aplicatia?", "Exit Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (result == DialogResult.No || result == DialogResult.Cancel)
-            {
-                e.Cancel = true; // Cancel the form closing event
-            }
-        }
-
         private void usernameTxt_Enter(object sender, EventArgs e)
         {
             // Clear the placeholder text when the TextBox is clicked
@@ -225,7 +215,17 @@ namespace WindowsFormsApp1
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Display a confirmation prompt to the user
+            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa inchideti aplicatia?", "Exit Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
