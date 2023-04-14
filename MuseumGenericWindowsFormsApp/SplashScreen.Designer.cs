@@ -79,7 +79,7 @@
             // 
             this.appNameLbl.AutoSize = true;
             this.appNameLbl.BackColor = System.Drawing.Color.Transparent;
-            this.appNameLbl.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appNameLbl.Font = new System.Drawing.Font("Bauhaus 93", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appNameLbl.ForeColor = System.Drawing.Color.Fuchsia;
             this.appNameLbl.Location = new System.Drawing.Point(12, 18);
             this.appNameLbl.Name = "appNameLbl";

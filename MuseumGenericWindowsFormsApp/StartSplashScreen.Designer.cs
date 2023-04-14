@@ -36,9 +36,13 @@
             this.rectanglePic = new System.Windows.Forms.PictureBox();
             this.tRexPic = new System.Windows.Forms.PictureBox();
             this.loadingLbl = new System.Windows.Forms.Label();
+            this.leftColumnPic = new System.Windows.Forms.PictureBox();
+            this.rightColumnPic = new System.Windows.Forms.PictureBox();
             this.totalProgressPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rectanglePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRexPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftColumnPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightColumnPic)).BeginInit();
             this.SuspendLayout();
             // 
             // totalProgressPanel
@@ -107,12 +111,34 @@
             this.loadingLbl.TabIndex = 6;
             this.loadingLbl.Text = "Loading...";
             // 
+            // leftColumnPic
+            // 
+            this.leftColumnPic.Image = global::WindowsFormsApp1.Properties.Resources.ColumnIcon;
+            this.leftColumnPic.Location = new System.Drawing.Point(12, 12);
+            this.leftColumnPic.Name = "leftColumnPic";
+            this.leftColumnPic.Size = new System.Drawing.Size(80, 80);
+            this.leftColumnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.leftColumnPic.TabIndex = 7;
+            this.leftColumnPic.TabStop = false;
+            // 
+            // rightColumnPic
+            // 
+            this.rightColumnPic.Image = global::WindowsFormsApp1.Properties.Resources.ColumnIcon;
+            this.rightColumnPic.Location = new System.Drawing.Point(886, 12);
+            this.rightColumnPic.Name = "rightColumnPic";
+            this.rightColumnPic.Size = new System.Drawing.Size(80, 80);
+            this.rightColumnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rightColumnPic.TabIndex = 8;
+            this.rightColumnPic.TabStop = false;
+            // 
             // StartSplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(978, 644);
+            this.Controls.Add(this.rightColumnPic);
+            this.Controls.Add(this.leftColumnPic);
             this.Controls.Add(this.loadingLbl);
             this.Controls.Add(this.tRexPic);
             this.Controls.Add(this.rectanglePic);
@@ -125,6 +151,8 @@
             this.totalProgressPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rectanglePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRexPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftColumnPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightColumnPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +167,7 @@
         private System.Windows.Forms.PictureBox rectanglePic;
         private System.Windows.Forms.PictureBox tRexPic;
         private System.Windows.Forms.Label loadingLbl;
+        private System.Windows.Forms.PictureBox leftColumnPic;
+        private System.Windows.Forms.PictureBox rightColumnPic;
     }
 }

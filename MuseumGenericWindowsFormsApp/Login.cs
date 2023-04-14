@@ -211,7 +211,8 @@ namespace WindowsFormsApp1
                                 "• Dinosaur icons created by Smashicons - Flaticon:\nhttps://www.flaticon.com/free-icons/dinosaur\n" +
                                 "• Logout icons created by Pixel perfect - Flaticon:\nhttps://www.flaticon.com/free-icons/logout\n" +
                                 "• Wrong icons created by Vector Squad - Flaticon:\nhttps://www.flaticon.com/free-icons/wrong\n" +
-                                "• Ok icons created by icon wind - Flaticon:\nhttps://www.flaticon.com/free-icons/ok";
+                                "• Ok icons created by icon wind - Flaticon:\nhttps://www.flaticon.com/free-icons/ok\n" +
+                                "• Pillar icons created by Freepik - Flaticon:\nhttps://www.flaticon.com/free-icons/pillar";
             MessageBox.Show("Special thanks to:\n" + creditsStr, "©Credits", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

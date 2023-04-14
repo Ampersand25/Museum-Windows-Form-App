@@ -54,10 +54,9 @@
             this.passwordTxt.BackColor = System.Drawing.Color.White;
             this.passwordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.passwordTxt.ForeColor = System.Drawing.Color.Plum;
-            this.passwordTxt.Location = new System.Drawing.Point(133, 427);
-            this.passwordTxt.Multiline = true;
+            this.passwordTxt.Location = new System.Drawing.Point(133, 433);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(339, 50);
+            this.passwordTxt.Size = new System.Drawing.Size(339, 44);
             this.passwordTxt.TabIndex = 47;
             this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             this.passwordTxt.Enter += new System.EventHandler(this.passwordTxt_Enter);
@@ -68,10 +67,9 @@
             this.usernameTxt.BackColor = System.Drawing.Color.White;
             this.usernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.usernameTxt.ForeColor = System.Drawing.Color.Plum;
-            this.usernameTxt.Location = new System.Drawing.Point(133, 321);
-            this.usernameTxt.Multiline = true;
+            this.usernameTxt.Location = new System.Drawing.Point(133, 327);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(339, 50);
+            this.usernameTxt.Size = new System.Drawing.Size(339, 44);
             this.usernameTxt.TabIndex = 45;
             this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);
             this.usernameTxt.Enter += new System.EventHandler(this.usernameTxt_Enter);
@@ -221,9 +219,9 @@
             // passwordPic
             // 
             this.passwordPic.Image = global::WindowsFormsApp1.Properties.Resources.PasswordIcon;
-            this.passwordPic.Location = new System.Drawing.Point(77, 427);
+            this.passwordPic.Location = new System.Drawing.Point(77, 433);
             this.passwordPic.Name = "passwordPic";
-            this.passwordPic.Size = new System.Drawing.Size(50, 50);
+            this.passwordPic.Size = new System.Drawing.Size(44, 44);
             this.passwordPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.passwordPic.TabIndex = 51;
             this.passwordPic.TabStop = false;
@@ -231,9 +229,9 @@
             // usernamePic
             // 
             this.usernamePic.Image = global::WindowsFormsApp1.Properties.Resources.UserIcon;
-            this.usernamePic.Location = new System.Drawing.Point(77, 321);
+            this.usernamePic.Location = new System.Drawing.Point(77, 327);
             this.usernamePic.Name = "usernamePic";
-            this.usernamePic.Size = new System.Drawing.Size(50, 50);
+            this.usernamePic.Size = new System.Drawing.Size(44, 44);
             this.usernamePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.usernamePic.TabIndex = 49;
             this.usernamePic.TabStop = false;
