@@ -18,7 +18,4 @@ CREATE TABLE UserCredentials
 
 DELETE FROM [MuzeuAuthenticationDB].[dbo].[UserCredentials]
 
-INSERT INTO [MuzeuAuthenticationDB].[dbo].[UserCredentials] (Email, Username, UserPassword) VALUES
-('crististanciu095@gmail.com', 'admin', '12345')
-
 SELECT * FROM [MuzeuAuthenticationDB].[dbo].[UserCredentials]
