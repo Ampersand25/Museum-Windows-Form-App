@@ -271,7 +271,7 @@
             this.showPasswordBtn.Size = new System.Drawing.Size(50, 50);
             this.showPasswordBtn.TabIndex = 36;
             this.showPasswordBtn.UseVisualStyleBackColor = true;
-            this.showPasswordBtn.Click += new System.EventHandler(this.button1_Click);
+            this.showPasswordBtn.Click += new System.EventHandler(this.showPasswordBtn_Click);
             // 
             // pictureBox1
             // 

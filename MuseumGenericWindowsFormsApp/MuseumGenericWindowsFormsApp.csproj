@@ -193,6 +193,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordEncryption.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>

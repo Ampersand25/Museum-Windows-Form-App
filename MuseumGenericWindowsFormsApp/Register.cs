@@ -344,7 +344,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void showPasswordBtn_Click(object sender, EventArgs e)
         {
             isShowPasswordOn = !isShowPasswordOn;
             updateShowPasswordState();
@@ -362,12 +362,14 @@ namespace WindowsFormsApp1
                     {
                         conn.Open();
 
+                        string encryptedPassword = EncryptionDecryptionUsingSymmetricKey.AesOperation.EncryptString(EncryptionDecryptionUsingSymmetricKey.AesOperation.key, passwordTxt.Text);
+
                         SqlCommand insertCommand = new SqlCommand("INSERT INTO [MuzeuAuthenticationDB].[dbo].[UserCredentials] " +
                             "([Email], [Username], [UserPassword]) " +
                             "VALUES (@email, @username, @password);", conn);
                         insertCommand.Parameters.AddWithValue("@email", emailTxt.Text);
                         insertCommand.Parameters.AddWithValue("@username", usernameTxt.Text);
-                        insertCommand.Parameters.AddWithValue("@password", passwordTxt.Text);
+                        insertCommand.Parameters.AddWithValue("@password", encryptedPassword);
 
                         int insertRowCount = insertCommand.ExecuteNonQuery();
                         Console.WriteLine("Insert Row Count: {0}", insertRowCount);
@@ -376,7 +378,7 @@ namespace WindowsFormsApp1
                         {
                             MessageBox.Show("[+]Inregistrare realizata cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            new GenericMasterDetailWindow().Show();
+                            new SplashScreen().Show();
                             this.Hide();
                         }
                         else

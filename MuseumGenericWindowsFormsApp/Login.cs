@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
 using Microsoft.Data.SqlClient;
 
 namespace WindowsFormsApp1
@@ -150,7 +149,9 @@ namespace WindowsFormsApp1
                         while (reader.Read())
                         {
                             string password = passwordTxt.Text;
-                            if (password.Equals(reader.GetString(0)))
+                            string encryptedPassword = reader.GetString(0);
+                            string decryptedPassword = EncryptionDecryptionUsingSymmetricKey.AesOperation.DecryptString(EncryptionDecryptionUsingSymmetricKey.AesOperation.key, encryptedPassword);
+                            if (password.Equals(decryptedPassword))
                             {
                                 new SplashScreen().Show();
                                 this.Hide();
