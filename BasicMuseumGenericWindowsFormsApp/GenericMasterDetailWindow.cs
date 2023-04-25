@@ -328,7 +328,7 @@ namespace WindowsFormsApp1
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa stergeti fosila de dinozaur cu id-ul #" + 0 + "?", "Delete Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show("Sunteti sigur ca doriti sa stergeti fosila de dinozaur?", "Delete Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
                 try
