@@ -1,7 +1,7 @@
 # Museum-Windows-Forms-App
 Below are some screenshots taken during the run of the 3 applications:
 
-- <b>MuseumWindowsFormsApp</b>
+- <b>1st application - MuseumWindowsFormsApp</b>
 
 ![1st ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%201.png)
 
@@ -11,7 +11,7 @@ Below are some screenshots taken during the run of the 3 applications:
 
 <hr>
 
-- <b>BasicMuseumGenericWindowsFormsApp</b>
+- <b>2nd application - BasicMuseumGenericWindowsFormsApp</b>
 
 ![4th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%204.png)
 
@@ -21,7 +21,7 @@ Below are some screenshots taken during the run of the 3 applications:
 
 <hr>
 
-- <b>MuseumGenericWindowsFormsApp</b>
+- <b>3rd application - MuseumGenericWindowsFormsApp</b>
 
 ![7th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%207.png)
 
