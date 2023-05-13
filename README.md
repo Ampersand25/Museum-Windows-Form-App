@@ -4,20 +4,26 @@ Below are some screenshots taken during the run of the 3 applications:
 - <b>1st application - MuseumWindowsFormsApp</b>
 
 ![1st ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%201.png)
+<p align="center"><strong>Image 1</strong> - first background of the first application</p>
 
 ![2nd ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%202.png)
+<p align="center"><strong>Image 2</strong> - second background of the first application</p>
 
 ![3rd ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%203.png)
+<p align="center"><strong>Image 3</strong> - third background of the first application</p>
 
 <hr>
 
 - <b>2nd application - BasicMuseumGenericWindowsFormsApp</b>
 
 ![4th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%204.png)
+<p align="center"><strong>Image 4</strong> - first running scenario for the second application: first DataGridView displays the records/lines/rows from the table Ghizi (parent table from MuzeuDB database that represents the part 1 (one) of the relation 1:n (one to many)) and the second DataGridView displays, for the selected record/line/row from the parent table, the records/lines/rows asscociated (with the selected record/line/row from first DataGridView) from the table FosileDinozauri (child table from MuzeuDB database that represents the part n (many) of the relation 1:n (one to many))</p>
 
 ![5th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%205.png)
+<p align="center"><strong>Image 5</strong> - second running scenario for the second application: first DataGridView displays the records/lines/rows from the table Vitrine (parent table from MuzeuDB database that represents the part 1 (one) of the relation 1:n (one to many)) and the second DataGridView displays, for the selected record/line/row from the parent table, the records/lines/rows asscociated (with the selected record/line/row from first DataGridView) from the table Vase (child table from MuzeuDB database that represents the part n (many) of the relation 1:n (one to many))</p>
 
 ![6th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%206.png)
+<p align="center"><strong>Image 6</strong> - third (and last) running scenario for the second application: first DataGridView displays the records/lines/rows from the table Paznici (parent table from MuzeuDB database that represents the part 1 (one) of the relation 1:n (one to many)) and the second DataGridView displays, for the selected record/line/row from the parent table, the records/lines/rows asscociated (with the selected record/line/row from first DataGridView) from the table Bijuterii (child table from MuzeuDB database that represents the part n (many) of the relation 1:n (one to many))</p>
 
 <hr>
 
