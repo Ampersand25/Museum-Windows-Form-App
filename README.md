@@ -1,12 +1,15 @@
 # Museum-Windows-Forms-App
+<hr>
 The diagram of the MuzeuDB database is the following:
+<hr>
 
 ![MuzueDB diagram](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Database%20diagram/Diagram_MuzeuDB.png)
 <hr>
+
 Below are some screenshots taken during the run of the 3 applications:
 <hr>
-
 - <b>1st application - MuseumWindowsFormsApp</b>
+<hr>
 
 ![1st ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%201.png)
 <p align="center"><strong>Image 1</strong> - first background of the first application</p>
