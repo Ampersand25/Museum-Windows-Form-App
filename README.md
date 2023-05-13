@@ -3,9 +3,8 @@ The diagram of the MuzeuDB database is the following:
 
 ![MuzueDB diagram](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Database%20diagram/Diagram_MuzeuDB.png)
 <hr>
-<hr>
-
 Below are some screenshots taken during the run of the 3 applications:
+<hr>
 
 - <b>1st application - MuseumWindowsFormsApp</b>
 
@@ -20,9 +19,8 @@ Below are some screenshots taken during the run of the 3 applications:
 ![3rd ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%203.png)
 <p align="center"><strong>Image 3</strong> - third background of the first application</p>
 <hr>
-<hr>
-
 - <b>2nd application - BasicMuseumGenericWindowsFormsApp</b>
+<hr>
 
 ![4th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%204.png)
 <p align="center"><strong>Image 4</strong> - first running scenario for the second application: first DataGridView displays the records/lines/rows from the table named "Ghizi" (parent table from MuzeuDB database that represents the part 1 (one) of the relation 1:n (one to many)) and the second DataGridView displays, for the selected record/line/row from the parent table, the records/lines/rows asscociated from the table named "FosileDinozauri" (child table from MuzeuDB database that represents the part n (many) of the relation 1:n (one to many))</p>
@@ -35,9 +33,8 @@ Below are some screenshots taken during the run of the 3 applications:
 ![6th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%206.png)
 <p align="center"><strong>Image 6</strong> - third (and last) running scenario for the second application: first DataGridView displays the records/lines/rows from the table named "Paznici" (parent table from MuzeuDB database that represents the part 1 (one) of the relation 1:n (one to many)) and the second DataGridView displays, for the selected record/line/row from the parent table, the records/lines/rows asscociated from the table named "Bijuterii" (child table from MuzeuDB database that represents the part n (many) of the relation 1:n (one to many))</p>
 <hr>
-<hr>
-
 - <b>3rd application - MuseumGenericWindowsFormsApp</b>
+<hr>
 
 ![7th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%207.png)
 <p align="center"><strong>Image 7</strong> - start splash screen (loading screen) which is displayed when the application starts and shows the loading progress of the app/p>
