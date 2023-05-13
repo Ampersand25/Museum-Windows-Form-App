@@ -3,6 +3,8 @@ The diagram of the MuzeuDB database is the following:
 
 ![MuzueDB diagram](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Database%20diagram/Diagram_MuzeuDB.png)
 
+<hr>
+
 Below are some screenshots taken during the run of the 3 applications:
 
 - <b>1st application - MuseumWindowsFormsApp</b>
