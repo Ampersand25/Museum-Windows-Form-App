@@ -6,7 +6,7 @@ The diagram of the MuzeuDB database is the following:
 
 Below are some screenshots taken during the run of the 3 applications:
 
-- <b>1st application - MuseumWindowsFormsApp</b>
+- <b>1st application - MuseumWindowsFormsApp (simple application that displays data from two particular tables from the database which are in a one to many (1:n) relation)</b>
 
 ![1st ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%201.png)
 <p align="center"><strong>Image 1</strong> - first background of the first application</p>
@@ -20,7 +20,7 @@ Below are some screenshots taken during the run of the 3 applications:
 <p align="center"><strong>Image 3</strong> - third background of the first application</p>
 <hr>
 
-- <b>2nd application - BasicMuseumGenericWindowsFormsApp</b>
+- <b>2nd application - BasicMuseumGenericWindowsFormsApp (first application but general (the app shows the records/lines/rows from two tables from the database with the condition that the tables are in a one to many (1:n) relation))</b>
 
 ![4th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%204.png)
 <p align="center"><strong>Image 4</strong> - first running scenario for the second application: first DataGridView displays the records/lines/rows from the table named "Ghizi" (parent table from MuzeuDB database that represents the part 1 (one) of the relation 1:n (one to many)) and the second DataGridView displays, for the selected record/line/row from the parent table, the records/lines/rows asscociated from the table named "FosileDinozauri" (child table from MuzeuDB database that represents the part n (many) of the relation 1:n (one to many))</p>
@@ -34,7 +34,7 @@ Below are some screenshots taken during the run of the 3 applications:
 <p align="center"><strong>Image 6</strong> - third (and last) running scenario for the second application: first DataGridView displays the records/lines/rows from the table named "Paznici" (parent table from MuzeuDB database that represents the part 1 (one) of the relation 1:n (one to many)) and the second DataGridView displays, for the selected record/line/row from the parent table, the records/lines/rows asscociated from the table named "Bijuterii" (child table from MuzeuDB database that represents the part n (many) of the relation 1:n (one to many))</p>
 <hr>
 
-- <b>3rd application - MuseumGenericWindowsFormsApp</b>
+- <b>3rd application - MuseumGenericWindowsFormsApp (second application but with: log in (sign in) window/form, registration (sign up) window/form and two splash screens for transitioning between different forms)</b>
 
 ![7th ss](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Screenshots/Screenshot%207.png)
 <p align="center"><strong>Image 7</strong> - start splash screen (loading screen) which is displayed when the application starts and shows the loading progress of the app/p>
