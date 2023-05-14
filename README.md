@@ -30,7 +30,7 @@ Each app has the following:
 - buttons for the CRUD (Create, Read, Update, Delete) operations, for refreshing the content of the two tables and for changing the current background
 - NumericUpDown controls for number columns/fields/attributes (like primary key which is an integer value) from child (the part n/many of the relation one to many (1:n)) table
 - TextBox controls (inputs) for text (varchar) columns/fields/attributes from child (the part n/many of the relation one to many (1:n)) table
-- ComboBox control for selecting the column/field/attribute which is the foreign key in the child (the part n/many of the relation one to many (1:n)) table
+- ComboBox control for selecting the column/field/attribute which is the foreign key in the child (the part n/many of the relation one to many (1:n)) table (the ComboBoxes contains all the primary keys from the parent ("master") table)
 <hr>
 
 All applications have the following features:
