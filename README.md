@@ -1,4 +1,22 @@
 # Museum-Windows-Forms-App
+Credits for the icons used in the application (visit https://www.flaticon.com/ for more amazing free icons):
+- Museum icons created by Freepik              - Flaticon: https://www.flaticon.com/free-icons/museum
+- Info icons created by Freepik                - Flaticon: https://www.flaticon.com/free-icons/info
+- User icons created by Phoenix Group          - Flaticon: https://www.flaticon.com/free-icons/user
+- Password icons created by Prosymbols Premium - Flaticon: https://www.flaticon.com/free-icons/password
+- Eye icons created by Kiranshastry            - Flaticon: https://www.flaticon.com/free-icons/eye
+- Password icons created by th studio          - Flaticon: https://www.flaticon.com/free-icons/password
+- Museum icons created by Freepik              - Flaticon: https://www.flaticon.com/free-icons/museum
+- Register icons created by Freepik            - Flaticon: https://www.flaticon.com/free-icons/register
+- Eye icons created by Freepik                 - Flaticon: https://www.flaticon.com/free-icons/eye
+- Show password icons created by Stasy         - Flaticon: https://www.flaticon.com/free-icons/show-password
+- Dinosaur icons created by Smashicons         - Flaticon: https://www.flaticon.com/free-icons/dinosaur
+- Logout icons created by Pixel perfect        - Flaticon: https://www.flaticon.com/free-icons/logout
+- Wrong icons created by Vector Squad          - Flaticon: https://www.flaticon.com/free-icons/wrong
+- Ok icons created by icon wind                - Flaticon: https://www.flaticon.com/free-icons/ok
+- Pillar icons created by Freepik              - Flaticon: https://www.flaticon.com/free-icons/pillar
+<hr>
+
 The diagram of the MuzeuDB database is the following:
 
 ![MuzueDB diagram](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Database%20diagram/Diagram_MuzeuDB.png)
