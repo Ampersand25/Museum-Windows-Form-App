@@ -4,6 +4,25 @@ The diagram of the MuzeuDB database is the following:
 ![MuzueDB diagram](https://github.com/Ampersand25/Museum-Windows-Forms-App/blob/main/Database%20diagram/Diagram_MuzeuDB.png)
 <hr>
 
+Each app has the following:
+- a master detail window (generic for second and third applications)
+- two DataGridView tables that shows all the entries from the two tables (parent table ("master") and child table ("detail"))
+- different backgrounds that can be changed
+- labels for displaying text
+- buttons for the CRUD (Create, Read, Update, Delete) operations, for refreshing the content of the two tables and for changing the current background
+- NumericUpDown controls for number columns/fields/attributes (like primary key which is an integer value) from child (the part n/many of the relation one to many (1:n)) table
+- TextBox controls (inputs) for text (varchar) columns/fields/attributes from child (the part n/many of the relation one to many (1:n)) table
+- ComboBox control for selecting the column/field/attribute which is the foreign key in the child (the part n/many of the relation one to many (1:n)) table
+<hr>
+
+All applications have the following features:
+- viewing data (all the entries) from the two tables (parent one and child one) from the database
+- creating/adding a new record/line/row for the child ("detail") table
+- updating/modifying an existing record/line/row from the child ("detail") table
+- removing/deleting an existing record/line/row from the child ("detail") table
+- refreshing the two DataGridView tables (after add, update and delete operations we need to refresh the two tables so that the data displayed will be updated)
+<hr>
+
 Below are some screenshots taken during the run of the 3 applications:
 
 - <b>1st application - MuseumWindowsFormsApp (simple application that displays data from two particular tables from the database which are in a one to many (1:n) relation)</b>
