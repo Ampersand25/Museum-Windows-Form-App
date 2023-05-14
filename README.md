@@ -43,6 +43,7 @@ All applications have the following features:
 
 Running scenarios (that can also be found at the following link: https://github.com/Ampersand25/Museum-Windows-Forms-App/tree/main/Running%20scenarios%20for%20generic%20app) for the generic applications (2nd and 3rd apps):
 - <b>first running scenario ("master" table is table "Ghizi" from the database and "detail" table is the table "FosileDinozauri" from the database)</b>:
+<!--
 <add key="parentTable" value="[MuzeuDB].[dbo].[Ghizi]" />
 <add key="childTable" value="[MuzeuDB].[dbo].[FosileDinozauri]" />
 <add key="parentTableName" value="Ghizi" />
@@ -54,7 +55,9 @@ Running scenarios (that can also be found at the following link: https://github.
 <add key="updateValues" value="[TipDinozaur]=@value2, [FamilieDinozaur]=@value3, [Epoca]=@value4, [NrOase]=@value5, [CNPGhid]=@value6" />
 <add key="updateCondition" value="[FosilaDinozaurID]=@value1" />
 <add key="deleteCondition" value="[FosilaDinozaurID]=@value1" />
+-->
 - <b>second running scenario ("master" table is table "Vitrine" from the database and "detail" table is the table "Vase" from the database)</b>:
+<!--
 <add key="parentTable" value="[MuzeuDB].[dbo].[Vitrine]" />
 <add key="childTable" value="[MuzeuDB].[dbo].[Vase]" />
 <add key="parentTableName" value="Vitrine" />
@@ -66,7 +69,9 @@ Running scenarios (that can also be found at the following link: https://github.
 <add key="updateValues" value="[Culoare]=@value2, [Material]=@value3, [Vechime]=@value4, [VitrinaID]=@value5" />
 <add key="updateCondition" value="[VasID]=@value1" />
 <add key="deleteCondition" value="[VasID]=@value1" />
+-->
 - <b>third running scenario ("master" table is table "Paznici" from the database and "detail" table is the table "Bijuterii" from the database)</b>:
+<!--
 <add key="parentTable" value="[MuzeuDB].[dbo].[Paznici]" />
 <add key="childTable" value="[MuzeuDB].[dbo].[Bijuterii]" />
 <add key="parentTableName" value="Paznici" />
@@ -78,6 +83,7 @@ Running scenarios (that can also be found at the following link: https://github.
 <add key="updateValues" value="[Material]=@value2, [Valoare]=@value3, [CNPPaznic]=@value4" />
 <add key="updateDeCondition" value="[BijuterieID]=@value1" />
 <add key="deleteCondition" value="[BijuterieID]=@value1" />
+-->
 Important note: for changing the current running scenario, for second or third application, you need to update the App.config (which is an XML file)!
 <hr>
 
