@@ -45,7 +45,7 @@ Running scenarios (that can also be found at the following link: https://github.
 - <b>first running scenario</b>: "master" table is table "Ghizi" from the database and "detail" table is the table "FosileDinozauri" from the database
 - <b>second running scenario</b>: "master" table is table "Vitrine" from the database and "detail" table is the table "Vase" from the database
 - <b>third running scenario</b>: "master" table is table "Paznici" from the database and "detail" table is the table "Bijuterii" from the database
-Important note: for changing the current running scenario, for second or third application, you need to update the App.config (which is an XML file)!
+<br>Important note: for changing the current running scenario, for second or third application, you need to update the App.config (which is an XML file)!
 <hr>
 
 Below are some screenshots taken during the run of the 3 applications:
