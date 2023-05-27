@@ -39,6 +39,8 @@ All applications have the following features:
 - updating/modifying an existing record/line/row from the child ("detail") table
 - removing/deleting an existing record/line/row from the child ("detail") table
 - refreshing the two DataGridView tables (after add, update and delete operations we need to refresh the two tables so that the data displayed will be updated)
+- sorting the tables after the values from one column (DataGridView feature)
+- passwords are encrypted before storing them to the database and decrypted after reading them from the database (the database is MuzeuAuthenticationDB which is created using the SQL script named "MuzeuAuthenticationDB.sql")
 <hr>
 
 Running scenarios (that can also be found at the following link: https://github.com/Ampersand25/Museum-Windows-Forms-App/tree/main/Running%20scenarios%20for%20generic%20app) for the generic applications (2nd and 3rd apps):
